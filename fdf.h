@@ -6,10 +6,10 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2019/12/06 11:49:24 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2019/12/07 13:23:51 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft/libft.h"
-#include "string.h"
-
+#include <stdio.h>
+#include <fcntl.h>
