@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2019/12/19 15:10:46 by esko             ###   ########.fr       */
+/*   Updated: 2019/12/19 15:42:33 by esko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,21 @@
 static void    write_line(char *line, t_point **start, int y)
 {
     int x;
+    t_point *curr;
 
+    curr = *start;
     x = 0;
-    t_point *curr = *start;
-    //   curr = *start;
+    while (curr->next)
+        curr = curr->next;
     while (*line)
     {
         curr = point_node_new(x, y, ft_atoi(line));
-        printf("SET x y z\n");
-        printf("%d\t", curr->x);
-        printf("%d\t", curr->y);
-        printf("%d\n", curr->z);
-        while (ft_isdigit(*line) == 1 || *line == '-' && *line)
-        {
-            printf("LINE: %s\n", line);
+        while ((ft_isdigit(*line) == 1 || *line == '-') && *line)
             line++;
-        }
         while (ft_isdigit(*line) == 0 && *line != '-' && *line)
             line++;
         x++;
-
+        curr = curr->next;
     }
 }
 
@@ -51,12 +46,16 @@ static int	read_input(char *str)
 		return (-1);
 	while ((get_next_line(fd, &line)) == 1)
     {
-	    write_line(line, start, y);
+	    write_line(line, &start, y);
         y++;
         free(line);
 	}
-
-//	tab = write_list(ret, tab, line_count);
+    while (start->next)
+    {
+        printf("XYZ\n");
+        printf("%d, %d, %d\n", start->x, start->y, start->z);
+        start = start->next;
+    }
 	return (0);
 }
 
