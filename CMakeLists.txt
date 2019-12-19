@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(FdF)
+file(GLOB SOURCES "Libft/*.c")
+add_executable(FdF main.c pointlist.c)
+add_library(ft STATIC ${SOURCES})
+target_link_libraries(FdF ft)
