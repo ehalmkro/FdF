@@ -6,98 +6,65 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2019/12/18 19:07:35 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2019/12/19 15:10:46 by esko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static int count_elem(char *str)
+static void    write_line(char *line, t_point **start, int y)
 {
-	int count;
+    int x;
 
-	count = 0;
-	while (*str && *str != '\n')
-	{
-		while (*str != ' ')
-			str++;
-		if (*str == '\n' || !(*str))
-			return(count);
-		count++;
-		str++;
-	}
-	return (count);
-}
-
-static int	**write_arr(char *str, int **tab, size_t line_count)
-{
-	int i;
-	int j;
-
-	i = 0;
-    j = 0;
-
-    /* TODO:
-     * FIX THE FUCKING INT ARRAY ALLOCATION
-     */
-
-	tab = (int**)malloc(sizeof(int*) * line_count);
-	printf("MORO");
+    x = 0;
+    t_point *curr = *start;
+    //   curr = *start;
+    while (*line)
     {
-		while (*str)
-		{
-			tab[i][j] = (int)malloc(sizeof(int) * count_elem(str));
-			while (*str != '\n')
-			{
-				if (*str == ' ')
-					str++;
-				tab[i][j] = ft_atoi(str);
-				while (*str != ' ')
-					str++;
-				j++;
-			}
-			j = 0;
-			i++;
-		}
-	}
-	return (tab);
+        curr = point_node_new(x, y, ft_atoi(line));
+        printf("SET x y z\n");
+        printf("%d\t", curr->x);
+        printf("%d\t", curr->y);
+        printf("%d\n", curr->z);
+        while (ft_isdigit(*line) == 1 || *line == '-' && *line)
+        {
+            printf("LINE: %s\n", line);
+            line++;
+        }
+        while (ft_isdigit(*line) == 0 && *line != '-' && *line)
+            line++;
+        x++;
+
+    }
 }
 
-static int	read_input(char *str, int **tab)
+static int	read_input(char *str)
 {
 	int		fd;
-	size_t	line_count;
+	int     y;
 	char	*line;
-	char    *ret;
-	char    *tmp;
+	t_point *start;
 
-	tab = NULL;
-	ret = ft_strnew(0);
-    line_count = 0;
+    start = point_node_new(0, 0, 0);
+    y = 0;
 	if ((fd = open(str, O_RDONLY)) == -1)
 		return (-1);
 	while ((get_next_line(fd, &line)) == 1)
     {
-        line_count++;
-        tmp = ft_strjoin(ret, line);
-        free(ret);
+	    write_line(line, start, y);
+        y++;
         free(line);
-        ret = tmp;
 	}
-	printf("line count yo %zu\n", line_count);
-	tab = write_arr(ret, tab, line_count);
-	free(tmp);
+
+//	tab = write_list(ret, tab, line_count);
 	return (0);
 }
 
 int		main(int argc, char **argv)
 {
-    int **tab;
-
-    tab = NULL;
 	if (argc == 2)
 	{
-		if (read_input(argv[1], tab) == -1)
+		if (read_input(argv[1]) == -1)
 			perror("Error: ");
 //		while(1);
 	}
