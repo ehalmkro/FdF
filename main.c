@@ -6,24 +6,34 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2019/12/19 15:42:33 by esko             ###   ########.fr       */
+/*   Updated: 2019/12/20 20:18:27 by esko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static void    write_line(char *line, t_point **start, int y)
+static void     write_line(char *line, t_point **start, int y)
 {
     int x;
     t_point *curr;
-
-    curr = *start;
+/* LEAKS A LOT BECAUSE OF THE MOVING POINTER
+ * TODO: FIX LEAKING POINTER
+ */
     x = 0;
+    if (y == 0)
+    {
+        *start = point_node_new(x++, 0, ft_atoi(line));
+        while ((ft_isdigit(*line) == 1 || *line == '-') && *line)
+            line++;
+        while (ft_isdigit(*line) == 0 && *line != '-' && *line)
+            line++;
+    }
+    curr = *start;
     while (curr->next)
         curr = curr->next;
     while (*line)
     {
-        curr = point_node_new(x, y, ft_atoi(line));
+        curr->next = point_node_new(x, y, ft_atoi(line));
         while ((ft_isdigit(*line) == 1 || *line == '-') && *line)
             line++;
         while (ft_isdigit(*line) == 0 && *line != '-' && *line)
@@ -40,7 +50,6 @@ static int	read_input(char *str)
 	char	*line;
 	t_point *start;
 
-    start = point_node_new(0, 0, 0);
     y = 0;
 	if ((fd = open(str, O_RDONLY)) == -1)
 		return (-1);
@@ -56,6 +65,7 @@ static int	read_input(char *str)
         printf("%d, %d, %d\n", start->x, start->y, start->z);
         start = start->next;
     }
+    printf("XYZ\n%d, %d, %d", start->x, start->y, start->z);
 	return (0);
 }
 
