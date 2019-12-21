@@ -6,7 +6,7 @@
 /*   By: esko <esko@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 13:29:54 by esko              #+#    #+#             */
-/*   Updated: 2019/12/20 19:50:24 by esko             ###   ########.fr       */
+/*   Updated: 2019/12/20 19:51:36 by esko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,4 @@ void        point_node_pushback(t_point **start, t_point *new)
     while (current->next)
         current = current->next;
     current->next = new;
-
 }

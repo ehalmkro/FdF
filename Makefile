@@ -6,12 +6,12 @@
 #    By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/18 17:34:36 by ehalmkro          #+#    #+#              #
-#    Updated: 2019/12/18 17:36:41 by ehalmkro         ###   ########.fr        #
+#    Updated: 2019/12/20 20:24:43 by esko             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = FdF
-SRC = main.c
+SRC = main.c pointlist.c
 LIB = Libft/
 FLAGS = -Wall -Wextra -Werror
 OBJECTS = $(SRC:.c=.o)
