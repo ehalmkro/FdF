@@ -11,20 +11,22 @@
 # **************************************************************************** #
 
 NAME = FdF
-SRC = main.c pointlist.c
+SRC = main.c pointlist.c draw_window.c
 LIB = Libft/
+MLIB = /usr/X11/lib -I/usr/X11/include
+MFLAGS = -lmlx -lX11 -lXext -framework OpenGL -framework AppKit
 FLAGS = -Wall -Wextra -Werror
 OBJECTS = $(SRC:.c=.o)
 
 all: $(NAME)
 $(NAME):
-				make -C Libft
-				gcc $(FLAGS) -c $(SRC)
-				gcc -o $(NAME) $(OBJECTS) -L $(LIB) -lft
+				make -C $(LIB) > /dev/null
+				gcc $(FLAGS) -c $(SRC) > /dev/null
+				gcc -o $(NAME) $(OBJECTS) -L $(LIB) -lft -L $(MLIB) $(MFLAGS)  > /dev/null 
 clean:
-				rm -f $(OBJECTS)
-				make -C libft clean
+				rm -f $(OBJECTS) > /dev/null
+				make -C $(LIB) clean > /dev/null
 fclean: clean
-				rm -f $(NAME)
-				make -C libft fclean
+				rm -f $(NAME) > /dev/null
+				make -C $(LIB) fclean > /dev/null
 re: fclean all

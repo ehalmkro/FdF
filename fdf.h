@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2019/12/19 13:22:35 by esko             ###   ########.fr       */
+/*   Updated: 2019/12/21 15:23:53 by esko             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "Libft/libft.h"
 # include <stdio.h>
 # include <fcntl.h>
+# include "minilibx/mlx.h"
 
 typedef struct		s_point
 {
@@ -25,7 +26,8 @@ typedef struct		s_point
     struct s_point	*next;
 }				t_point;
 
-t_point     *point_node_new(int x, int y, int z);
-void        point_node_pushback(t_point **start, t_point *back);
+t_point		*point_node_new(int x, int y, int z);
+void		point_node_pushback(t_point **start, t_point *back);
+void		draw_window(void *mlx, t_point **start);
 
 #endif

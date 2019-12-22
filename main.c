@@ -40,39 +40,56 @@ static void     write_line(char *line, t_point **start, int y)
     }
 }
 
-static int	read_input(char *str)
+static int	read_input(char *str, t_point **start)
 {
-	int		fd;
+	int	fd;
 	int     y;
 	char	*line;
-	t_point *start;
 
-    y = 0;
+	y = 0;
 	if ((fd = open(str, O_RDONLY)) == -1)
 		return (-1);
 	while ((get_next_line(fd, &line)) == 1)
-    {
-	    write_line(line, &start, y);
-        y++;
-        free(line);
+    	{
+		write_line(line, start, y);
+        	y++;
+        	free(line);
 	}
-    while (start->next)
+	
+// LIST DEBUGGING
+/*
+	t_point *debug;
+	debug = *start;
+    while (debug->next)
     {
         printf("XYZ\n");
-        printf("%d, %d, %d\n", start->x, start->y, start->z);
-        start = start->next;
+        printf("%d, %d, %d\n", debug->x, debug->y, debug->z);
+        debug = debug->next;
     }
-    printf("XYZ\n%d, %d, %d", start->x, start->y, start->z);
+        printf("%d, %d, %d\n", debug->x, debug->y, debug->z);
+*/
 	return (0);
 }
 
 int		main(int argc, char **argv)
-{
+{	
+	void	*mlx;
+	t_point *start;
+
 	if (argc == 2)
 	{
-		if (read_input(argv[1]) == -1)
+		if (read_input(argv[1], &start) == -1)
+		{
 			perror("Error: ");
-		while(1);
+			exit(1);
+		}
 	}
+//		while(1);
+	if ((mlx = mlx_init()) == NULL)
+	{
+		perror("Error: ");
+		exit(1);
+	}
+	draw_window(mlx, &start);
 	return (0);
 }
