@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2019/12/20 20:34:12 by esko             ###   ########.fr       */
+/*   Updated: 2020/01/03 14:01:58 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,21 +75,24 @@ int		main(int argc, char **argv)
 {	
 	void	*mlx;
 	t_point *start;
-
-	if (argc == 2)
+    
+    if (argc != 2)
+        ft_putendl("usage: fdf source_file");
+    else
 	{
 		if (read_input(argv[1], &start) == -1)
 		{
 			perror("Error: ");
 			exit(1);
 		}
-	}
+	
 //		while(1);
-	if ((mlx = mlx_init()) == NULL)
-	{
-		perror("Error: ");
-		exit(1);
-	}
-	draw_window(mlx, &start);
+    	if ((mlx = mlx_init()) == NULL)
+    	{
+    		perror("Error: ");
+    		exit(1);
+    	}
+    	draw_window(mlx, &start);
+     }
 	return (0);
 }
