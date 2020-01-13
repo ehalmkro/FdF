@@ -23,10 +23,10 @@ void	draw_window(void *mlx, t_point **start)
 	void *win;
 
 	printf("X = %d\n", (*start)->x);	
-	if ((win = mlx_new_window(mlx, 1024, 768, "FdF // ehalmkro // 2020")) == NULL)
+	if ((win = mlx_new_window(mlx, WINDOW_WIDTH, WINDOW_HEIGHT, "FdF 0.01 // ehalmkro // 2020")) == NULL)
 		perror("Error: ");
 	mlx_clear_window(mlx, win);
-	mlx_string_put(mlx, win, 20, 20, 0x00FF00, "HELLO THIS IS TEST");
+	mlx_string_put(mlx, win, 20, 20, 0x00FF00, "THIS IS FDF");
 	mlx_pixel_put(mlx, win, 500, 500, 0x00FF00);
 	mlx_pixel_put(mlx, win, 501, 501, 0x00FF00);
 	draw_2d_outline(mlx, win, start);
