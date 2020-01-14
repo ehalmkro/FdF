@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/13 16:55:51 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/14 11:26:26 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 static void     write_line(char *line, t_point **start, int y)
 {
     int x;
-    t_point *curr;
-/*
- * LEAKS A LOT BECAUSE OF THE MOVING POINTER
- * TODO: FIX LEAKING POINTER
- */
+
     x = 0;
     if (y == 0)
     {
@@ -29,7 +25,6 @@ static void     write_line(char *line, t_point **start, int y)
         while (ft_isdigit(*line) == 0 && *line != '-' && *line)
             line++;
     }
-    curr = *start;
     while (*line)
     {
         point_node_pushback(start, point_node_new(x++, y, ft_atoi(line)));
@@ -55,9 +50,9 @@ static int	read_input(char *str, t_point **start)
         	y++;
         	free(line);
 	}
-	
-// LIST DEBUGGING
+
 /*
+ * LIST DEBUGGING
 	t_point *debug;
 	debug = *start;
     while (debug->next)
@@ -68,6 +63,7 @@ static int	read_input(char *str, t_point **start)
     }
         printf("%d, %d, %d\n", debug->x, debug->y, debug->z);
 */
+
 	return (0);
 }
 
@@ -85,14 +81,19 @@ int		main(int argc, char **argv)
 			perror("Error: ");
 			exit(1);
 		}
-	
-//		while(1);
     	if ((mlx = mlx_init()) == NULL)
     	{
     		perror("Error: ");
     		exit(1);
     	}
+    	find_minmax(&start);
     	draw_window(mlx, &start);
      }
+
+     /*
+     * FOR LEAK TESTING
+     *	while(1);
+     */
+
 	return (0);
 }
