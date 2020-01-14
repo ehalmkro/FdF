@@ -6,12 +6,12 @@
 #    By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/18 17:34:36 by ehalmkro          #+#    #+#              #
-#    Updated: 2020/01/13 16:55:51 by ehalmkro         ###   ########.fr        #
+#    Updated: 2020/01/14 15:26:26 by ehalmkro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = FdF
-SRC = main.c pointlist.c draw_window.c
+SRC = main.c pointlist.c draw_window.c tools.c
 LIB = Libft/
 MLIB = /usr/local/lib
 MFLAGS = -lmlx -framework OpenGL -framework AppKit

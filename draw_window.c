@@ -12,8 +12,6 @@
 
 #include "fdf.h"
 
-
-
 static void	draw_2d_outline(void *mlx, void *win, t_point **start)
 {
 	t_point *curr;
