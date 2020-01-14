@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ehalmkro/hive/FdF/Libft/libft.h
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+sys/uio.h
+-
+
+/Users/ehalmkro/hive/FdF/draw_window.c
+fdf.h
+/Users/ehalmkro/hive/FdF/fdf.h
+
+/Users/ehalmkro/hive/FdF/fdf.h
+Libft/libft.h
+/Users/ehalmkro/hive/FdF/Libft/libft.h
+stdio.h
+-
+fcntl.h
+-
+mlx.h
+-
+
+/Users/ehalmkro/hive/FdF/main.c
+fdf.h
+/Users/ehalmkro/hive/FdF/fdf.h
+
+/Users/ehalmkro/hive/FdF/pointlist.c
+fdf.h
+/Users/ehalmkro/hive/FdF/fdf.h
+
+/Users/ehalmkro/hive/FdF/tools.c
+fdf.h
+/Users/ehalmkro/hive/FdF/fdf.h
+
+/usr/local/include/mlx.h
+
