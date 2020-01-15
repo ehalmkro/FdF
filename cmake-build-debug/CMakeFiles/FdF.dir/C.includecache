@@ -16,10 +16,6 @@ string.h
 sys/uio.h
 -
 
-/Users/ehalmkro/hive/FdF/draw_window.c
-fdf.h
-/Users/ehalmkro/hive/FdF/fdf.h
-
 /Users/ehalmkro/hive/FdF/fdf.h
 Libft/libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
@@ -35,10 +31,6 @@ fdf.h
 /Users/ehalmkro/hive/FdF/fdf.h
 
 /Users/ehalmkro/hive/FdF/pointlist.c
-fdf.h
-/Users/ehalmkro/hive/FdF/fdf.h
-
-/Users/ehalmkro/hive/FdF/tools.c
 fdf.h
 /Users/ehalmkro/hive/FdF/fdf.h
 

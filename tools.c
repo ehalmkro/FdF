@@ -12,6 +12,7 @@
 
 #include "fdf.h"
 
+/*
 double get_percent(int start, int end, int curr)
 {
 	double	place;
@@ -58,4 +59,4 @@ t_max	find_minmax(t_point **start)
 	percentage = get_percent(0, 10, 5);
 	printf("PERCENTAGE CHECK %f\n", percentage);
 	return (map);
-}
+}*/

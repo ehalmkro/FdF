@@ -6,46 +6,55 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/15 12:57:43 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/15 21:18:40 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static void		add_row(t_map **start, t_map *new_row)
+static void		append_row(t_map ****start, t_map *new_row)
 {
 	t_map *curr;
+	static int rowcount = 1;
+//	int columncount = 1;
 
-	curr = *start;
-	while (curr->next)
-		curr = curr->next
-
-
-
+//	printf("ROW COUNT %d\n", rowcount++);
+	curr = ***start;
+	while (curr->down != NULL)
+	{
+		curr = curr->down;
+//		ft_putendl("jesus aren't we going down");
+	}
+	if (rowcount > 1)
+	{
+		while (curr->right != NULL) {
+			//		printf("COLUMN COUNT %d\n", columncount++);
+			curr->down = new_row;
+			curr = curr->right;
+			new_row = new_row->right;
+		}
+	}
+	curr->down = NULL;
 }
 
-
-static void     write_line(char *line, t_map **start, int y)
+static void     write_line(char *line, t_map ***start, int y)
 {
-    int x;
+    size_t	x;
+	t_map	*curr;
+	static int first;
 
+	first = 0;
+	curr = **start;
     x = 0;
-    if (y == 0)
-    {
-		(*start)->data = point_node_new(0, 0, ft_atoi(line));
-        while ((ft_isdigit(*line) == 1 || *line == '-') && *line)
-            line++;
-        while (ft_isdigit(*line) == 0 && *line != '-' && *line)
-            line++;
-    }
     while (*line)
     {
-        point_node_pushback(start, point_node_new(x++, y, ft_atoi(line)));
+        map_push_right(&curr, map_add_node(point_node_new(x++, y, ft_atoi(line))));
         while ((ft_isdigit(*line) == 1 || *line == '-') && *line)
             line++;
         while (ft_isdigit(*line) == 0 && *line != '-' && *line)
             line++;
     }
+    append_row(&start, curr);
 }
 
 static int	read_input(char *str, t_map **start)
@@ -59,32 +68,24 @@ static int	read_input(char *str, t_map **start)
 		return (-1);
 	while ((get_next_line(fd, &line)) == 1)
     {
-		write_line(line, start, y);
-        	y++;
-        	free(line);
+		write_line(line, &start, y);
+        y++;
+        free(line);
 	}
-
-/*
- * LIST DEBUGGING
-	t_point *debug;
-	debug = *start;
-    while (debug->next)
-    {
-        printf("XYZ\n");
-        printf("%d, %d, %d\n", debug->x, debug->y, debug->z);
-        debug = debug->next;
-    }
-        printf("%d, %d, %d\n", debug->x, debug->y, debug->z);
-*/
-
 	return (0);
 }
 
 int		main(int argc, char **argv)
 {	
-	void	*mlx;
-	t_map *start;
-    
+	void			*mlx;
+	t_map			*start;
+
+	start = malloc(sizeof(t_map));
+	start->data = NULL;
+	start->right = NULL;
+	start->down = NULL;
+	start->next = NULL;
+
     if (argc != 2)
         ft_putendl("usage: fdf source_file");
     else
@@ -94,13 +95,18 @@ int		main(int argc, char **argv)
 			perror("Error: ");
 			exit(1);
 		}
+		map_add_next(&start);
     	if ((mlx = mlx_init()) == NULL)
     	{
     		perror("Error: ");
     		exit(1);
     	}
-    	find_minmax(&start);
-    	draw_window(mlx, &start);
+
+	/*
+	 * find_minmax(&start);
+	 * draw_window(mlx, &start);
+	 *
+	 * */
      }
 
      /*

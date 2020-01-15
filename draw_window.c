@@ -6,12 +6,12 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/14 11:21:17 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/15 19:28:53 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
+/*
 static void	draw_2d_outline(void *mlx, void *win, t_point **start)
 {
 	t_point *curr;
@@ -42,4 +42,4 @@ void	draw_window(void *mlx, t_point **start)
 	mlx_string_put(mlx, win, 20, 20, 0x00FF00, "THIS IS FDF");
 	draw_2d_outline(mlx, win, start);
 	mlx_loop(mlx);
-}
+}*/
