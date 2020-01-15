@@ -24,7 +24,7 @@ double get_percent(int start, int end, int curr)
 	return (place/dist);
 }
 
-void	init_minmax(t_map *map)
+void	init_minmax(t_max *map)
 {
 	map->max_x = INT_MIN;
 	map->max_y = INT_MIN;
@@ -32,10 +32,10 @@ void	init_minmax(t_map *map)
 	map->min_z = INT_MAX;
 }
 
-t_map	find_minmax(t_point **start)
+t_max	find_minmax(t_point **start)
 {
 	t_point *curr;
-	t_map	map;
+	t_max	map;
 
 	init_minmax(&map);
 	curr = *start;

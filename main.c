@@ -6,20 +6,33 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/14 11:26:26 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/15 12:57:43 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static void     write_line(char *line, t_point **start, int y)
+static void		add_row(t_map **start, t_map *new_row)
+{
+	t_map *curr;
+
+	curr = *start;
+	while (curr->next)
+		curr = curr->next
+
+
+
+}
+
+
+static void     write_line(char *line, t_map **start, int y)
 {
     int x;
 
     x = 0;
     if (y == 0)
     {
-        *start = point_node_new(0, 0, ft_atoi(line));
+		(*start)->data = point_node_new(0, 0, ft_atoi(line));
         while ((ft_isdigit(*line) == 1 || *line == '-') && *line)
             line++;
         while (ft_isdigit(*line) == 0 && *line != '-' && *line)
@@ -35,17 +48,17 @@ static void     write_line(char *line, t_point **start, int y)
     }
 }
 
-static int	read_input(char *str, t_point **start)
+static int	read_input(char *str, t_map **start)
 {
-	int	fd;
-	int     y;
+	int		fd;
+	int		y;
 	char	*line;
 
 	y = 0;
 	if ((fd = open(str, O_RDONLY)) == -1)
 		return (-1);
 	while ((get_next_line(fd, &line)) == 1)
-    	{
+    {
 		write_line(line, start, y);
         	y++;
         	free(line);
@@ -70,7 +83,7 @@ static int	read_input(char *str, t_point **start)
 int		main(int argc, char **argv)
 {	
 	void	*mlx;
-	t_point *start;
+	t_map *start;
     
     if (argc != 2)
         ft_putendl("usage: fdf source_file");
