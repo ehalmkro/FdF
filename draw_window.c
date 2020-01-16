@@ -6,31 +6,31 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/15 19:28:53 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/16 17:24:00 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-/*
-static void	draw_2d_outline(void *mlx, void *win, t_point **start)
+
+static void	draw_2d_outline(void *mlx, void *win, t_map **start)
 {
-	t_point *curr;
+	t_map *curr;
 	int	color;
 
 	curr = *start;
 	while (curr)
 	{
-		if (curr->z != 0)
+		if (curr->data->z != 0)
 			color = 0x800080;
 		else
 			color = 0x008080;
-		mlx_pixel_put(mlx, win, 500 + curr->x, 500 + curr->y, color);
+		mlx_pixel_put(mlx, win, 500 + curr->data->x, 500 + curr->data->y, color);
 		curr = curr->next;
 	}
 }
 
 
-void	draw_window(void *mlx, t_point **start)
+void	draw_window(void *mlx, t_map **start)
 {
 	void *win;
 	t_draw draw;
@@ -42,4 +42,4 @@ void	draw_window(void *mlx, t_point **start)
 	mlx_string_put(mlx, win, 20, 20, 0x00FF00, "THIS IS FDF");
 	draw_2d_outline(mlx, win, start);
 	mlx_loop(mlx);
-}*/
+}

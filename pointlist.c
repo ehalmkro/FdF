@@ -6,12 +6,12 @@
 /*   By: esko <esko@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 13:29:54 by esko              #+#    #+#             */
-/*   Updated: 2020/01/15 21:18:40 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/16 16:45:40 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
+/*
 void		map_add_next(t_map **start)
 {
 	t_map *curr;
@@ -24,7 +24,8 @@ void		map_add_next(t_map **start)
 			curr = curr->right;
 		curr->right = forward;
 
-}
+}*/
+
 t_point     *point_node_new(float x, float y, float z)
 {
     t_point *ret;
@@ -44,8 +45,8 @@ t_map		*map_add_node(t_point *data)
 	ret->data = (t_point*)malloc(sizeof(t_point));
 	ret->data = data;
 	ret->down = NULL;
-	ret->right = NULL;
 	ret->next = NULL;
+	ret->right = NULL;
 	return (ret);
 }
 
@@ -54,8 +55,8 @@ void        map_push_right(t_map **start, t_map *new)
     t_map *curr;
 
     curr = *start;
-    while (curr->right)
-        curr = curr->right;
-    curr->right = new;
-//	printf("DATA\nX %f\nY %f\n", new->data->x, new->data->y);
+    while (curr->next)
+        curr = curr->next;
+    curr->next = new;
+//	printf("DATA\nX %f\nY %f\nZ %f\n", new->data->x, new->data->y, new->data->z);
 }

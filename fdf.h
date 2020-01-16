@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/15 21:18:40 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/16 15:29:38 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ typedef struct				s_draw
 
 t_point			*point_node_new(float x, float y, float z);
 void			point_node_pushback(t_point **start, t_point *back);
-void			draw_window(void *mlx, t_point **start);
-t_max			find_minmax(t_point **start);
+void			draw_window(void *mlx, t_map **start);
+t_max			find_minmax(t_map **start);
 double 			get_percent(int start, int end, int curr);
 
 
