@@ -314,6 +314,9 @@
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/get_next_line.c">
 			<Option target="ft"/>
 		</Unit>
+		<Unit filename="/Users/ehalmkro/hive/FdF/color.c">
+			<Option target="FdF"/>
+		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/draw_window.c">
 			<Option target="FdF"/>
 		</Unit>

@@ -1864,6 +1864,33 @@ Libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/Libft/get_next_line.c.s
 .PHONY : Libft/get_next_line.c.s
 
+color.o: color.c.o
+
+.PHONY : color.o
+
+# target to build an object file
+color.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/color.c.o
+.PHONY : color.c.o
+
+color.i: color.c.i
+
+.PHONY : color.i
+
+# target to preprocess a source file
+color.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/color.c.i
+.PHONY : color.c.i
+
+color.s: color.c.s
+
+.PHONY : color.s
+
+# target to generate assembly for a file
+color.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/color.c.s
+.PHONY : color.c.s
+
 draw_window.o: draw_window.c.o
 
 .PHONY : draw_window.o
@@ -2174,6 +2201,9 @@ help:
 	@echo "... Libft/get_next_line.o"
 	@echo "... Libft/get_next_line.i"
 	@echo "... Libft/get_next_line.s"
+	@echo "... color.o"
+	@echo "... color.i"
+	@echo "... color.s"
 	@echo "... draw_window.o"
 	@echo "... draw_window.i"
 	@echo "... draw_window.s"

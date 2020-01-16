@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FdF.dir/pointlist.c.o"
   "CMakeFiles/FdF.dir/draw_window.c.o"
   "CMakeFiles/FdF.dir/tools.c.o"
+  "CMakeFiles/FdF.dir/color.c.o"
   "FdF.pdb"
   "FdF"
 )

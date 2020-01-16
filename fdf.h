@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/16 15:29:38 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/16 17:46:59 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <mlx.h>
+# include <math.h>
 
 # define WINDOW_WIDTH 1024
 # define WINDOW_HEIGHT 768
@@ -29,6 +30,7 @@ typedef struct				s_point
 	float					x;
 	float					y;
 	float					z;
+	int 					color;
 }							t_point;
 
 typedef struct				s_max

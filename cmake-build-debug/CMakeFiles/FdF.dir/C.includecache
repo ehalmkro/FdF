@@ -29,18 +29,8 @@ fcntl.h
 -
 mlx.h
 -
-
-/Users/ehalmkro/hive/FdF/main.c
-fdf.h
-/Users/ehalmkro/hive/FdF/fdf.h
-
-/Users/ehalmkro/hive/FdF/pointlist.c
-fdf.h
-/Users/ehalmkro/hive/FdF/fdf.h
-
-/Users/ehalmkro/hive/FdF/tools.c
-fdf.h
-/Users/ehalmkro/hive/FdF/fdf.h
+math.h
+-
 
 /usr/local/include/mlx.h
 
