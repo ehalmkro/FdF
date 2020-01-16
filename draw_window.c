@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/16 18:03:01 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/16 18:10:38 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ static void draw_line(t_point *start, t_point *end, void *mlx, void *win)
 	printf("end X %f Y %f\n", end->x, end->y);
 	delta_x = end->x - start->x;
 	delta_y = end->y - start->y;
+	printf("delta X %f Y %f\n", delta_x, delta_y);
 	pixelcount = sqrt((delta_x * delta_x) + (delta_y * delta_y));
+	printf("pixelcount X %f\n", pixelcount);
 	double x_pixel;
 	double y_pixel;
 
@@ -30,6 +32,7 @@ static void draw_line(t_point *start, t_point *end, void *mlx, void *win)
 	y_pixel = start->y;
 	delta_x /= pixelcount;
 	delta_y /= pixelcount;
+	printf("delta 2 X %f Y %f\n", delta_x, delta_y);
 	while (pixelcount)
 	{
 		mlx_pixel_put(mlx, win, (int)x_pixel, (int)y_pixel, 0xFFFFFF);
