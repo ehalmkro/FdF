@@ -6,9 +6,19 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/16 18:05:47 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/17 18:17:44 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "fdf.h"
+
+void	set_color(t_point *vertex)
+{
+	if (vertex->z != 0)
+		vertex->color = 0xf58d42;
+	else
+		vertex->color = 0x42bff5;
+
+}
 
 

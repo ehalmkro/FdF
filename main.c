@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/16 17:20:35 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/17 18:13:20 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,27 @@ static void	append_map(t_map **start, t_max minmax)
 	t_map *tapehead;
 	t_map *forward;
 	float y;
+	float x;
 	tapehead = *start;
 
+	x = 0;
+	y = 0;
 	while (y < minmax.max_y - 1)
 	{
 		y = tapehead->data->y;
-		forward = get_next_y(tapehead, y);
-		tapehead->down = forward;
-		if (y >= tapehead->next->data->y)
-			tapehead->right = tapehead->next;
-		tapehead = tapehead->next;
+		forward = get_next_y (tapehead, y);
+		while (x < minmax.max_x)
+		{
+			x = tapehead->data->x;
+			tapehead->down = forward;
+			if (y >= tapehead->next->data->y)
+			{
+				tapehead->right = tapehead->next;
+				forward = forward->next;
+			}
+			tapehead = tapehead->next;
+		}
+		x = 0;
 	}
 }
 
@@ -75,14 +86,29 @@ static int	read_input(char *str, t_map **start)
 		y++;
 		free(line);
 	}
-
 	return (0);
+}
+
+void	draw_matrix(t_map *start, void *mlx, void *win)
+{
+/*		if (start->down)
+			draw_matrix (start->down, mlx, win);
+		if (start->right)
+			draw_matrix (start->right, mlx, win);*/
+		if (start->right)
+			draw_line(start->data, start->right->data, mlx, win);
+		if (start->down)
+			draw_line(start->data, start->down->data, mlx, win);
+		if (start->next)
+			draw_matrix(start->next, mlx, win);
+
 }
 
 int		main(int argc, char **argv)
 {
 	void			*mlx;
 	t_map			*start;
+	void 			*win;
 	t_max			maxvalues;
 
 	start = map_add_node(NULL);
@@ -102,20 +128,18 @@ int		main(int argc, char **argv)
 			perror("Error: ");
 			exit(1);
 		}
-		draw_window(mlx, &start);
+		win = draw_window(mlx, &start);
+		draw_matrix (start, mlx, win);
+		mlx_string_put(mlx, win, 20, 20, 0x00FF00, "X");
+		mlx_string_put(mlx, win, 20, 60, 0x00FF00, "Y");
+		mlx_string_put(mlx, win, 40, 20, 0x00FF00, ft_itoa((int)maxvalues.max_x));
+		mlx_string_put(mlx, win, 40, 60, 0x00FF00, ft_itoa((int)maxvalues.max_y));
+		mlx_loop(mlx);
 	}
 
 	 /*
 	 * FOR LEAK TESTING
 	 *	while(1);
-	 */
-
-	 	while (start)
-	{
-		printf ("DATA\nX %f\nY %f\nZ %f\n", start->data->x, start->data->y, start->data->z);
-		start = start->down;
-	}
-
-
+	*/
 	return (0);
 }
