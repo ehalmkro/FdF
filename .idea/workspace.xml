@@ -13,19 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/draw_window.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/pointlist.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/tools.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/color.c" beforeDir="false" afterPath="$PROJECT_DIR$/color.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draw_window.c" beforeDir="false" afterPath="$PROJECT_DIR$/draw_window.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fdf.h" beforeDir="false" afterPath="$PROJECT_DIR$/fdf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_maps/42.fdf" beforeDir="false" afterPath="$PROJECT_DIR$/test_maps/42.fdf" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,17 +65,17 @@
         <counts>
           <entry key="Makefile" value="74" />
           <entry key="author" value="9" />
-          <entry key="c" value="17662" />
+          <entry key="c" value="18050" />
           <entry key="h" value="843" />
-          <entry key="txt" value="730" />
+          <entry key="txt" value="812" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="298" />
           <entry key="Makefile" value="74" />
-          <entry key="ObjectiveC" value="18505" />
-          <entry key="PLAIN_TEXT" value="441" />
+          <entry key="ObjectiveC" value="18893" />
+          <entry key="PLAIN_TEXT" value="523" />
         </counts>
       </usages-collector>
     </session>
@@ -110,8 +99,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3234">
-                  <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+                <state relative-caret-position="413">
+                  <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -123,8 +112,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/draw_window.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="177">
-                  <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+                <state relative-caret-position="345">
+                  <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
                 </state>
               </provider>
             </entry>
@@ -186,10 +175,10 @@
         <option value="$PROJECT_DIR$/tools.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/pointlist.c" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/color.c" />
         <option value="$PROJECT_DIR$/fdf.h" />
         <option value="$PROJECT_DIR$/draw_window.c" />
+        <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
   </component>
@@ -379,7 +368,7 @@
       <workItem from="1579171086295" duration="1151000" />
       <workItem from="1579175893162" duration="14118000" />
       <workItem from="1579255499157" duration="2476000" />
-      <workItem from="1579261963250" duration="11812000" />
+      <workItem from="1579261963250" duration="12556000" />
     </task>
     <task id="LOCAL-00001" summary="TODO added LOL">
       <created>1576595380251</created>
@@ -465,11 +454,18 @@
       <option name="project" value="LOCAL" />
       <updated>1579191154545</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Lots of work for nothing. Add line draw">
+      <created>1579278410969</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1579278410969</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67596000" />
+    <option name="totallyTimeSpent" value="68340000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -481,7 +477,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1371" extended-state="6" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49939394" visible="true" weight="0.15170771" />
@@ -489,7 +485,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.50060606" side_tool="true" weight="0.18152866" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293944" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5265241" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4911374" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955688" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -499,7 +495,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49893844" weight="0.34916866" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50106156" side_tool="true" weight="0.32919708" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.329927" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32858273" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32791728" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.329927" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -560,7 +556,8 @@
     <MESSAGE value="add double linked list, next not working" />
     <MESSAGE value="fix double linked list" />
     <MESSAGE value="add color" />
-    <option name="LAST_COMMIT_MESSAGE" value="add color" />
+    <MESSAGE value="Lots of work for nothing. Add line draw" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lots of work for nothing. Add line draw" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -676,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3234">
-          <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-48">
@@ -709,8 +699,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/draw_window.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        <state relative-caret-position="345">
+          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
         </state>
       </provider>
     </entry>
