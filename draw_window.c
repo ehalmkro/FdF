@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/17 18:19:00 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/17 18:39:08 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void draw_line(t_point *start, t_point *end, void *mlx, void *win)
 	delta_y /= pixelcount;
 	while (pixelcount > 0)
 	{
-		mlx_pixel_put(mlx, win, (int)x_pixel + 100, (int)y_pixel + 100, end->color);
+		mlx_pixel_put(mlx, win, (int)x_pixel + 100, (int)y_pixel + 100, start->color);
 		x_pixel += delta_x;
 		y_pixel += delta_y;
 		pixelcount--;
@@ -59,7 +59,7 @@ void	*draw_window(void *mlx, t_map **start)
 	void *win;
 	t_draw draw;
 
-	draw.zoom = 26;
+	draw.zoom = 15;
 	if ((win = mlx_new_window(mlx, WINDOW_WIDTH, WINDOW_HEIGHT, "FdF 0.01 // ehalmkro // 2020")) == NULL)
 		perror("Error: ");
 	mlx_clear_window(mlx, win);

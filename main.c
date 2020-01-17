@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/17 18:13:20 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/17 18:37:56 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,11 @@ static void	append_map(t_map **start, t_max minmax)
 		{
 			x = tapehead->data->x;
 			tapehead->down = forward;
-			if (y >= tapehead->next->data->y)
+			if (y == tapehead->next->data->y)
 			{
 				tapehead->right = tapehead->next;
+				if (forward->next && forward->next->data->y == forward->data->y)
+					forward->right = forward->next;
 				forward = forward->next;
 			}
 			tapehead = tapehead->next;
@@ -91,17 +93,12 @@ static int	read_input(char *str, t_map **start)
 
 void	draw_matrix(t_map *start, void *mlx, void *win)
 {
-/*		if (start->down)
-			draw_matrix (start->down, mlx, win);
-		if (start->right)
-			draw_matrix (start->right, mlx, win);*/
 		if (start->right)
 			draw_line(start->data, start->right->data, mlx, win);
 		if (start->down)
 			draw_line(start->data, start->down->data, mlx, win);
 		if (start->next)
 			draw_matrix(start->next, mlx, win);
-
 }
 
 int		main(int argc, char **argv)
