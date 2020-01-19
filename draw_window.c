@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/17 18:39:08 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/19 14:53:45 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ void draw_line(t_point *start, t_point *end, void *mlx, void *win)
 	double x_pixel;
 	double y_pixel;
 
-	set_color(start);
+/*	set_color(start);
 	set_color(end);
+ */
 	delta_x = end->x - start->x;
 	delta_y = end->y - start->y;
 	pixelcount = sqrt((delta_x * delta_x) + (delta_y * delta_y));
@@ -31,7 +32,7 @@ void draw_line(t_point *start, t_point *end, void *mlx, void *win)
 	delta_y /= pixelcount;
 	while (pixelcount > 0)
 	{
-		mlx_pixel_put(mlx, win, (int)x_pixel + 100, (int)y_pixel + 100, start->color);
+		mlx_pixel_put(mlx, win, (int)x_pixel + 100, (int)y_pixel + 100, set_color(start, end));
 		x_pixel += delta_x;
 		y_pixel += delta_y;
 		pixelcount--;

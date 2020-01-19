@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/17 18:37:56 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/19 14:32:08 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ static void	write_line(char *line, t_map ***start, int y)
   while (*line)
   {
 	if (y == 0 && curr->data == NULL)
-		curr->data = point_node_new(x++, y, ft_atoi(line));
+		curr->data = point_node_new((float)x++, (float)y, (float)ft_atoi(line));
 	else
-		map_push_right(&curr, map_add_node(point_node_new(x++, y, ft_atoi(line))));
+		map_push_right(&curr, map_add_node(point_node_new((float)x++, (float)y, (float)ft_atoi(line))));
 	while ((ft_isdigit(*line) == 1 || *line == '-') && *line)
 		line++;
 	  while (ft_isdigit(*line) == 0 && *line != '-' && *line)

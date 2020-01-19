@@ -6,15 +6,15 @@
 #    By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/18 17:34:36 by ehalmkro          #+#    #+#              #
-#    Updated: 2020/01/14 15:26:26 by ehalmkro         ###   ########.fr        #
+#    Updated: 2020/01/19 14:57:56 by ehalmkro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = FdF
-SRC = main.c pointlist.c draw_window.c tools.c
+SRC = main.c pointlist.c draw_window.c tools.c color.c
 LIB = Libft/
 MLIB = /usr/local/lib
-MFLAGS = -lmlx -framework OpenGL -framework AppKit
+MFLAGS = -lmlx -I /usr/local/X11/include -L/usr/X11/lib -lX11 -lXext -framework OpenGL -framework Appkit
 FLAGS = -Wall -Wextra -Werror
 OBJECTS = $(SRC:.c=.o)
 
