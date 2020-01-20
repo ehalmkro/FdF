@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 12:55:44 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 13:07:04 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ static int		close_window(void *param)
 
 static int		keypress(int keycode, void *param)
 {
+	t_draw *draw = param;
 	if (keycode == MAIN_PAD_ESC)
 		exit(0);
 	if (keycode == ARROW_UP)
-		exit(0);
+	{
+		draw->padding_y -= 1;
+	}
+
 
 }
 

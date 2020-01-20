@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 12:53:20 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 13:12:24 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,16 +61,17 @@ int				read_input(char *str, t_map **start);
 
 
 t_point			*point_node_new(float x, float y, float z);
-void			*draw_window(t_map **start, t_draw **draw);
+void			*draw_window(t_draw **draw);
 void			find_minmax(t_map **start, t_draw **draw);
 double 			get_percent(int start, int end, int curr);
 
 void			append_map(t_map **start, t_draw **draw);
+void			zoom_matrix(t_map **start, t_draw **draw);
 
 void      		map_push_right(t_map **start, t_map *new);
 t_map			*map_add_node(t_point *data);
 
-void			draw_line(t_point *start, t_point *end, void *mlx, void *win);
+void			draw_line(t_point *start, t_point *end, t_draw *draw);
 void			draw_matrix(t_map *start, t_draw *draw);
 
 int				set_color(t_point *start, t_point *end);

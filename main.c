@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 12:38:37 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 13:22:51 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ int		main(int argc, char **argv)
 	{
 		start = map_add_node(NULL);
 		draw = malloc(sizeof(t_draw));
+		draw->zoom = 25;
+		draw->padding_x = 200;
+		draw->padding_y = 200;
 		if (read_input(argv[1], &start) == -1)
 		{
 			perror("Error: ");
@@ -35,7 +38,14 @@ int		main(int argc, char **argv)
 			perror("Error: ");
 			exit(1);
 		}
-		draw_window(&start, &draw);
+		if ((draw->win = mlx_new_window(draw->mlx, WINDOW_WIDTH, WINDOW_HEIGHT, "FdF 0.01 // ehalmkro // 2020")) == NULL)
+		{
+			perror ("Error: ");
+			exit (1);
+		}
+
+		draw_window(&draw);
+		zoom_matrix (&start, &draw);
 		draw_matrix(start, draw);
 		event_loop(&start, &draw);
 		mlx_loop(draw->mlx);
