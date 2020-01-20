@@ -22,6 +22,11 @@ CMakeFiles/FdF.dir/main.c.o
  /Users/ehalmkro/hive/FdF/fdf.h
  /Users/ehalmkro/hive/FdF/main.c
  /usr/local/include/mlx.h
+CMakeFiles/FdF.dir/matrix.c.o
+ /Users/ehalmkro/hive/FdF/Libft/libft.h
+ /Users/ehalmkro/hive/FdF/fdf.h
+ /Users/ehalmkro/hive/FdF/matrix.c
+ /usr/local/include/mlx.h
 CMakeFiles/FdF.dir/pointlist.c.o
  /Users/ehalmkro/hive/FdF/Libft/libft.h
  /Users/ehalmkro/hive/FdF/fdf.h

@@ -13,29 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/matrix.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/pointlist.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/pointlist.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/tools.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/tools.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FdF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FdF.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events.c" beforeDir="false" afterPath="$PROJECT_DIR$/events.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fdf.h" beforeDir="false" afterPath="$PROJECT_DIR$/fdf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pointlist.c" beforeDir="false" afterPath="$PROJECT_DIR$/pointlist.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/window.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.make" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,20 +42,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="c" value="4743" />
-          <entry key="h" value="528" />
-          <entry key="txt" value="164" />
+          <entry key="c" value="4831" />
+          <entry key="h" value="532" />
+          <entry key="txt" value="222" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="5271" />
-          <entry key="PLAIN_TEXT" value="164" />
+          <entry key="ObjectiveC" value="5363" />
+          <entry key="PLAIN_TEXT" value="222" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -93,11 +72,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/fdf.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="278">
-                  <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#923#948#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="330">
+                  <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -131,7 +107,7 @@
             <entry file="file://$PROJECT_DIR$/color.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="322">
-                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                  <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -145,20 +121,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/line_draw.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="920">
-                  <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+                <state relative-caret-position="322">
+                  <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/events.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="897">
-                  <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+                <state relative-caret-position="759">
+                  <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
                   <folding>
                     <element signature="e#892#908#0" expanded="true" />
                   </folding>
@@ -198,13 +174,14 @@
         <option value="$PROJECT_DIR$/draw_window.c" />
         <option value="$PROJECT_DIR$/read_write.c" />
         <option value="$PROJECT_DIR$/keycodes.h" />
-        <option value="$PROJECT_DIR$/line_draw.c" />
         <option value="$PROJECT_DIR$/pointlist.c" />
         <option value="$PROJECT_DIR$/window.c" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/events.c" />
         <option value="$PROJECT_DIR$/matrix.c" />
         <option value="$PROJECT_DIR$/fdf.h" />
+        <option value="$PROJECT_DIR$/color.c" />
+        <option value="$PROJECT_DIR$/line_draw.c" />
       </list>
     </option>
   </component>
@@ -340,7 +317,7 @@
       <workItem from="1579255499157" duration="2476000" />
       <workItem from="1579261963250" duration="12556000" />
       <workItem from="1579437070351" duration="1589000" />
-      <workItem from="1579532681971" duration="7552000" />
+      <workItem from="1579532681971" duration="7831000" />
     </task>
     <task id="LOCAL-00001" summary="TODO added LOL">
       <created>1576595380251</created>
@@ -461,11 +438,18 @@
       <option name="project" value="LOCAL" />
       <updated>1579520489852</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add rotation matrix functionality">
+      <created>1579541461004</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579541461004</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15797000" />
+    <option name="totallyTimeSpent" value="16076000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,21 +462,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49939394" visible="true" weight="0.15409055" />
       <window_info id="Structure" order="1" sideWeight="0.50060606" side_tool="true" weight="0.18152866" />
       <window_info id="Favorites" order="2" sideWeight="0.50060606" side_tool="true" weight="0.18152866" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293944" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19423929" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19423929" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955688" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893844" weight="0.32919708" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293944" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49893844" weight="0.34859675" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49893844" visible="true" weight="0.34859675" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50106156" side_tool="true" weight="0.32919708" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.329927" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32791728" />
@@ -561,7 +544,8 @@
     <MESSAGE value="refactor draw functions, add exit event" />
     <MESSAGE value="clear stuff up for event function compability" />
     <MESSAGE value="Add event" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add event" />
+    <MESSAGE value="add rotation matrix functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="add rotation matrix functionality" />
   </component>
   <component name="WindowStateProjectService">
     <state x="301" y="0" key="CommitChangelistDialog2" timestamp="1579439018118">
@@ -589,13 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
           <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/color.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -627,23 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/line_draw.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/events.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-          <folding>
-            <element signature="e#892#908#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matrix.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -661,13 +621,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/events.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+          <folding>
+            <element signature="e#892#908#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/color.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/line_draw.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fdf.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-          <folding>
-            <element signature="e#923#948#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
