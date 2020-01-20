@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 13:12:24 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 19:28:53 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,16 @@
 # define WINDOW_HEIGHT 768
 # define INT_MIN -2147483648
 # define INT_MAX 2147483647
+# define DEFAULT_INCREMENT 5
+# define ZOOM_COEFF_POS 1.15
+# define ZOOM_COEFF_NEG 0.9
+# define MATRIX_ROTATION_DEG 0.069
 
 typedef struct				s_point
 {
-	float					x;
-	float					y;
-	float					z;
+	double					x;
+	double					y;
+	double					z;
 	int 					color;
 }							t_point;
 
@@ -43,6 +47,7 @@ typedef struct				s_map
 
 typedef struct				s_draw
 {
+	t_map					*map;
 	float 					zoom;
 	void					*mlx;
 	void					*win;
@@ -66,7 +71,7 @@ void			find_minmax(t_map **start, t_draw **draw);
 double 			get_percent(int start, int end, int curr);
 
 void			append_map(t_map **start, t_draw **draw);
-void			zoom_matrix(t_map **start, t_draw **draw);
+void			zoom_matrix(t_draw **draw);
 
 void      		map_push_right(t_map **start, t_map *new);
 t_map			*map_add_node(t_point *data);
@@ -75,7 +80,12 @@ void			draw_line(t_point *start, t_point *end, t_draw *draw);
 void			draw_matrix(t_map *start, t_draw *draw);
 
 int				set_color(t_point *start, t_point *end);
-void			event_loop(t_map **start, t_draw **draw);
+void			render(t_map **start, t_draw **draw);
+
+int				close_window(void *param);
+int				keypress(int keycode, void *param);
+
+void			rotate_2d(t_draw *draw);
 
 
 #endif

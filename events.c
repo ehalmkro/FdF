@@ -6,46 +6,56 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 13:40:46 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 19:23:19 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include "keycodes.h"
 
-static int		close_window(void *param)
+int		close_window(void *param)
 {
 	(void)param;
 	exit(0);
 }
 
-static int		keypress(int keycode, void *param)
+int		keypress(int keycode, void *param)
 {
 	t_draw *draw = param;
 	if (keycode == MAIN_PAD_ESC)
 		exit(0);
 	if (keycode == ARROW_UP)
+		draw->padding_y -= DEFAULT_INCREMENT;
+	if (keycode == ARROW_LEFT)
+		draw->padding_x -= DEFAULT_INCREMENT;
+	if (keycode == ARROW_DOWN)
+		draw->padding_y += DEFAULT_INCREMENT;
+	if (keycode == ARROW_RIGHT)
+		draw->padding_x += DEFAULT_INCREMENT;
+	if (keycode == NUM_PAD_PLUS)
 	{
-		draw->padding_y -= 5;
-		printf("PADDING Y = %f", draw->padding_y);
+		draw->zoom = ZOOM_COEFF_POS;
+		zoom_matrix(&draw);
 	}
-
+	if (keycode == NUM_PAD_MINUS)
+	{
+		draw->zoom = ZOOM_COEFF_NEG;
+		zoom_matrix(&draw);
+	}
+	if (keycode == NUM_PAD_MINUS)
+	{
+		draw->zoom = ZOOM_COEFF_NEG;
+		zoom_matrix(&draw);
+	}
+	if (keycode == MAIN_PAD_MORE)
+		rotate_2d(draw);
+	render(&(draw->map), &draw);
 	return (0);
-
-
 }
 
-void			event_loop(t_map **start, t_draw **draw)
+void			render(t_map **start, t_draw **draw)
 {
-	t_map *list_curr;
-	t_draw *draw_curr;
-
-	list_curr = *start;
-	draw_curr = *draw;
-
-	mlx_hook(draw_curr->win, 17, 0, &close_window, draw_curr);
-	mlx_hook(draw_curr->win, 3, 0, &keypress, draw_curr);
+	mlx_clear_window ((*draw)->mlx, (*draw)->win);
 	draw_window(draw);
 	draw_matrix(*start, *draw);
-
 }

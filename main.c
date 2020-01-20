@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 13:31:42 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 18:36:18 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	init_window(t_draw **draw)
 		perror ("Error: ");
 		exit (1);
 	}
-	(*draw)->zoom = 25;
+	(*draw)->zoom = 15;
 	(*draw)->padding_x = 200;
 	(*draw)->padding_y = 200;
 }
@@ -50,9 +50,10 @@ int		main(int argc, char **argv)
 
 		init_window(&draw);
 		draw_window(&draw);
-		zoom_matrix (&start, &draw);
-		draw_matrix(start, draw);
-		event_loop(&start, &draw);
+		zoom_matrix (&draw);
+		render(&start, &draw);
+		mlx_hook(draw->win, 17, 0, &close_window, draw);
+		mlx_hook(draw->win, 3, 0, &keypress, draw);
 		mlx_loop(draw->mlx);
 	}
 

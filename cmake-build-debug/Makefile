@@ -1972,6 +1972,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/main.c.s
 .PHONY : main.c.s
 
+matrix.o: matrix.c.o
+
+.PHONY : matrix.o
+
+# target to build an object file
+matrix.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/matrix.c.o
+.PHONY : matrix.c.o
+
+matrix.i: matrix.c.i
+
+.PHONY : matrix.i
+
+# target to preprocess a source file
+matrix.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/matrix.c.i
+.PHONY : matrix.c.i
+
+matrix.s: matrix.c.s
+
+.PHONY : matrix.s
+
+# target to generate assembly for a file
+matrix.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/matrix.c.s
+.PHONY : matrix.c.s
+
 pointlist.o: pointlist.c.o
 
 .PHONY : pointlist.o
@@ -2294,6 +2321,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... matrix.o"
+	@echo "... matrix.i"
+	@echo "... matrix.s"
 	@echo "... pointlist.o"
 	@echo "... pointlist.i"
 	@echo "... pointlist.s"

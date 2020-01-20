@@ -6,11 +6,13 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 13:06:13 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 19:30:08 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+// TODO: IMPLEMENT XIAOLIN WU LINE ALGORITHM
 
 void draw_line(t_point *start, t_point *end, t_draw *draw)
 {

@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FdF.dir/read_write.c.o"
   "CMakeFiles/FdF.dir/line_draw.c.o"
   "CMakeFiles/FdF.dir/events.c.o"
+  "CMakeFiles/FdF.dir/matrix.c.o"
   "FdF.pdb"
   "FdF"
 )

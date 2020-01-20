@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   color.c                                            :+:      :+:    :+:   */
+/*   matrix.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 10:31:22 by ehalmkro         ###   ########.fr       */
+/*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
+/*   Updated: 2020/01/20 19:21:54 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <math.h>
 #include "fdf.h"
 
-// TODO: RGB COLOR GRADIENTS
-
-
-int		set_color(t_point *start, t_point *end)
+void	rotate_2d(t_draw *draw)
 {
-	if (start->z == 0 && end->z == 0)
-		return(0xf58d42);
-	return(0x42bff5);
+	t_map *matrix;
+	double prev_y;
+	double prev_x;
+
+	matrix = draw->map;
+	while (matrix)
+	{
+		prev_y = matrix->data->y;
+		prev_x = matrix->data->x;
+		matrix->data->x = prev_x * cos(MATRIX_ROTATION_DEG) - prev_y * sin(MATRIX_ROTATION_DEG);
+		matrix->data->y = prev_x * sin(MATRIX_ROTATION_DEG) + prev_y * cos(MATRIX_ROTATION_DEG);
+		matrix = matrix->next;
+	}
 }
-
-

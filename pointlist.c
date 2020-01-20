@@ -51,6 +51,7 @@ void	append_map(t_map **start, t_draw **draw)
 		}
 		x = 0;
 	}
+	(*draw)->map = *start;
 }
 
 t_point     *point_node_new(float x, float y, float z)
