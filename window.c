@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 11:24:34 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 11:33:44 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*draw_window(t_map **start, t_draw **draw)
 	t_draw *draw_curr;
 
 	draw_curr = *draw;
-	draw_curr->zoom = 15;
+	draw_curr->zoom = 25;
 	if ((draw_curr->win = mlx_new_window(draw_curr->mlx, WINDOW_WIDTH, WINDOW_HEIGHT, "FdF 0.01 // ehalmkro // 2020")) == NULL)
 	{
 		perror ("Error: ");

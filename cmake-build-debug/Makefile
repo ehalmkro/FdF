@@ -1891,6 +1891,33 @@ color.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/color.c.s
 .PHONY : color.c.s
 
+events.o: events.c.o
+
+.PHONY : events.o
+
+# target to build an object file
+events.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/events.c.o
+.PHONY : events.c.o
+
+events.i: events.c.i
+
+.PHONY : events.i
+
+# target to preprocess a source file
+events.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/events.c.i
+.PHONY : events.c.i
+
+events.s: events.c.s
+
+.PHONY : events.s
+
+# target to generate assembly for a file
+events.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/events.c.s
+.PHONY : events.c.s
+
 line_draw.o: line_draw.c.o
 
 .PHONY : line_draw.o
@@ -2258,6 +2285,9 @@ help:
 	@echo "... color.o"
 	@echo "... color.i"
 	@echo "... color.s"
+	@echo "... events.o"
+	@echo "... events.i"
+	@echo "... events.s"
 	@echo "... line_draw.o"
 	@echo "... line_draw.i"
 	@echo "... line_draw.s"

@@ -6,11 +6,13 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:08:41 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 11:10:32 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 11:22:45 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+//	TODO: FIX INPUT READ: MOVING POINTER CAUSING LEAKS
 
 static void	write_line(char *line, t_map ***start, int y)
 {

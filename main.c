@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 11:28:33 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 12:38:37 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,13 @@ int		main(int argc, char **argv)
 			exit(1);
 		}
 		draw_window(&start, &draw);
-		draw_matrix(start, draw->mlx, draw->win);
+		draw_matrix(start, draw);
+		event_loop(&start, &draw);
 		mlx_loop(draw->mlx);
 	}
 
-	 /*
-	 * FOR LEAK TESTING
-	 *	while(1);
-	*/
+//	LEAK TEST
+//	while(1);
 
 	return (0);
 }

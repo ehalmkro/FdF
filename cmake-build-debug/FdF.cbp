@@ -317,6 +317,12 @@
 		<Unit filename="/Users/ehalmkro/hive/FdF/color.c">
 			<Option target="FdF"/>
 		</Unit>
+		<Unit filename="/Users/ehalmkro/hive/FdF/events.c">
+			<Option target="FdF"/>
+		</Unit>
+		<Unit filename="/Users/ehalmkro/hive/FdF/keycodes.h">
+			<Option target="FdF"/>
+		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/line_draw.c">
 			<Option target="FdF"/>
 		</Unit>

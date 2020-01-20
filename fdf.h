@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 11:09:54 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 12:53:20 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,10 @@ void      		map_push_right(t_map **start, t_map *new);
 t_map			*map_add_node(t_point *data);
 
 void			draw_line(t_point *start, t_point *end, void *mlx, void *win);
-void			draw_matrix(t_map *start, void *mlx, void *win);
+void			draw_matrix(t_map *start, t_draw *draw);
 
 int				set_color(t_point *start, t_point *end);
+void			event_loop(t_map **start, t_draw **draw);
 
 
 #endif

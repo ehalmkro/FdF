@@ -6,6 +6,12 @@ CMakeFiles/FdF.dir/color.c.o
  /Users/ehalmkro/hive/FdF/color.c
  /Users/ehalmkro/hive/FdF/fdf.h
  /usr/local/include/mlx.h
+CMakeFiles/FdF.dir/events.c.o
+ /Users/ehalmkro/hive/FdF/Libft/libft.h
+ /Users/ehalmkro/hive/FdF/events.c
+ /Users/ehalmkro/hive/FdF/fdf.h
+ /Users/ehalmkro/hive/FdF/keycodes.h
+ /usr/local/include/mlx.h
 CMakeFiles/FdF.dir/line_draw.c.o
  /Users/ehalmkro/hive/FdF/Libft/libft.h
  /Users/ehalmkro/hive/FdF/fdf.h
