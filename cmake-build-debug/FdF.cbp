@@ -317,7 +317,7 @@
 		<Unit filename="/Users/ehalmkro/hive/FdF/color.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/draw_window.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/line_draw.c">
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/main.c">
@@ -326,7 +326,13 @@
 		<Unit filename="/Users/ehalmkro/hive/FdF/pointlist.c">
 			<Option target="FdF"/>
 		</Unit>
+		<Unit filename="/Users/ehalmkro/hive/FdF/read_write.c">
+			<Option target="FdF"/>
+		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/tools.c">
+			<Option target="FdF"/>
+		</Unit>
+		<Unit filename="/Users/ehalmkro/hive/FdF/window.c">
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/CMakeLists.txt">

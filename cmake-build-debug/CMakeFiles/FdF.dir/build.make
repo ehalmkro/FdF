@@ -83,18 +83,18 @@ CMakeFiles/FdF.dir/pointlist.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FdF.dir/pointlist.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/pointlist.c -o CMakeFiles/FdF.dir/pointlist.c.s
 
-CMakeFiles/FdF.dir/draw_window.c.o: CMakeFiles/FdF.dir/flags.make
-CMakeFiles/FdF.dir/draw_window.c.o: ../draw_window.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/FdF.dir/draw_window.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/FdF.dir/draw_window.c.o   -c /Users/ehalmkro/hive/FdF/draw_window.c
+CMakeFiles/FdF.dir/window.c.o: CMakeFiles/FdF.dir/flags.make
+CMakeFiles/FdF.dir/window.c.o: ../window.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/FdF.dir/window.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/FdF.dir/window.c.o   -c /Users/ehalmkro/hive/FdF/window.c
 
-CMakeFiles/FdF.dir/draw_window.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FdF.dir/draw_window.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ehalmkro/hive/FdF/draw_window.c > CMakeFiles/FdF.dir/draw_window.c.i
+CMakeFiles/FdF.dir/window.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FdF.dir/window.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ehalmkro/hive/FdF/window.c > CMakeFiles/FdF.dir/window.c.i
 
-CMakeFiles/FdF.dir/draw_window.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FdF.dir/draw_window.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/draw_window.c -o CMakeFiles/FdF.dir/draw_window.c.s
+CMakeFiles/FdF.dir/window.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FdF.dir/window.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/window.c -o CMakeFiles/FdF.dir/window.c.s
 
 CMakeFiles/FdF.dir/tools.c.o: CMakeFiles/FdF.dir/flags.make
 CMakeFiles/FdF.dir/tools.c.o: ../tools.c
@@ -122,27 +122,57 @@ CMakeFiles/FdF.dir/color.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FdF.dir/color.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/color.c -o CMakeFiles/FdF.dir/color.c.s
 
+CMakeFiles/FdF.dir/read_write.c.o: CMakeFiles/FdF.dir/flags.make
+CMakeFiles/FdF.dir/read_write.c.o: ../read_write.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/FdF.dir/read_write.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/FdF.dir/read_write.c.o   -c /Users/ehalmkro/hive/FdF/read_write.c
+
+CMakeFiles/FdF.dir/read_write.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FdF.dir/read_write.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ehalmkro/hive/FdF/read_write.c > CMakeFiles/FdF.dir/read_write.c.i
+
+CMakeFiles/FdF.dir/read_write.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FdF.dir/read_write.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/read_write.c -o CMakeFiles/FdF.dir/read_write.c.s
+
+CMakeFiles/FdF.dir/line_draw.c.o: CMakeFiles/FdF.dir/flags.make
+CMakeFiles/FdF.dir/line_draw.c.o: ../line_draw.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/FdF.dir/line_draw.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/FdF.dir/line_draw.c.o   -c /Users/ehalmkro/hive/FdF/line_draw.c
+
+CMakeFiles/FdF.dir/line_draw.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FdF.dir/line_draw.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ehalmkro/hive/FdF/line_draw.c > CMakeFiles/FdF.dir/line_draw.c.i
+
+CMakeFiles/FdF.dir/line_draw.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FdF.dir/line_draw.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/line_draw.c -o CMakeFiles/FdF.dir/line_draw.c.s
+
 # Object files for target FdF
 FdF_OBJECTS = \
 "CMakeFiles/FdF.dir/main.c.o" \
 "CMakeFiles/FdF.dir/pointlist.c.o" \
-"CMakeFiles/FdF.dir/draw_window.c.o" \
+"CMakeFiles/FdF.dir/window.c.o" \
 "CMakeFiles/FdF.dir/tools.c.o" \
-"CMakeFiles/FdF.dir/color.c.o"
+"CMakeFiles/FdF.dir/color.c.o" \
+"CMakeFiles/FdF.dir/read_write.c.o" \
+"CMakeFiles/FdF.dir/line_draw.c.o"
 
 # External object files for target FdF
 FdF_EXTERNAL_OBJECTS =
 
 FdF: CMakeFiles/FdF.dir/main.c.o
 FdF: CMakeFiles/FdF.dir/pointlist.c.o
-FdF: CMakeFiles/FdF.dir/draw_window.c.o
+FdF: CMakeFiles/FdF.dir/window.c.o
 FdF: CMakeFiles/FdF.dir/tools.c.o
 FdF: CMakeFiles/FdF.dir/color.c.o
+FdF: CMakeFiles/FdF.dir/read_write.c.o
+FdF: CMakeFiles/FdF.dir/line_draw.c.o
 FdF: CMakeFiles/FdF.dir/build.make
 FdF: libft.a
 FdF: /usr/local/lib/libmlx.a
 FdF: CMakeFiles/FdF.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable FdF"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable FdF"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FdF.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

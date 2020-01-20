@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/16 15:29:06 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 10:41:32 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,32 +25,32 @@ double get_percent(int start, int end, int curr)
 	return (place/dist);
 }
 */
-void	init_minmax(t_max *map)
+void	init_minmax(t_draw *map)
 {
-	map->max_x = INT_MIN;
-	map->max_y = INT_MIN;
-	map->max_z = INT_MIN;
-	map->min_z = INT_MAX;
+
 }
 
-t_max	find_minmax(t_map **start)
+void	find_minmax(t_map **start, t_draw **draw)
 {
-	t_map *curr;
-	t_max	map;
+	t_map *list_curr;
+	t_draw *draw_curr;
 
-	init_minmax(&map);
-	curr = *start;
-	while (curr)
+	list_curr = *start;
+	draw_curr = *draw;
+	draw_curr->max_x = INT_MIN;
+	draw_curr->max_y = INT_MIN;
+	draw_curr->max_z = INT_MIN;
+	draw_curr->min_z = INT_MAX;
+	while (list_curr)
 	{
-		if (curr->data->x > map.max_x)
-			map.max_x = curr->data->x;
-		if (curr->data->y > map.max_y)
-			map.max_y = curr->data->y;
-		if (curr->data->z > map.max_z)
-			map.max_z = curr->data->z;
-		if (curr->data->z < map.min_z)
-			map.min_z = curr->data->z;
-		curr = curr->next;
+		if (list_curr->data->x > draw_curr->max_x)
+			draw_curr->max_x = list_curr->data->x;
+		if (list_curr->data->y > draw_curr->max_y)
+			draw_curr->max_y = list_curr->data->y;
+		if (list_curr->data->z > draw_curr->max_z)
+			draw_curr->max_z = list_curr->data->z;
+		if (list_curr->data->z < draw_curr->min_z)
+			draw_curr->min_z = list_curr->data->z;
+		list_curr = list_curr->next;
 	}
-	return (map);
 }

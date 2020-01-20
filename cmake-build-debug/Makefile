@@ -1891,32 +1891,32 @@ color.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/color.c.s
 .PHONY : color.c.s
 
-draw_window.o: draw_window.c.o
+line_draw.o: line_draw.c.o
 
-.PHONY : draw_window.o
+.PHONY : line_draw.o
 
 # target to build an object file
-draw_window.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/draw_window.c.o
-.PHONY : draw_window.c.o
+line_draw.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/line_draw.c.o
+.PHONY : line_draw.c.o
 
-draw_window.i: draw_window.c.i
+line_draw.i: line_draw.c.i
 
-.PHONY : draw_window.i
+.PHONY : line_draw.i
 
 # target to preprocess a source file
-draw_window.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/draw_window.c.i
-.PHONY : draw_window.c.i
+line_draw.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/line_draw.c.i
+.PHONY : line_draw.c.i
 
-draw_window.s: draw_window.c.s
+line_draw.s: line_draw.c.s
 
-.PHONY : draw_window.s
+.PHONY : line_draw.s
 
 # target to generate assembly for a file
-draw_window.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/draw_window.c.s
-.PHONY : draw_window.c.s
+line_draw.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/line_draw.c.s
+.PHONY : line_draw.c.s
 
 main.o: main.c.o
 
@@ -1972,6 +1972,33 @@ pointlist.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/pointlist.c.s
 .PHONY : pointlist.c.s
 
+read_write.o: read_write.c.o
+
+.PHONY : read_write.o
+
+# target to build an object file
+read_write.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_write.c.o
+.PHONY : read_write.c.o
+
+read_write.i: read_write.c.i
+
+.PHONY : read_write.i
+
+# target to preprocess a source file
+read_write.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_write.c.i
+.PHONY : read_write.c.i
+
+read_write.s: read_write.c.s
+
+.PHONY : read_write.s
+
+# target to generate assembly for a file
+read_write.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/read_write.c.s
+.PHONY : read_write.c.s
+
 tools.o: tools.c.o
 
 .PHONY : tools.o
@@ -1998,6 +2025,33 @@ tools.s: tools.c.s
 tools.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/tools.c.s
 .PHONY : tools.c.s
+
+window.o: window.c.o
+
+.PHONY : window.o
+
+# target to build an object file
+window.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/window.c.o
+.PHONY : window.c.o
+
+window.i: window.c.i
+
+.PHONY : window.i
+
+# target to preprocess a source file
+window.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/window.c.i
+.PHONY : window.c.i
+
+window.s: window.c.s
+
+.PHONY : window.s
+
+# target to generate assembly for a file
+window.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/window.c.s
+.PHONY : window.c.s
 
 # Help Target
 help:
@@ -2204,18 +2258,24 @@ help:
 	@echo "... color.o"
 	@echo "... color.i"
 	@echo "... color.s"
-	@echo "... draw_window.o"
-	@echo "... draw_window.i"
-	@echo "... draw_window.s"
+	@echo "... line_draw.o"
+	@echo "... line_draw.i"
+	@echo "... line_draw.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... pointlist.o"
 	@echo "... pointlist.i"
 	@echo "... pointlist.s"
+	@echo "... read_write.o"
+	@echo "... read_write.i"
+	@echo "... read_write.s"
 	@echo "... tools.o"
 	@echo "... tools.i"
 	@echo "... tools.s"
+	@echo "... window.o"
+	@echo "... window.i"
+	@echo "... window.s"
 .PHONY : help
 
 

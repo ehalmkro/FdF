@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   draw_window.c                                      :+:      :+:    :+:   */
+/*   line_draw.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/19 14:53:45 by ehalmkro         ###   ########.fr       */
+/*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
+/*   Updated: 2020/01/20 11:23:11 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@ void draw_line(t_point *start, t_point *end, void *mlx, void *win)
 	double x_pixel;
 	double y_pixel;
 
-/*	set_color(start);
-	set_color(end);
- */
 	delta_x = end->x - start->x;
 	delta_y = end->y - start->y;
 	pixelcount = sqrt((delta_x * delta_x) + (delta_y * delta_y));
@@ -39,31 +36,12 @@ void draw_line(t_point *start, t_point *end, void *mlx, void *win)
 	}
 }
 
-static void	zoom_matrix(t_map ***start, t_draw *draw)
+void	draw_matrix(t_map *start, void *mlx, void *win)
 {
-	t_map *curr;
-
-	curr = **start;
-
-	while (curr)
-	{
-		printf("X: %f Y: %f Z: %f\n", curr->data->x, curr->data->y, curr->data->z);
-		curr->data->x *= draw->zoom;
-		curr->data->y *= draw->zoom;
-		curr->data->z *= draw->zoom;
-		curr = curr->next;
-	}
-}
-
-void	*draw_window(void *mlx, t_map **start)
-{
-	void *win;
-	t_draw draw;
-
-	draw.zoom = 15;
-	if ((win = mlx_new_window(mlx, WINDOW_WIDTH, WINDOW_HEIGHT, "FdF 0.01 // ehalmkro // 2020")) == NULL)
-		perror("Error: ");
-	mlx_clear_window(mlx, win);
-	zoom_matrix (&start, &draw);
-	return (win);
+	if (start->right)
+		draw_line (start->data, start->right->data, mlx, win);
+	if (start->down)
+		draw_line (start->data, start->down->data, mlx, win);
+	if (start->next)
+		draw_matrix (start->next, mlx, win);
 }

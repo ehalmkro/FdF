@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/19 14:32:08 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 11:09:54 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,6 @@ typedef struct				s_point
 	int 					color;
 }							t_point;
 
-typedef struct				s_max
-{
-	float 					max_x;
-	float 					max_y;
-	float 					max_z;
-	float 					min_z;
-}							t_max;
-
 typedef struct				s_map
 {
 	t_point					*data;
@@ -52,17 +44,28 @@ typedef struct				s_map
 typedef struct				s_draw
 {
 	float 					zoom;
+	void					*mlx;
+	void					*win;
+	float 					max_x;
+	float 					max_y;
+	float 					max_z;
+	float 					min_z;
+	float 					padding_x;
+	float 					padding_y;
+	float 					padding_z;
 }							t_draw;
 
+int				read_input(char *str, t_map **start);
 
 
 
 
 t_point			*point_node_new(float x, float y, float z);
-void			*draw_window(void *mlx, t_map **start);
-t_max			find_minmax(t_map **start);
+void			*draw_window(t_map **start, t_draw **draw);
+void			find_minmax(t_map **start, t_draw **draw);
 double 			get_percent(int start, int end, int curr);
 
+void			append_map(t_map **start, t_draw **draw);
 
 void      		map_push_right(t_map **start, t_map *new);
 t_map			*map_add_node(t_point *data);

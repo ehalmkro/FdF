@@ -6,10 +6,10 @@ CMakeFiles/FdF.dir/color.c.o
  /Users/ehalmkro/hive/FdF/color.c
  /Users/ehalmkro/hive/FdF/fdf.h
  /usr/local/include/mlx.h
-CMakeFiles/FdF.dir/draw_window.c.o
+CMakeFiles/FdF.dir/line_draw.c.o
  /Users/ehalmkro/hive/FdF/Libft/libft.h
- /Users/ehalmkro/hive/FdF/draw_window.c
  /Users/ehalmkro/hive/FdF/fdf.h
+ /Users/ehalmkro/hive/FdF/line_draw.c
  /usr/local/include/mlx.h
 CMakeFiles/FdF.dir/main.c.o
  /Users/ehalmkro/hive/FdF/Libft/libft.h
@@ -21,8 +21,18 @@ CMakeFiles/FdF.dir/pointlist.c.o
  /Users/ehalmkro/hive/FdF/fdf.h
  /Users/ehalmkro/hive/FdF/pointlist.c
  /usr/local/include/mlx.h
+CMakeFiles/FdF.dir/read_write.c.o
+ /Users/ehalmkro/hive/FdF/Libft/libft.h
+ /Users/ehalmkro/hive/FdF/fdf.h
+ /Users/ehalmkro/hive/FdF/read_write.c
+ /usr/local/include/mlx.h
 CMakeFiles/FdF.dir/tools.c.o
  /Users/ehalmkro/hive/FdF/Libft/libft.h
  /Users/ehalmkro/hive/FdF/fdf.h
  /Users/ehalmkro/hive/FdF/tools.c
+ /usr/local/include/mlx.h
+CMakeFiles/FdF.dir/window.c.o
+ /Users/ehalmkro/hive/FdF/Libft/libft.h
+ /Users/ehalmkro/hive/FdF/fdf.h
+ /Users/ehalmkro/hive/FdF/window.c
  /usr/local/include/mlx.h
