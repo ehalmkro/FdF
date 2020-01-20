@@ -16,10 +16,6 @@ string.h
 sys/uio.h
 -
 
-/Users/ehalmkro/hive/FdF/color.c
-fdf.h
-/Users/ehalmkro/hive/FdF/fdf.h
-
 /Users/ehalmkro/hive/FdF/fdf.h
 Libft/libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
@@ -32,7 +28,7 @@ mlx.h
 math.h
 -
 
-/Users/ehalmkro/hive/FdF/line_draw.c
+/Users/ehalmkro/hive/FdF/window.c
 fdf.h
 /Users/ehalmkro/hive/FdF/fdf.h
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="FdF" targetName="FdF" />
       <config projectName="FdF" targetName="ft" />
+      <config projectName="FdF" targetName="FdF" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -13,8 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_maps/me.fdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FdF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/window.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,32 +35,36 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="c" value="15" />
+          <entry key="fdf" value="3" />
           <entry key="h" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="ObjectiveC" value="19" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="c" value="4831" />
+          <entry key="c" value="4878" />
+          <entry key="fdf" value="162" />
           <entry key="h" value="532" />
-          <entry key="txt" value="222" />
+          <entry key="txt" value="247" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="5363" />
-          <entry key="PLAIN_TEXT" value="222" />
+          <entry key="ObjectiveC" value="5410" />
+          <entry key="PLAIN_TEXT" value="409" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="2" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -69,11 +76,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.42449743">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fdf.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="330">
-                  <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+                  <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -90,11 +97,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/window.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="966">
-                  <caret line="42" column="102" selection-start-line="42" selection-start-column="102" selection-end-line="42" selection-end-column="102" />
+                  <caret line="42" column="103" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
                 </state>
               </provider>
             </entry>
@@ -115,13 +122,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/keycodes.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-231">
+                <state relative-caret-position="299">
                   <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/line_draw.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="322">
@@ -131,9 +138,32 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test_maps/10-2.fdf">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test_maps/42.fdf">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret selection-end-line="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test_maps/me.fdf">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/events.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="759">
+                <state relative-caret-position="1012">
                   <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
                   <folding>
                     <element signature="e#892#908#0" expanded="true" />
@@ -175,13 +205,14 @@
         <option value="$PROJECT_DIR$/read_write.c" />
         <option value="$PROJECT_DIR$/keycodes.h" />
         <option value="$PROJECT_DIR$/pointlist.c" />
-        <option value="$PROJECT_DIR$/window.c" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/events.c" />
         <option value="$PROJECT_DIR$/matrix.c" />
         <option value="$PROJECT_DIR$/fdf.h" />
         <option value="$PROJECT_DIR$/color.c" />
         <option value="$PROJECT_DIR$/line_draw.c" />
+        <option value="$PROJECT_DIR$/window.c" />
+        <option value="$PROJECT_DIR$/test_maps/me.fdf" />
       </list>
     </option>
   </component>
@@ -203,7 +234,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,10 +241,16 @@
               <item name="FdF" type="b2602c69:ProjectViewProjectNode" />
               <item name="FdF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FdF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FdF" type="462c0819:PsiDirectoryNode" />
+              <item name="test_maps" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -246,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.42">
+  <component name="RunManager" selected="Application.me">
     <configuration name="100-6" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="test_maps/100-6.fdf" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FdF" TARGET_NAME="FdF" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FdF" RUN_TARGET_NAME="FdF">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -267,6 +303,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="me" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="test_maps/me.fdf" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FdF" TARGET_NAME="FdF" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FdF" RUN_TARGET_NAME="FdF">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
       <makefile filename="$PROJECT_DIR$/Makefile" target="FdF" workingDirectory="" arguments="">
         <envs />
@@ -274,11 +315,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Makefile.Makefile" />
       <item itemvalue="Application.100-6" />
       <item itemvalue="Application.42" />
+      <item itemvalue="Application.me" />
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.ft" />
+      <item itemvalue="Makefile.Makefile" />
     </list>
   </component>
   <component name="ServiceViewManager">
@@ -318,6 +360,7 @@
       <workItem from="1579261963250" duration="12556000" />
       <workItem from="1579437070351" duration="1589000" />
       <workItem from="1579532681971" duration="7831000" />
+      <workItem from="1579541586448" duration="647000" />
     </task>
     <task id="LOCAL-00001" summary="TODO added LOL">
       <created>1576595380251</created>
@@ -445,11 +488,18 @@
       <option name="project" value="LOCAL" />
       <updated>1579541461004</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix 42 map to original">
+      <created>1579541614212</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1579541614212</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16076000" />
+    <option name="totallyTimeSpent" value="16723000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,20 +512,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49939394" visible="true" weight="0.15409055" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49939394" visible="true" weight="0.15528198" />
       <window_info id="Structure" order="1" sideWeight="0.50060606" side_tool="true" weight="0.18152866" />
       <window_info id="Favorites" order="2" sideWeight="0.50060606" side_tool="true" weight="0.18152866" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293944" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19423929" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19423929" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955688" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893844" weight="0.32919708" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293944" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49893844" visible="true" weight="0.34859675" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49893844" weight="0.34859675" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50106156" side_tool="true" weight="0.32919708" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.329927" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32791728" />
@@ -545,7 +596,8 @@
     <MESSAGE value="clear stuff up for event function compability" />
     <MESSAGE value="Add event" />
     <MESSAGE value="add rotation matrix functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="add rotation matrix functionality" />
+    <MESSAGE value="fix 42 map to original" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 42 map to original" />
   </component>
   <component name="WindowStateProjectService">
     <state x="301" y="0" key="CommitChangelistDialog2" timestamp="1579439018118">
@@ -597,10 +649,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keycodes.h">
+    <entry file="file://$PROJECT_DIR$/fdf.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="330">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -614,27 +666,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/window.c">
+    <entry file="file://$PROJECT_DIR$/color.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="42" column="102" selection-start-line="42" selection-start-column="102" selection-end-line="42" selection-end-column="102" />
+        <state relative-caret-position="322">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keycodes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/events.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
+        <state relative-caret-position="1012">
           <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
           <folding>
             <element signature="e#892#908#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/color.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -645,10 +697,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdf.h">
+    <entry file="file://$PROJECT_DIR$/test_maps/10-2.fdf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_maps/42.fdf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state>
+          <caret selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/window.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="42" column="103" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_maps/me.fdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
         </state>
       </provider>
     </entry>

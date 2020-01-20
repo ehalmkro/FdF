@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 18:40:29 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 19:44:35 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	*draw_window(t_draw **draw)
 	mlx_string_put(draw_curr->mlx, draw_curr->win, 20, 20, 0x00FF00, "X max");
 	mlx_string_put(draw_curr->mlx, draw_curr->win, 20, 40, 0x00FF00, "Y max");
 	mlx_string_put(draw_curr->mlx, draw_curr->win, 20, 60, 0x00FF00, "Z max");
-	mlx_string_put(draw_curr->mlx, draw_curr->win, 100, 20, 0x00FF00, ft_itoa((int)draw_curr->max_x));
-	mlx_string_put(draw_curr->mlx, draw_curr->win, 100, 40, 0x00FF00, ft_itoa((int)draw_curr->max_y));
-	mlx_string_put(draw_curr->mlx, draw_curr->win, 100, 60, 0x00FF00, ft_itoa((int)draw_curr->max_z));
+	mlx_string_put(draw_curr->mlx, draw_curr->win, 100, 20, 0x00FF00, ft_itoa((int)draw_curr->max_x + 1));
+	mlx_string_put(draw_curr->mlx, draw_curr->win, 100, 40, 0x00FF00, ft_itoa((int)draw_curr->max_y + 1));
+	mlx_string_put(draw_curr->mlx, draw_curr->win, 100, 60, 0x00FF00, ft_itoa((int)draw_curr->max_z + 1));
 }
