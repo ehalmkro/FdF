@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 13:07:04 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/20 13:40:46 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,11 @@ static int		keypress(int keycode, void *param)
 		exit(0);
 	if (keycode == ARROW_UP)
 	{
-		draw->padding_y -= 1;
+		draw->padding_y -= 5;
+		printf("PADDING Y = %f", draw->padding_y);
 	}
+
+	return (0);
 
 
 }
@@ -42,4 +45,7 @@ void			event_loop(t_map **start, t_draw **draw)
 
 	mlx_hook(draw_curr->win, 17, 0, &close_window, draw_curr);
 	mlx_hook(draw_curr->win, 3, 0, &keypress, draw_curr);
+	draw_window(draw);
+	draw_matrix(*start, *draw);
+
 }
