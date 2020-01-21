@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 18:36:18 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/21 16:11:52 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		main(int argc, char **argv)
 			perror("Error: ");
 			exit(1);
 		}
-		find_minmax(&start, &draw);
+		scene_find_minmax (&start, &draw);
 		append_map(&start, &draw);
 		if ((draw->mlx = mlx_init()) == NULL)
 		{
@@ -50,7 +50,8 @@ int		main(int argc, char **argv)
 
 		init_window(&draw);
 		draw_window(&draw);
-		zoom_matrix (&draw);
+		zoom_matrix(&draw);
+		move_matrix_pos(&draw);
 		render(&start, &draw);
 		mlx_hook(draw->win, 17, 0, &close_window, draw);
 		mlx_hook(draw->win, 3, 0, &keypress, draw);

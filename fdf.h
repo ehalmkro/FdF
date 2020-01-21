@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 19:28:53 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/21 16:40:00 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,13 @@
 # define DEFAULT_INCREMENT 5
 # define ZOOM_COEFF_POS 1.15
 # define ZOOM_COEFF_NEG 0.9
-# define MATRIX_ROTATION_DEG 0.069
+# define MATRIX_ROTATION_DEG 0.005
+
+
+#define ipart_(X) ((int)(X))
+#define round_(X) ((int)(((double)(X))+0.5))
+#define fpart_(X) (((double)(X))-(double)ipart_(X))
+#define rfpart_(X) (1.0-fpart_(X))
 
 typedef struct				s_point
 {
@@ -67,7 +73,7 @@ int				read_input(char *str, t_map **start);
 
 t_point			*point_node_new(float x, float y, float z);
 void			*draw_window(t_draw **draw);
-void			find_minmax(t_map **start, t_draw **draw);
+void			scene_find_minmax (t_map **start, t_draw **draw);
 double 			get_percent(int start, int end, int curr);
 
 void			append_map(t_map **start, t_draw **draw);
@@ -86,6 +92,14 @@ int				close_window(void *param);
 int				keypress(int keycode, void *param);
 
 void			rotate_2d(t_draw *draw);
+
+int 			*get_gradient(int start_color, int end_color);
+int 			get_color_rgb(int r, int g, int b);
+
+int 			*split_color(int color);
+int 			decrease_brightness(int color, float brightness);
+
+void			move_matrix_pos(t_draw **draw);
 
 
 #endif

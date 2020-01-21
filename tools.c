@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/20 10:41:32 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/21 15:16:01 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,19 @@ double get_percent(int start, int end, int curr)
 	return (place/dist);
 }
 */
-void	init_minmax(t_draw *map)
-{
 
+int 	*split_color(int color)
+{
+	int *ret;
+	ret = malloc(sizeof(int*) * 3);
+	ret[0] = color & 255;
+	color >>= 8;
+	ret[1] = color & 255;
+	ret[2] = color >> 8;
+	return (ret);
 }
 
-void	find_minmax(t_map **start, t_draw **draw)
+void	scene_find_minmax (t_map **start, t_draw **draw)
 {
 	t_map *list_curr;
 	t_draw *draw_curr;
