@@ -26,8 +26,8 @@ void	append_map(t_map **start, t_draw **draw)
 {
 	t_map *tapehead;
 	t_map *forward;
-	float y;
-	float x;
+	double y;
+	double x;
 	tapehead = *start;
 
 	x = 0;

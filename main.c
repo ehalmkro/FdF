@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/21 16:11:52 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/22 19:13:12 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	init_window(t_draw **draw)
 	(*draw)->zoom = 15;
 	(*draw)->padding_x = 200;
 	(*draw)->padding_y = 200;
+	(*draw)->window_text_color = 0xFFFFFF;
 }
 
 int		main(int argc, char **argv)
@@ -51,7 +52,10 @@ int		main(int argc, char **argv)
 		init_window(&draw);
 		draw_window(&draw);
 		zoom_matrix(&draw);
-		move_matrix_pos(&draw);
+		center_map(&draw);
+		void (*draw_ptr)(t_point start, t_point end, struct s_draw *draw);
+		draw_ptr = &draw_line_bresenham;
+		draw->draw_algorithm = draw_ptr;
 		render(&start, &draw);
 		mlx_hook(draw->win, 17, 0, &close_window, draw);
 		mlx_hook(draw->win, 3, 0, &keypress, draw);

@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/21 16:19:13 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/22 19:57:13 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		keypress(int keycode, void *param)
 	t_draw *draw = param;
 	if (keycode == MAIN_PAD_ESC)
 		exit(0);
-	if (keycode > 123 && keycode < 127)
+	if (keycode >= 123 && keycode < 127)
 	{
 		if (keycode == ARROW_UP)
 			draw->padding_y = -1;
@@ -40,16 +40,25 @@ int		keypress(int keycode, void *param)
 	{
 		draw->zoom = ZOOM_COEFF_POS;
 		zoom_matrix(&draw);
+		center_map (&draw);
+	}
+	if (keycode == NUM_PAD_MINUS)
+	{
+		draw->zoom = ZOOM_COEFF_NEG;
+		zoom_matrix(&draw);
+		center_map (&draw);
 	}
 	if (keycode == NUM_PAD_MINUS)
 	{
 		draw->zoom = ZOOM_COEFF_NEG;
 		zoom_matrix(&draw);
 	}
-	if (keycode == NUM_PAD_MINUS)
+	if (keycode == MAIN_PAD_9)
 	{
-		draw->zoom = ZOOM_COEFF_NEG;
-		zoom_matrix(&draw);
+		if (draw->draw_algorithm != &draw_line_gupta_sproull)
+			draw->draw_algorithm = &draw_line_gupta_sproull;
+		else
+			draw->draw_algorithm = &draw_line_bresenham;
 	}
 	if (keycode == MAIN_PAD_MORE)
 		rotate_2d(draw);
