@@ -6,116 +6,195 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/21 16:38:46 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/22 20:02:27 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include <math.h>
 
-// TODO: IMPLEMENT XIAOLIN WU LINE ALGORITHM
-
-/*
-void	draw_line(t_point *start, t_point *end, t_draw *draw)
+void	put_pixel(double x, double y, double brightness, t_draw *draw)
 {
-	double delta_x;
-	double delta_y;
-	double x0;
-	double x1;
-	double y0;
-	double y1;
-	double gradient;
-	int steep;
-	float intery;
+	mlx_pixel_put(draw->mlx, draw->win, (int)x, (int)y, decrease_brightness(0xFFFF00, brightness));
+}
 
-	x0 = start->x;
-	x1 = end->x;
-	y0 = start->y;
-	y1 = end->y;
-	steep = abs(y1 - y0) > abs(x1 - x0);
-	if (steep)
-	{
-		ft_swap(&x0, &y0);
-		ft_swap(&x1, &y1);
-	}
-	if (x0 > x1)
-	{
-		ft_swap(&x0, &x1);
-		ft_swap(&y0, &y1);
+// TODO: IMPLEMENT XIAOLIN WU LINE ALGORITHM
+// swaps two numbers
+void swap(int* a , int*b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
 
-	}
-	delta_x = (x1 - x0);
-	delta_y = (y1 - y0);
-	gradient = delta_y/delta_x;
-	if (delta_x == 0.0)
-		gradient = 1;
-	double xend = round(x0);
-	double yend = y0 + gradient * (xend - x0);
-	double xgap = rfpart_(x0 + 0.5);
-	double xplx1 = xend;
-	double yplx1 = ipart_(yend);
-	if (steep)
-	{
-		mlx_pixel_put (draw->mlx, draw->win, yplx1, xplx1, decrease_brightness(draw->map->data->color,\
-		rfpart_(yend) * xgap));
-		mlx_pixel_put (draw->mlx, draw->win,yplx1 + 1, xplx1, decrease_brightness(draw->map->data->color,\
-		fpart_(yend) * xgap));
-	}
-	else
-	{
-		mlx_pixel_put (draw->mlx, draw->win, xplx1, yplx1, decrease_brightness (draw->map->data->color,\
-		rfpart_(yend) * xgap));
-		mlx_pixel_put (draw->mlx, draw->win, xplx1, yplx1 + 1, decrease_brightness (draw->map->data->color,\
-		fpart_(yend) * xgap));
-	}
-
-	intery = yend + gradient;
-	xend = round_(x1);
-	yend = y1 + gradient * (xend - x1);
-	xgap = fpart_(x1 + 0.5);
-	double xplx2 = xend;
-	double yplx2 = ipart_(yend);
-	if (steep)
-	{
-		mlx_pixel_put (draw->mlx, draw->win, yplx2, xplx2, decrease_brightness (draw->map->data->color,\
-		rfpart_(yend) * xgap));
-		mlx_pixel_put (draw->mlx, draw->win, yplx2 + 1, xplx2, decrease_brightness (draw->map->data->color,\
-		rfpart_(yend) * xgap));
-	}
-	else
-	{
-		mlx_pixel_put (draw->mlx, draw->win, xplx2, yplx2, decrease_brightness (draw->map->data->color,\
-		rfpart_(yend) * xgap));
-		mlx_pixel_put (draw->mlx, draw->win, xplx2, yplx2 + 1, decrease_brightness (draw->map->data->color,\
-		rfpart_(yend) * xgap));
-	}
+/*static double	frc_part(double nbr)
+{
+	return (ceil(nbr) - nbr);
+}
 
 
-	// MAIN LOOP
-	int x = xplx1;
-	if (steep)
+static void		draw_wu_slope(double x, double y, t_draw *draw)
+{
+	if (draw->slope >= 0)
 	{
-		while (x <= xplx2)
+		put_pixel(floor(x), y, 1 - frc_part(y), draw);
+		put_pixel(floor(x) + 1, y, frc_part (y), draw);
+	}
+	else if (draw->slope < 0)
+	{
+		put_pixel(floor(x), y, 1 - frc_part(y), draw);
+		put_pixel(floor(x) - 1, y, frc_part(y), draw);
+	}
+
+}
+
+static void		draw_wu_dots(t_point start, t_point end, t_draw *draw)
+{
+	while (start.x <= end.x)
+	{
+		if (draw->steep)
+			draw_wu_slope(start.y, start.x, draw);
+		else
+			draw_wu_slope(start.x, start.y, draw);
+		start.y += draw->slope;
+		start.x++;
+	}
+
+}
+
+void	draw_line_wu(t_point start, t_point end, t_draw *draw)
+{
+	double	dx;
+	double	dy;
+
+	draw->steep = fabs(end.y - start.y) > fabs(end.x - start.x) ? 1 : 0;
+	if (draw->steep)
+	{
+		swap(&start.x, &start.y);
+		swap(&end.x, &end.y);
+	}
+	if (end.x < start.x)
+	{
+		swap(&start.x, &end.x);
+		swap(&start.y, &end.y);
+	}
+	dx = end.x - start.x;
+	dy = end.y - start.y;
+	draw->slope = dx == 0 ? 1 : dy / dx;
+	draw_wu_dots(start, end, draw);
+
+}*/
+
+void	draw_line_gupta_sproull(t_point start, t_point end, t_draw *draw)
+{
+	double dx;
+	double dy;
+
+	dx = end.x - start.x;
+	dy = end.y - start.y;
+	int d = 2 * dy - dx;
+	int incr_e = 2*dy;
+	int incr_ne = 2*(dy-dx);
+	int two_v_dx = 0;
+	double invdenom = 1.0/(2.0*sqrt(dx*dx+dy*dy));
+	double two_dx_invdenom = 2.0*dx*invdenom;
+	double x = start.x;
+	double y = start.y;
+	put_pixel(x, y, 1.0, draw);
+	put_pixel(x, y+1, two_dx_invdenom, draw);
+	put_pixel(x, y-1, two_dx_invdenom, draw);
+	while (x < end.x)
+	{
+		if (d < 0)
 		{
-			mlx_pixel_put(draw->mlx, draw->win, ipart_(intery), x, rfpart_(intery));
-			mlx_pixel_put(draw->mlx, draw->win, ipart_(intery) + 1, x, rfpart_(intery));
+			two_v_dx = d + dx;
+			d += incr_e;
 			x++;
 		}
-	}
-	else
-	{
-		while (x <= xplx2)
+		else
 		{
-			mlx_pixel_put(draw->mlx, draw->win, ipart_(intery), x, rfpart_(intery));
-			mlx_pixel_put(draw->mlx, draw->win, ipart_(intery) + 1, x, rfpart_(intery));
+			two_v_dx = d - dx;
+			d += incr_ne;
 			x++;
+			y++;
 		}
+		put_pixel(x, y, two_v_dx * invdenom, draw);
+		put_pixel(x, y + 1, two_dx_invdenom - two_v_dx * invdenom, draw);
+		put_pixel(x, y - 1, two_dx_invdenom + two_v_dx * invdenom, draw);
 	}
 }
-*/
+
+
+/*
+void	draw_line_wu(t_point *start, t_point *end, t_draw *draw)
+{
+	double x0 = start->x;
+	double x1 = end->x;
+	double y0 = start->y;
+	double y1 = end->y;
+	int x_dir;
+	if (y0 > y1)
+		ft_swap(&y0, &y1);
+	mlx_pixel_put(draw->mlx, draw->win, (int)x0, (int)y0, set_color(start, end));
+	double delta_x = x1 - x0;
+	if (delta_x >= 0.0)
+		x_dir = 1;
+	else
+	{
+		x_dir = -1;
+		delta_x *= -1;
+	}
+	double delta_y = y1 - y0;
+	if (delta_y == 0)
+	{
+		while (delta_x-- > 0)
+		{
+			x0 += x_dir;
+			mlx_pixel_put(draw->mlx, draw->win, (int)x0, (int)y0, set_color(start, end));
+		}
+		return;
+	}
+	if (delta_x == 0)
+	{
+		while (delta_y-- > 0)
+		{
+			y0++;
+			mlx_pixel_put(draw->mlx, draw->win, (int)x0, (int)y0, set_color(start, end));
+		}
+		return;
+	}
+	if (delta_x == delta_y)
+	{
+		while (delta_y-- > 0)
+		{
+			x0 += x_dir;
+			y0++;
+			mlx_pixel_put(draw->mlx, draw->win, (int)x0, (int)y0, set_color(start, end));
+		}
+		return;
+	}
+	double erroracc = 0;
+	double erroracc_tmp = 0;
+	double erroradj = 0;
+	double weighting = 0;
+	if (delta_y > delta_x)
+	{
+		erroradj = (int)delta_x << 16 / (int)delta_y;
+		while (--delta_y)
+		{
+			erroracc_tmp = erroracc;
+			erroracc += erroradj;
+			if (erroracc  <= erroracc_tmp)
+				x0 += x_dir;
+			y0++;
+			weightin
+		}
+	}
+
+}*/
 
 //		BRESENHAM LINE ALGORITHM
-void draw_line(t_point *start, t_point *end, t_draw *draw)
+void draw_line_bresenham(t_point start, t_point end, t_draw *draw)
 {
 	double delta_x;
 	double delta_y;
@@ -123,17 +202,17 @@ void draw_line(t_point *start, t_point *end, t_draw *draw)
 	double x_pixel;
 	double y_pixel;
 
-	delta_x = end->x - start->x;
-	delta_y = end->y - start->y;
+	delta_x = end.x - start.x;
+	delta_y = end.y - start.y;
 	pixelcount = sqrt((delta_x * delta_x) + (delta_y * delta_y));
-	x_pixel = start->x;
-	y_pixel = start->y;
+	x_pixel = start.x;
+	y_pixel = start.y;
 	delta_x /= pixelcount;
 	delta_y /= pixelcount;
 	while (pixelcount > 0)
 	{
 		mlx_pixel_put(draw->mlx, draw->win, (int)(x_pixel), (int)(y_pixel),\
-		set_color(start, end));
+		set_color(&start, &end));
 		x_pixel += delta_x;
 		y_pixel += delta_y;
 		pixelcount--;
@@ -141,16 +220,16 @@ void draw_line(t_point *start, t_point *end, t_draw *draw)
 }
 
 
-
 void	draw_matrix(t_map *start, t_draw *draw)
 {
 	if (start->right)
-		draw_line (start->data, start->right->data, draw);
+		draw->draw_algorithm((*start->data), (*start->right->data), draw);
 	if (start->down)
-		draw_line (start->data, start->down->data, draw);
+		draw->draw_algorithm((*start->data), (*start->down->data), draw);
 	if (start->next)
-		draw_matrix (start->next, draw);
-	if (!(start->next) && !(start->down) && !(start->right))
+		draw_matrix(start->next, draw);
+	draw->draw_algorithm((*start->data), (*start->data), draw);
+	/*if (!(start->next) && !(start->down) && !(start->right))
 		mlx_pixel_put(draw->mlx, draw->win, (int)(start->data->x), (int)\
-		(start->data->y), set_color(start->data, start->data));
+		(start->data->y),set_color(start->data, start->data));*/
 }

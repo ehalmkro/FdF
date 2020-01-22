@@ -26,16 +26,7 @@ double get_percent(int start, int end, int curr)
 }
 */
 
-int 	*split_color(int color)
-{
-	int *ret;
-	ret = malloc(sizeof(int*) * 3);
-	ret[0] = color & 255;
-	color >>= 8;
-	ret[1] = color & 255;
-	ret[2] = color >> 8;
-	return (ret);
-}
+
 
 void	scene_find_minmax (t_map **start, t_draw **draw)
 {

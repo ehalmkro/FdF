@@ -6,12 +6,29 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/21 16:33:03 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/21 16:53:34 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <math.h>
 #include "fdf.h"
+
+void	center_map(t_draw **draw)
+{
+	t_map *map;
+	double increment_x;
+	double increment_y;
+
+	map = (*draw)->map;
+	increment_x = WINDOW_WIDTH/3 - map->data->x;
+	increment_y = WINDOW_HEIGHT/3 - map->data->y;
+	while (map)
+	{
+		map->data->x += increment_x;
+		map->data->y += increment_y;
+		map = map->next;
+	}
+}
 
 void	move_matrix_pos(t_draw **draw)
 {

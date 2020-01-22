@@ -6,23 +6,32 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/21 16:01:04 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/22 18:24:33 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include <math.h>
 
-int 	decrease_brightness(int color, float brightness)
+int 	*split_color(int color)
 {
-	printf("FLOAT VALUE %f\n", brightness);
+	int *ret;
+	ret = malloc(sizeof(int*) * 3);
+	ret[0] = color & 255;
+	color >>= 8;
+	ret[1] = color & 255;
+	ret[2] = color >> 8;
+	return (ret);
+}
+
+int 	decrease_brightness(int color, double brightness)
+{
 	int *rgb;
 	rgb = split_color(color);
 	rgb[0] *= brightness;
 	rgb[1] *= brightness;
 	rgb[2] *= brightness;
-	printf("then r %i g %i b%i\n", rgb[0], rgb[1], rgb[2]);
-	return((0 << 24) | (rgb[0] << 16) | (rgb[1] << 8) | rgb[2]);
+	return((0 << 24) + (rgb[0] << 16) + (rgb[1] << 8) + rgb[2]);
 }
 
 // TODO: RGB COLOR GRADIENTS
