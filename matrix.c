@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/23 14:59:23 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/23 15:23:29 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ void	modify_z(t_draw **draw)
 				map->data->z -= Z_INCREASE;
 		}
 		map = map->next;
-		printf("hello");
 	}
 	(*draw)->padding_z = 0;
+
 }
 
 void	center_map(t_draw **draw)
@@ -121,4 +121,9 @@ void transform_isometric(t_draw **draw)
 		map->data->y = -(map->data->z) + (previous_x + previous_y) * sin (0.523599);
 		map = map->next;
 	}
+}
+
+void	matrix_transformations(void (*transformation)(t_point start, t_point end, t_draw *draw)
+{
+
 }

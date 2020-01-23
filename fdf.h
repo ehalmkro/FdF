@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/23 14:40:48 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/23 14:57:32 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,6 @@ void			center_map(t_draw **draw);
 
 void 			transform_isometric(t_draw **draw);
 void			modify_z(t_draw **draw);
+void			matrix_transformations(void (*transformation)(t_point start, t_point end, t_draw *draw);
 
 #endif
