@@ -28,11 +28,11 @@ mlx.h
 math.h
 -
 
-/Users/ehalmkro/hive/FdF/line_draw.c
-fdf.h
-/Users/ehalmkro/hive/FdF/fdf.h
+/Users/ehalmkro/hive/FdF/matrix.c
 math.h
 -
+fdf.h
+/Users/ehalmkro/hive/FdF/fdf.h
 
 /usr/local/include/mlx.h
 
