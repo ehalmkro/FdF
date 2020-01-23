@@ -6,12 +6,35 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/21 16:53:34 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/23 14:59:23 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <math.h>
 #include "fdf.h"
+
+void	modify_z(t_draw **draw)
+{
+	t_map *map;
+
+	map = (*draw)->map;
+	while (map)
+	{
+		if ((*draw)->padding_z == 1)
+		{
+			if (map->data->z != 0)
+				map->data->z += Z_INCREASE;
+		}
+		if ((*draw)->padding_z == -1)
+		{
+			if (map->data->z != 0)
+				map->data->z -= Z_INCREASE;
+		}
+		map = map->next;
+		printf("hello");
+	}
+	(*draw)->padding_z = 0;
+}
 
 void	center_map(t_draw **draw)
 {
@@ -60,12 +83,12 @@ void	zoom_matrix(t_draw **draw)
 		printf ("X: %f Y: %f Z: %f\n", map->data->x, map->data->y, map->data->z);
 		map->data->x *= (*draw)->zoom;
 		map->data->y *= (*draw)->zoom;
-//		map->data->z *= (*draw)->zoom;
+		map->data->z *= (*draw)->zoom;
 		map = map->next;
 	}
 }
 
-void	rotate_2d(t_draw *draw)
+void	rotate_z(t_draw *draw)
 {
 	t_map *matrix;
 	double prev_y;
@@ -79,5 +102,23 @@ void	rotate_2d(t_draw *draw)
 		matrix->data->x = prev_x * cos(MATRIX_ROTATION_DEG) - prev_y * sin(MATRIX_ROTATION_DEG);
 		matrix->data->y = prev_x * sin(MATRIX_ROTATION_DEG) + prev_y * cos(MATRIX_ROTATION_DEG);
 		matrix = matrix->next;
+	}
+}
+
+
+void transform_isometric(t_draw **draw)
+{
+	t_map *map;
+	double previous_x;
+	double previous_y;
+
+	map = (*draw)->map;
+	while (map)
+	{
+		previous_x = map->data->x;
+		previous_y = map->data->y;
+		map->data->x = (previous_x - previous_y) * cos (0.523599);
+		map->data->y = -(map->data->z) + (previous_x + previous_y) * sin (0.523599);
+		map = map->next;
 	}
 }

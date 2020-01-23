@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/22 20:02:27 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/23 14:44:13 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	put_pixel(double x, double y, double brightness, t_draw *draw)
 {
-	mlx_pixel_put(draw->mlx, draw->win, (int)x, (int)y, decrease_brightness(0xFFFF00, brightness));
+	mlx_pixel_put(draw->mlx, draw->win, (int)x, (int)y, decrease_brightness(0xFFFFFF, brightness));
 }
 
 // TODO: IMPLEMENT XIAOLIN WU LINE ALGORITHM
@@ -27,7 +27,7 @@ void swap(int* a , int*b)
 	*b = temp;
 }
 
-/*static double	frc_part(double nbr)
+static double	frc_part(double nbr)
 {
 	return (ceil(nbr) - nbr);
 }
@@ -83,7 +83,7 @@ void	draw_line_wu(t_point start, t_point end, t_draw *draw)
 	draw->slope = dx == 0 ? 1 : dy / dx;
 	draw_wu_dots(start, end, draw);
 
-}*/
+}
 
 void	draw_line_gupta_sproull(t_point start, t_point end, t_draw *draw)
 {
@@ -123,7 +123,6 @@ void	draw_line_gupta_sproull(t_point start, t_point end, t_draw *draw)
 		put_pixel(x, y - 1, two_dx_invdenom + two_v_dx * invdenom, draw);
 	}
 }
-
 
 /*
 void	draw_line_wu(t_point *start, t_point *end, t_draw *draw)
@@ -223,9 +222,9 @@ void draw_line_bresenham(t_point start, t_point end, t_draw *draw)
 void	draw_matrix(t_map *start, t_draw *draw)
 {
 	if (start->right)
-		draw->draw_algorithm((*start->data), (*start->right->data), draw);
+		draw->draw_algorithm ((*start->data), (*start->right->data), draw);
 	if (start->down)
-		draw->draw_algorithm((*start->data), (*start->down->data), draw);
+		draw->draw_algorithm ((*start->data), (*start->down->data), draw);
 	if (start->next)
 		draw_matrix(start->next, draw);
 	draw->draw_algorithm((*start->data), (*start->data), draw);

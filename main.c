@@ -41,7 +41,7 @@ int		main(int argc, char **argv)
 			perror("Error: ");
 			exit(1);
 		}
-		scene_find_minmax (&start, &draw);
+		scene_find_minmax(&start, &draw);
 		append_map(&start, &draw);
 		if ((draw->mlx = mlx_init()) == NULL)
 		{

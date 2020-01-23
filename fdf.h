@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/22 19:31:57 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/23 14:40:48 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # define ZOOM_COEFF_POS 1.15
 # define ZOOM_COEFF_NEG 0.9
 # define MATRIX_ROTATION_DEG 0.05
+# define Z_INCREASE	5
 # define YELLOW 0xFFFF00
 # define BLUE 0x0000FF
 # define GREEN 0x00FF00
@@ -102,7 +103,7 @@ void			render(t_map **start, t_draw **draw);
 int				close_window(void *param);
 int				keypress(int keycode, void *param);
 
-void			rotate_2d(t_draw *draw);
+void			rotate_z(t_draw *draw);
 
 int 			*get_gradient(int start_color, int end_color);
 int 			get_color_rgb(int r, int g, int b);
@@ -112,5 +113,8 @@ int 			decrease_brightness(int color, double brightness);
 
 void			move_matrix_pos(t_draw **draw);
 void			center_map(t_draw **draw);
+
+void 			transform_isometric(t_draw **draw);
+void			modify_z(t_draw **draw);
 
 #endif
