@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/24 14:07:51 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/24 19:02:20 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@
 # define BLUE 0x0000FF
 # define GREEN 0x00FF00
 # define MAGENTA 0xFF00FF
-# define DEFAULT_COLOR BLUE
-# define HEIGHT_COLOR BLUE
+# define DEFAULT_COLOR GREEN
+# define HEIGHT_COLOR MAGENTA
 
 #define ipart_(X) ((int)(X))
 #define round_(X) ((int)(((double)(X))+0.5))
@@ -57,7 +57,7 @@ typedef struct				s_map
 	struct s_map			*next;
 }							t_map;
 
-typedef struct				s_draw
+typedef struct				s_scene
 {
 	t_map					*map;
 	float 					zoom;
@@ -71,7 +71,7 @@ typedef struct				s_draw
 	float 					padding_y;
 	float 					padding_z;
 	int 					window_text_color;
-	void					(*draw_algorithm)(t_point start, t_point end, struct s_draw *draw);
+	void					(*draw_algorithm)(t_point start, t_point end, struct s_scene *draw);
 	double 					slope;
 	int 					steep;
 }							t_scene;
@@ -96,6 +96,7 @@ t_map			*map_add_node(t_point *data);
 void			draw_line_wu(t_point start, t_point end, t_scene *draw);
 void 			draw_line_bresenham(t_point start, t_point end, t_scene *draw);
 void			draw_line_gupta_sproull(t_point start, t_point end, t_scene *draw);
+void 			draw_line_wu_alternate(t_point start, t_point end, t_scene *draw);
 
 void			draw_matrix(t_map *start, t_scene *draw);
 
@@ -117,9 +118,16 @@ int 			decrease_brightness(int color, double brightness);
 void			center_map(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
 void 			transform_isometric(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
 void			rotate_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
+void			rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
+void			rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
 void			move_matrix_pos(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
 void			zoom_matrix(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
 void			modify_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
+void 			correct_axis(t_point *start, t_point *end, t_scene *draw);
+
+void			put_pixel(double x, double y, int color, t_scene *draw);
+
+
 
 void			color_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
 

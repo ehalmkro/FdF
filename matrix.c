@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/24 11:57:09 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/24 18:03:32 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,27 +26,6 @@ void	modify_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scen
 void	center_map(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw)
 {
 
-	double increment_x;
-	double increment_y;
-
-	(void)prev_x;
-	(void)prev_y;
-	(void)prev_z;
-	increment_x = 0;
-	increment_y = 0;
-
-	if (draw->max_x / 2 + increment_x < WINDOW_WIDTH/2)
-	{
-		while ((draw->max_x / 2) + increment_x < WINDOW_WIDTH/2)
-			increment_x++;
-		data->x += increment_x;
-	}
-	if (draw->max_y / 2 + increment_y< WINDOW_HEIGHT/2)
-	{
-		while ((draw->max_y / 2) + increment_y < WINDOW_HEIGHT / 2)
-			increment_y++;
-		data->y += increment_y;
-	}
 }
 
 void	move_matrix_pos(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw)
@@ -82,6 +61,22 @@ void	rotate_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scen
 	(void)draw;
 	data->x = prev_x * cos (MATRIX_ROTATION_DEG) - prev_y * sin (MATRIX_ROTATION_DEG);
 	data->y = prev_x * sin (MATRIX_ROTATION_DEG) + prev_y * cos (MATRIX_ROTATION_DEG);
+}
+
+void	rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw)
+{
+	(void)prev_x;
+	(void)draw;
+	data->y = prev_y * cos(MATRIX_ROTATION_DEG) + prev_z * sin(MATRIX_ROTATION_DEG);
+	data->z = (-prev_y) * sin(MATRIX_ROTATION_DEG) + prev_z * cos(MATRIX_ROTATION_DEG);
+}
+
+void	rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw)
+{
+	(void)prev_y;
+	(void)draw;
+	data->x = prev_x * cos(MATRIX_ROTATION_DEG) + prev_z * sin(MATRIX_ROTATION_DEG);
+	data->z = (-prev_x) * sin(MATRIX_ROTATION_DEG) + prev_z * cos(MATRIX_ROTATION_DEG);
 }
 
 

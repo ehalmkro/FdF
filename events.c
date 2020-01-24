@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/24 14:06:31 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/24 19:50:36 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,13 @@ int		keypress(int keycode, void *param)
 	if (keycode >= 123 && keycode < 127)
 	{
 		if (keycode == ARROW_UP)
-			draw->padding_y = -1;
+			draw->padding_y -= DEFAULT_INCREMENT;
 		if (keycode == ARROW_LEFT)
-			draw->padding_x = -1;
+			draw->padding_x -= DEFAULT_INCREMENT;
 		if (keycode == ARROW_DOWN)
-			draw->padding_y = 1;
+			draw->padding_y += DEFAULT_INCREMENT;
 		if (keycode == ARROW_RIGHT)
-			draw->padding_x = 1;
-		matrix_transformation(draw, &move_matrix_pos);
-		draw->padding_x = 0;
-		draw->padding_y = 0;
+			draw->padding_x += DEFAULT_INCREMENT;
 	}
 	if (keycode == MAIN_PAD_5)
 	{
@@ -62,16 +59,20 @@ int		keypress(int keycode, void *param)
 	}
 	if (keycode == MAIN_PAD_9)
 	{
-		if (draw->draw_algorithm != &draw_line_wu)
-			draw->draw_algorithm = &draw_line_wu;
+		if (draw->draw_algorithm != &draw_line_wu_alternate)
+			draw->draw_algorithm = &draw_line_wu_alternate;
 		else
-			draw->draw_algorithm = &draw_line_bresenham;
+			draw->draw_algorithm = &draw_line_wu;
+/*		else
+			draw->draw_algorithm = &draw_line_gupta_sproull;*/
 	}
 	if (keycode == MAIN_PAD_MORE)
 	{
 		matrix_transformation(draw, rotate_z);
 		//matrix_transformation(draw, center_map);
 	}
+	if (keycode == MAIN_PAD_LESS)
+		matrix_transformation(draw, rotate_y);
 	if (keycode == MAIN_PAD_0)
 		matrix_transformation(draw, transform_isometric);
 	render(&(draw->map), &draw);
@@ -85,7 +86,7 @@ void			render(t_map **start, t_scene **draw)
 	//printf("X = %f, Y = %f Z = %f\n", (*draw)->map->data->x, (*draw)->map->data->y, (*draw)->map->data->z);
 	//printf("NEXT\nX = %f, Y = %f Z = %f\n", (*draw)->map->next->data->x, (*draw)->map->next->data->y, (*draw)->map->next->data->z);
 
-	t_point *point;
+	/*t_point *point;
 	t_point *point2;
 	point = malloc(sizeof(t_point));
 	point2 = malloc(sizeof(t_point));
@@ -96,7 +97,6 @@ void			render(t_map **start, t_scene **draw)
 	draw_line_gupta_sproull(*point, *point2, *draw);
 	point = point_node_new(20, 0, 0);
 	point2 = point_node_new(60, 1000, 0);
-	draw_line_bresenham(*point, *point2, *draw);
-
+	draw_line_bresenham(*point, *point2, *draw);*/
 	draw_matrix(*start, *draw);
 }
