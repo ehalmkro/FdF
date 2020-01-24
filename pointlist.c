@@ -6,7 +6,7 @@
 /*   By: esko <esko@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 13:29:54 by esko              #+#    #+#             */
-/*   Updated: 2020/01/20 11:10:32 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/24 13:45:19 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static t_map *get_next_y(t_map *start, float y)
 	return(ret);
 }
 
-void	append_map(t_map **start, t_draw **draw)
+void	append_map(t_map **start, t_scene **draw)
 {
 	t_map *tapehead;
 	t_map *forward;
@@ -56,13 +56,17 @@ void	append_map(t_map **start, t_draw **draw)
 
 t_point     *point_node_new(float x, float y, float z)
 {
-    t_point *ret;
+	t_point *ret;
 
-    ret = (t_point*)malloc(sizeof(t_point));
-    ret->x = x;
-    ret->y = y;
-    ret->z = z;
-    return(ret);
+	ret = (t_point*)malloc(sizeof(t_point));
+	ret->x = x;
+	ret->y = y;
+	ret->z = z;
+	if (z <= 0)
+		ret->color = DEFAULT_COLOR;
+	else
+		ret->color = HEIGHT_COLOR;
+	return(ret);
 }
 
 t_map		*map_add_node(t_point *data)
@@ -80,10 +84,10 @@ t_map		*map_add_node(t_point *data)
 
 void        map_push_right(t_map **start, t_map *new)
 {
-    t_map *curr;
+	t_map *curr;
 
-    curr = *start;
-    while (curr->next)
-        curr = curr->next;
-    curr->next = new;
+	curr = *start;
+	while (curr->next)
+		curr = curr->next;
+	curr->next = new;
 }

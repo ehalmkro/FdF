@@ -6,13 +6,13 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/21 15:16:01 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/24 12:45:01 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-/*
+
 double get_percent(int start, int end, int curr)
 {
 	double	place;
@@ -24,31 +24,27 @@ double get_percent(int start, int end, int curr)
 		return (1.0);
 	return (place/dist);
 }
-*/
 
 
-
-void	scene_find_minmax (t_map **start, t_draw **draw)
+void	scene_find_minmax (t_scene *draw)
 {
-	t_map *list_curr;
-	t_draw *draw_curr;
+	t_map *map;
+ 	map = draw->map;
 
-	list_curr = *start;
-	draw_curr = *draw;
-	draw_curr->max_x = INT_MIN;
-	draw_curr->max_y = INT_MIN;
-	draw_curr->max_z = INT_MIN;
-	draw_curr->min_z = INT_MAX;
-	while (list_curr)
+
+ 	if (map)
 	{
-		if (list_curr->data->x > draw_curr->max_x)
-			draw_curr->max_x = list_curr->data->x;
-		if (list_curr->data->y > draw_curr->max_y)
-			draw_curr->max_y = list_curr->data->y;
-		if (list_curr->data->z > draw_curr->max_z)
-			draw_curr->max_z = list_curr->data->z;
-		if (list_curr->data->z < draw_curr->min_z)
-			draw_curr->min_z = list_curr->data->z;
-		list_curr = list_curr->next;
+		draw->max_x = INT_MIN;
+		draw->max_y = INT_MIN;
+		draw->max_z = INT_MIN;
+		draw->min_z = INT_MAX;
+		while (map)
+		{
+			map->data->x > draw->max_x ? draw->max_x = map->data->x : 0;
+			map->data->y > draw->max_y ? draw->max_y = map->data->y : 0;
+			map->data->z > draw->max_z ? draw->max_z = map->data->z : 0;
+			map->data->z < draw->min_z ? draw->min_z = map->data->z : 0;
+			map = map->next;
+		}
 	}
 }

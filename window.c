@@ -12,9 +12,9 @@
 
 #include "fdf.h"
 
-void	*draw_window(t_draw **draw)
+void	*draw_window(t_scene **draw)
 {
-	t_draw *draw_curr;
+	t_scene *draw_curr;
 
 	draw_curr = *draw;
 

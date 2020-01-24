@@ -63,8 +63,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft.dir/Libft/ft_wordcount.c.o"
   "CMakeFiles/ft.dir/Libft/ft_wordlength.c.o"
   "CMakeFiles/ft.dir/Libft/get_next_line.c.o"
-  "libft.pdb"
   "libft.a"
+  "libft.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
