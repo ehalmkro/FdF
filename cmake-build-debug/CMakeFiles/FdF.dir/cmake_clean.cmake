@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FdF.dir/read_write.c.o"
   "CMakeFiles/FdF.dir/tools.c.o"
   "CMakeFiles/FdF.dir/window.c.o"
+  "CMakeFiles/FdF.dir/wu.c.o"
   "FdF"
   "FdF.pdb"
 )

@@ -46,6 +46,5 @@ int 	get_color_rgb(int r, int g, int b)
 
 int		set_color(t_point *data, t_scene *draw)
 {
-	printf("color stuff: COLOR %x\t BRIGHTNESS FACTOR %f\n", data->color, (data->z/draw->max_z));
 	return(decrease_brightness(data->color, (data->z/draw->max_z)));
 }

@@ -2107,6 +2107,33 @@ window.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/window.c.s
 .PHONY : window.c.s
 
+wu.o: wu.c.o
+
+.PHONY : wu.o
+
+# target to build an object file
+wu.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/wu.c.o
+.PHONY : wu.c.o
+
+wu.i: wu.c.i
+
+.PHONY : wu.i
+
+# target to preprocess a source file
+wu.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/wu.c.i
+.PHONY : wu.c.i
+
+wu.s: wu.c.s
+
+.PHONY : wu.s
+
+# target to generate assembly for a file
+wu.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/wu.c.s
+.PHONY : wu.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2336,6 +2363,9 @@ help:
 	@echo "... window.o"
 	@echo "... window.i"
 	@echo "... window.s"
+	@echo "... wu.o"
+	@echo "... wu.i"
+	@echo "... wu.s"
 .PHONY : help
 
 

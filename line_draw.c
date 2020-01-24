@@ -6,26 +6,52 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/24 13:57:30 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/24 19:04:12 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include <math.h>
 
+
+void correct_axis(t_point *start, t_point *end, t_scene *draw)
+{
+	double x0;
+	double x1;
+	double y0;
+	double y1;
+
+	x0 = start->x;
+	x1 = end->x;
+	y0 = start->y;
+	y1 = end->y;
+
+	if (fabs(y1 - y0) < fabs(x1 - x0))
+	{
+		if (x0 > x1)
+		{
+			swap(&(start->x), &(end->x));
+			swap(&(start->y), &(end->y));
+		}
+	}
+	else
+	{
+		if (y0 > y1)
+		{
+			swap(&(start->x), &(end->x));
+			swap(&(start->y), &(end->y));
+		}
+	}
+}
+
 void	put_pixel(double x, double y, int color, t_scene *draw)
 {
-	mlx_pixel_put(draw->mlx, draw->win, x, y, color);
+	mlx_pixel_put(draw->mlx, draw->win, x + draw->padding_x, y + draw->padding_y, color);
 }
 
 // TODO: IMPLEMENT XIAOLIN WU LINE ALGORITHM
 
-void swap(int* a , int*b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
+
 
 static double	frc_part(double nbr)
 {
@@ -37,13 +63,13 @@ static void		draw_wu_slope(double x, double y, t_scene *draw)
 {
 	if (draw->slope >= 0)
 	{
-		put_pixel(floor(x), y, 1 - frc_part(y), draw);
-		put_pixel(floor(x) + 1, y, frc_part (y), draw);
+		put_pixel (floor (x), y, decrease_brightness (0xFFFFFF, 1 - frc_part (y)), draw);
+		put_pixel (floor (x) + 1, y, decrease_brightness (0xFFFFFF, frc_part (y)), draw);
 	}
 	else if (draw->slope < 0)
 	{
-		put_pixel(floor(x), y, 1 - frc_part(y), draw);
-		put_pixel(floor(x) - 1, y, frc_part(y), draw);
+		put_pixel(floor(x), y, decrease_brightness (0xFFFFFF, 1 - frc_part(y)), draw);
+		put_pixel(floor(x) - 1, y, decrease_brightness (0xFFFFFF, frc_part(y)), draw);
 	}
 
 }
@@ -83,13 +109,28 @@ void	draw_line_wu(t_point start, t_point end, t_scene *draw)
 	draw->slope = dx == 0 ? 1 : dy / dx;
 	draw_wu_dots(start, end, draw);
 
+
 }
 
 void	draw_line_gupta_sproull(t_point start, t_point end, t_scene *draw)
 {
+	correct_axis(&start, &end, draw);
 	double dx;
 	double dy;
 
+	if (abs(end.y - start.y) < abs(end.x - start.x))
+	{
+		if (draw->steep)
+		{
+			swap (&start.x, &start.y);
+			swap (&end.x, &end.y);
+		}
+		if (end.x < start.x)
+		{
+			swap (&start.x, &end.x);
+			swap (&start.y, &end.y);
+		}
+	}
 	dx = end.x - start.x;
 	dy = end.y - start.y;
 	int d = 2 * dy - dx;
@@ -98,11 +139,13 @@ void	draw_line_gupta_sproull(t_point start, t_point end, t_scene *draw)
 	int two_v_dx = 0;
 	double invdenom = 1.0/(2.0*sqrt(dx*dx+dy*dy));
 	double two_dx_invdenom = 2.0*dx*invdenom;
+
 	double x = start.x;
 	double y = start.y;
-	put_pixel(x, y, 1.0, draw);
-	put_pixel(x, y+1, two_dx_invdenom, draw);
-	put_pixel(x, y-1, two_dx_invdenom, draw);
+
+	put_pixel(x, y, decrease_brightness (0xFFFFFFF, 1.0), draw);
+	put_pixel(x, y+1, decrease_brightness(0xFFFFFFF,two_dx_invdenom), draw);
+	put_pixel(x, y-1, decrease_brightness(0xFFFFFFF,two_dx_invdenom), draw);
 	while (x < end.x)
 	{
 		if (d < 0)
@@ -118,9 +161,9 @@ void	draw_line_gupta_sproull(t_point start, t_point end, t_scene *draw)
 			x++;
 			y++;
 		}
-		put_pixel(x, y, two_v_dx * invdenom, draw);
-		put_pixel(x, y + 1, two_dx_invdenom - two_v_dx * invdenom, draw);
-		put_pixel(x, y - 1, two_dx_invdenom + two_v_dx * invdenom, draw);
+		put_pixel(x, y, decrease_brightness (0xFFFFFFF, two_v_dx * invdenom), draw);
+		put_pixel(x, y + 1, decrease_brightness (0xFFFFFFF, two_dx_invdenom - two_v_dx * invdenom), draw);
+		put_pixel(x, y - 1, decrease_brightness (0xFFFFFFF, two_dx_invdenom + two_v_dx * invdenom), draw);
 	}
 }
 
@@ -195,6 +238,7 @@ void	draw_line_wu(t_point *start, t_point *end, t_scene *draw)
 //		BRESENHAM LINE ALGORITHM
 void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 {
+	correct_axis(&start, &end, draw);
 	double delta_x;
 	double delta_y;
 	double pixelcount;
@@ -208,12 +252,7 @@ void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 	delta_y /= pixelcount;
 	while (pixelcount > 0)
 	{
-		printf("START Z %f\n", start.z);
-		printf("END Z %f\n", end.z);
-		if (start.z > 0 || end.z > 0)
-			put_pixel(pixel->x, pixel->y, decrease_brightness(start.z > end.z ? start.z : end.z, 0.9), draw);
-		else
-			put_pixel(pixel->x, pixel->y, start.color, draw);
+		put_pixel(pixel->x, pixel->y, start.color == HEIGHT_COLOR ? start.color : end.color, draw);
 		pixel->x += delta_x;
 		pixel->y += delta_y;
 		pixelcount--;
