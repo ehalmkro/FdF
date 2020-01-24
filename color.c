@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/22 18:24:33 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/24 14:02:05 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,12 @@ int 	*split_color(int color)
 	return (ret);
 }
 
+
 int 	decrease_brightness(int color, double brightness)
 {
 	int *rgb;
+	if (brightness >= 1.0)
+		return (color);
 	rgb = split_color(color);
 	rgb[0] *= brightness;
 	rgb[1] *= brightness;
@@ -41,9 +44,8 @@ int 	get_color_rgb(int r, int g, int b)
 		return((0 << 24) | (r << 16) | (g << 8) | b);
 }
 
-int		set_color(t_point *start, t_point *end)
+int		set_color(t_point *data, t_scene *draw)
 {
-	if (start->z == 0 && end->z == 0)
-		return(0xffffff);
-	return(0xffff00);
+	printf("color stuff: COLOR %x\t BRIGHTNESS FACTOR %f\n", data->color, (data->z/draw->max_z));
+	return(decrease_brightness(data->color, (data->z/draw->max_z)));
 }

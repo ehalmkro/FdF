@@ -6,20 +6,20 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/23 14:44:13 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/24 13:57:30 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include <math.h>
 
-void	put_pixel(double x, double y, double brightness, t_draw *draw)
+void	put_pixel(double x, double y, int color, t_scene *draw)
 {
-	mlx_pixel_put(draw->mlx, draw->win, (int)x, (int)y, decrease_brightness(0xFFFFFF, brightness));
+	mlx_pixel_put(draw->mlx, draw->win, x, y, color);
 }
 
 // TODO: IMPLEMENT XIAOLIN WU LINE ALGORITHM
-// swaps two numbers
+
 void swap(int* a , int*b)
 {
 	int temp = *a;
@@ -33,7 +33,7 @@ static double	frc_part(double nbr)
 }
 
 
-static void		draw_wu_slope(double x, double y, t_draw *draw)
+static void		draw_wu_slope(double x, double y, t_scene *draw)
 {
 	if (draw->slope >= 0)
 	{
@@ -48,7 +48,7 @@ static void		draw_wu_slope(double x, double y, t_draw *draw)
 
 }
 
-static void		draw_wu_dots(t_point start, t_point end, t_draw *draw)
+static void		draw_wu_dots(t_point start, t_point end, t_scene *draw)
 {
 	while (start.x <= end.x)
 	{
@@ -62,7 +62,7 @@ static void		draw_wu_dots(t_point start, t_point end, t_draw *draw)
 
 }
 
-void	draw_line_wu(t_point start, t_point end, t_draw *draw)
+void	draw_line_wu(t_point start, t_point end, t_scene *draw)
 {
 	double	dx;
 	double	dy;
@@ -85,7 +85,7 @@ void	draw_line_wu(t_point start, t_point end, t_draw *draw)
 
 }
 
-void	draw_line_gupta_sproull(t_point start, t_point end, t_draw *draw)
+void	draw_line_gupta_sproull(t_point start, t_point end, t_scene *draw)
 {
 	double dx;
 	double dy;
@@ -125,7 +125,7 @@ void	draw_line_gupta_sproull(t_point start, t_point end, t_draw *draw)
 }
 
 /*
-void	draw_line_wu(t_point *start, t_point *end, t_draw *draw)
+void	draw_line_wu(t_point *start, t_point *end, t_scene *draw)
 {
 	double x0 = start->x;
 	double x1 = end->x;
@@ -193,38 +193,40 @@ void	draw_line_wu(t_point *start, t_point *end, t_draw *draw)
 }*/
 
 //		BRESENHAM LINE ALGORITHM
-void draw_line_bresenham(t_point start, t_point end, t_draw *draw)
+void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 {
 	double delta_x;
 	double delta_y;
 	double pixelcount;
-	double x_pixel;
-	double y_pixel;
+	t_point *pixel;
 
+	pixel = point_node_new(start.x, start.y, 0);
 	delta_x = end.x - start.x;
 	delta_y = end.y - start.y;
 	pixelcount = sqrt((delta_x * delta_x) + (delta_y * delta_y));
-	x_pixel = start.x;
-	y_pixel = start.y;
 	delta_x /= pixelcount;
 	delta_y /= pixelcount;
 	while (pixelcount > 0)
 	{
-		mlx_pixel_put(draw->mlx, draw->win, (int)(x_pixel), (int)(y_pixel),\
-		set_color(&start, &end));
-		x_pixel += delta_x;
-		y_pixel += delta_y;
+		printf("START Z %f\n", start.z);
+		printf("END Z %f\n", end.z);
+		if (start.z > 0 || end.z > 0)
+			put_pixel(pixel->x, pixel->y, decrease_brightness(start.z > end.z ? start.z : end.z, 0.9), draw);
+		else
+			put_pixel(pixel->x, pixel->y, start.color, draw);
+		pixel->x += delta_x;
+		pixel->y += delta_y;
 		pixelcount--;
 	}
 }
 
 
-void	draw_matrix(t_map *start, t_draw *draw)
+void	draw_matrix(t_map *start, t_scene *draw)
 {
 	if (start->right)
-		draw->draw_algorithm ((*start->data), (*start->right->data), draw);
+		draw->draw_algorithm((*start->data), (*start->right->data), draw);
 	if (start->down)
-		draw->draw_algorithm ((*start->data), (*start->down->data), draw);
+		draw->draw_algorithm((*start->data), (*start->down->data), draw);
 	if (start->next)
 		draw_matrix(start->next, draw);
 	draw->draw_algorithm((*start->data), (*start->data), draw);
