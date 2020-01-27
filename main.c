@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/24 18:08:20 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/27 15:27:26 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ void	init_window(t_scene **draw)
 		perror ("Error: ");
 		exit (1);
 	}
+
+	(*draw)->mouse = malloc(sizeof(t_mouse));
 	(*draw)->zoom = 15;
+	(*draw)->projection = 0;
 	(*draw)->padding_x = 400;
 	(*draw)->padding_y = 400;
 	(*draw)->window_text_color = 0xFFFFFF;
@@ -52,11 +55,16 @@ int		main(int argc, char **argv)
 
 		init_window(&draw);
 		draw_window(&draw);
-		matrix_transformation(draw, &zoom_matrix);
+		matrix_transformation(draw, &zoom_matrix, 0);
 		draw->draw_algorithm = &draw_line_bresenham;
 		render(&start, &draw);
 		mlx_hook(draw->win, 17, 0, &close_window, draw);
 		mlx_hook(draw->win, 3, 0, &keypress, draw);
+		mlx_hook(draw->win, 4, 0, &mouse_press, draw);
+		mlx_hook(draw->win, 5, 0, &mouse_release, draw);
+		mlx_hook(draw->win, 6, 0, &mouse_move, draw);
+
+
 		mlx_loop(draw->mlx);
 	}
 

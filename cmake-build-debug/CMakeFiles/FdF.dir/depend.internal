@@ -47,3 +47,8 @@ CMakeFiles/FdF.dir/window.c.o
  /Users/ehalmkro/hive/FdF/fdf.h
  /Users/ehalmkro/hive/FdF/window.c
  /usr/local/include/mlx.h
+CMakeFiles/FdF.dir/wu.c.o
+ /Users/ehalmkro/hive/FdF/Libft/libft.h
+ /Users/ehalmkro/hive/FdF/fdf.h
+ /Users/ehalmkro/hive/FdF/wu.c
+ /usr/local/include/mlx.h

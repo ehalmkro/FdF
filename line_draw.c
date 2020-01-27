@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/24 19:04:12 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/27 15:34:44 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -258,17 +258,31 @@ void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 		pixelcount--;
 	}
 }
-
+static void 	draw_isometric(t_map *start, t_scene *draw)
+{
+	if (start->right)
+		draw->draw_algorithm(*transform_isometric(start->data), *transform_isometric(start->right->data), draw);
+	if (start->down)
+		draw->draw_algorithm(*transform_isometric(start->data), *transform_isometric(start->down->data), draw);
+	if (start->next)
+		draw_isometric(start->next, draw);
+	draw->draw_algorithm(*transform_isometric(start->data), *transform_isometric(start->data), draw);
+}
 
 void	draw_matrix(t_map *start, t_scene *draw)
 {
-	if (start->right)
-		draw->draw_algorithm((*start->data), (*start->right->data), draw);
-	if (start->down)
-		draw->draw_algorithm((*start->data), (*start->down->data), draw);
-	if (start->next)
-		draw_matrix(start->next, draw);
-	draw->draw_algorithm((*start->data), (*start->data), draw);
+	if (draw->projection == 1)
+		draw_isometric (start, draw);
+	else
+	{
+		if (start->right)
+			draw->draw_algorithm ((*start->data), (*start->right->data), draw);
+		if (start->down)
+			draw->draw_algorithm ((*start->data), (*start->down->data), draw);
+		if (start->next)
+			draw_matrix (start->next, draw);
+		draw->draw_algorithm ((*start->data), (*start->data), draw);
+	}
 	/*if (!(start->next) && !(start->down) && !(start->right))
 		mlx_pixel_put(draw->mlx, draw->win, (int)(start->data->x), (int)\
 		(start->data->y),set_color(start->data, start->data));*/

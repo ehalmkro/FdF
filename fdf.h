@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/24 19:02:20 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/27 15:32:17 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@
 #define fpart_(X) (((double)(X))-(double)ipart_(X))
 #define rfpart_(X) (1.0-fpart_(X))
 
+typedef enum
+{
+	ISOMETRIC,
+	PARALLEL
+}	t_projection;
+
 typedef struct				s_point
 {
 	double					x;
@@ -57,12 +63,23 @@ typedef struct				s_map
 	struct s_map			*next;
 }							t_map;
 
+typedef struct				s_mouse
+{
+	int						x;
+	int 					prev_x;
+	int						y;
+	int 					prev_y;
+	int 					button_press;
+}							t_mouse;
+
 typedef struct				s_scene
 {
 	t_map					*map;
-	float 					zoom;
+	t_mouse 				*mouse;
+	int 					projection;
 	void					*mlx;
 	void					*win;
+	float 					zoom;
 	float 					max_x;
 	float 					max_y;
 	float 					max_z;
@@ -115,18 +132,19 @@ int 			*split_color(int color);
 int 			decrease_brightness(int color, double brightness);
 
 
-void			center_map(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
-void 			transform_isometric(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
-void			rotate_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
-void			rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
-void			rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
-void			move_matrix_pos(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
-void			zoom_matrix(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
-void			modify_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
+void			center_map(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
+t_point 		*transform_isometric(t_point *data);
+void			rotate_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
+void			rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
+void			rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
+void			move_matrix_pos(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
+void			zoom_matrix(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
+void			modify_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void 			correct_axis(t_point *start, t_point *end, t_scene *draw);
 
 void			put_pixel(double x, double y, int color, t_scene *draw);
 
+int				mouse_move(int x, int y, void *param);
 
 
 void			color_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
@@ -134,6 +152,10 @@ void			color_z(t_point *data, double prev_x, double prev_y, double prev_z, t_sce
 int				weighted_average(int first, int second, double percentage);
 
 void			matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, double prev_x, double prev_y,\
-				double prev_z, t_scene *draw));
+				double prev_z, t_scene *draw, double deg), double deg);
+
+int				mouse_press(int button, int x, int y, void *param);
+int				mouse_release(int button, int x, int y, void *param);
+
 
 #endif
