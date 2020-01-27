@@ -6,9 +6,11 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/27 15:32:17 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/27 21:00:58 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// TODO clear unnecessary stuff
 
 #ifndef FDF_H
 
@@ -33,13 +35,17 @@
 # define BLUE 0x0000FF
 # define GREEN 0x00FF00
 # define MAGENTA 0xFF00FF
-# define DEFAULT_COLOR GREEN
-# define HEIGHT_COLOR MAGENTA
+# define DEFAULT_COLOR 0xFFF2A0
+# define HEIGHT_COLOR 0xF65BE3
+
+// TODO: get rid of these
 
 #define ipart_(X) ((int)(X))
 #define round_(X) ((int)(((double)(X))+0.5))
 #define fpart_(X) (((double)(X))-(double)ipart_(X))
 #define rfpart_(X) (1.0-fpart_(X))
+
+// TODO: implement this enum
 
 typedef enum
 {
@@ -117,16 +123,12 @@ void 			draw_line_wu_alternate(t_point start, t_point end, t_scene *draw);
 
 void			draw_matrix(t_map *start, t_scene *draw);
 
-int				set_color(t_point *data, t_scene *draw);
+int				set_color(t_point start, t_point end, t_point delta, t_point current, t_scene draw);
+
 void			render(t_map **start, t_scene **draw);
 
 int				close_window(void *param);
 int				keypress(int keycode, void *param);
-
-
-
-int 			get_gradient(int start_color, int end_color, double percentage);
-int 			get_color_rgb(int r, int g, int b);
 
 int 			*split_color(int color);
 int 			decrease_brightness(int color, double brightness);
@@ -137,7 +139,6 @@ t_point 		*transform_isometric(t_point *data);
 void			rotate_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void			rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void			rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
-void			move_matrix_pos(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void			zoom_matrix(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void			modify_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void 			correct_axis(t_point *start, t_point *end, t_scene *draw);
@@ -147,15 +148,15 @@ void			put_pixel(double x, double y, int color, t_scene *draw);
 int				mouse_move(int x, int y, void *param);
 
 
-void			color_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw);
-
-int				weighted_average(int first, int second, double percentage);
-
 void			matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, double prev_x, double prev_y,\
 				double prev_z, t_scene *draw, double deg), double deg);
 
 int				mouse_press(int button, int x, int y, void *param);
 int				mouse_release(int button, int x, int y, void *param);
+
+void			center_origo(t_scene *draw);
+
+int				combine_color(int r, int g, int b);
 
 
 #endif

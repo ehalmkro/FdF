@@ -25,6 +25,20 @@ double get_percent(int start, int end, int curr)
 	return (place/dist);
 }
 
+void	center_origo(t_scene *draw)
+{
+	t_map *map;
+
+	map = draw->map;
+	while (map)
+	{
+		map->data->x -= draw->max_x / 2;
+		map->data->y -= draw->max_y / 2;
+		map->data->z -= (draw->max_z - draw->min_z) / 2;
+		map = map->next;
+	}
+
+}
 
 void	scene_find_minmax (t_scene *draw)
 {

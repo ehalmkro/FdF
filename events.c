@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/27 15:27:26 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/27 15:48:48 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ int		mouse_move(int x, int y, void *param)
 	draw->mouse->prev_y = draw->mouse->y;
 	draw->mouse->x = x;
 	draw->mouse->y = y;
-	if (draw->mouse->button_press == 1)
+	if (draw->mouse->button_press == 1 || draw->mouse->button_press == 5)
 	{
 		matrix_transformation (draw, &rotate_x, (x - draw->mouse->prev_x) * 0.001);
 		matrix_transformation (draw, &rotate_y, (y - draw->mouse->prev_y) * 0.001);
 	}
+	if (draw->mouse->button_press == 4 || draw->mouse->button_press == 5)
+		matrix_transformation (draw, &rotate_z, (y - draw->mouse->prev_y) * 0.005);
 
 	render (&(draw->map), &draw);
 }
@@ -45,8 +47,9 @@ int		mouse_press(int button, int x, int y, void *param)
 		matrix_transformation (draw, &zoom_matrix, 0);
 	}
 	if (button == MOUSE_LEFT_BUTTON)
-		draw->mouse->button_press = 1;
-
+		draw->mouse->button_press += 1;
+	if (button == MOUSE_RIGHT_BUTTON)
+		draw->mouse->button_press += 4;
 	render(&(draw->map), &draw);
 	return(0);
 }
@@ -59,7 +62,9 @@ int		mouse_release(int button, int x, int y, void *param)
 	(void)y;
 	draw = param;
 	if (button == MOUSE_LEFT_BUTTON)
-		draw->mouse->button_press = 0;
+		draw->mouse->button_press -= 1;
+	if (button == MOUSE_RIGHT_BUTTON)
+		draw->mouse->button_press -= 4;
 	return (0);
 }
 
@@ -111,7 +116,7 @@ int		keypress(int keycode, void *param)
 		if (draw->draw_algorithm != &draw_line_wu_alternate)
 			draw->draw_algorithm = &draw_line_wu_alternate;
 		else
-			draw->draw_algorithm = &draw_line_wu;
+			draw->draw_algorithm = &draw_line_bresenham;
 /*		else
 			draw->draw_algorithm = &draw_line_gupta_sproull;*/
 	}
