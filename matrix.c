@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/27 15:36:21 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/27 15:37:27 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,6 @@ void	center_map(t_point *data, double prev_x, double prev_y, double prev_z, t_sc
 
 }
 
-void	move_matrix_pos(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
-{
-	(void)prev_x;
-	(void)prev_y;
-	(void)prev_z;
-	(void)deg;
-	(draw->padding_x == 1) ? data->x += DEFAULT_INCREMENT : 0;
-	(draw->padding_x == -1) ? data->x -= DEFAULT_INCREMENT : 0;
-	(draw->padding_y == 1) ? data->y += DEFAULT_INCREMENT : 0;
-	(draw->padding_y == -1) ? data->y -= DEFAULT_INCREMENT : 0;
-	(draw->padding_z == 1) ? data->z += DEFAULT_INCREMENT : 0;
-	(draw->padding_z == -1) ? data->z -= DEFAULT_INCREMENT : 0;
-}
 
 void	zoom_matrix(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
 {
@@ -101,6 +88,7 @@ t_point *transform_isometric(t_point *data)
 	prev_x = data->x;
 	prev_y = data->y;
 	ret = point_node_new((prev_x - prev_y) * cos (0.523599), -(data->z) + (prev_x + prev_y) * sin (0.523599), data->z);
+	ret->color = data->color;
 	return (ret);
 }
 

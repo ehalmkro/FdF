@@ -1,6 +1,8 @@
 #include "fdf.h"
 #include "math.h"
 
+// TODO: Norminette fix wu
+
 void swap(double* a , double *b)
 {
 	double temp = *a;
@@ -10,8 +12,11 @@ void swap(double* a , double *b)
 
 void 	draw_line_wu_alternate(t_point start, t_point end, t_scene *draw)
 {
-//	correct_axis (&start, &end, draw);
+	t_point *delta;
+	t_point *current;
+	t_point *current_2;
 	draw->steep = fabs(end.y - start.y) > fabs(end.x - start.x) ? 1 : 0;
+
 	if (draw->steep)
 	{
 		swap(&start.x, &start.y);
@@ -19,67 +24,61 @@ void 	draw_line_wu_alternate(t_point start, t_point end, t_scene *draw)
 	}
 	if (end.x < start.x)
 	{
-		swap(&start.x, &end.x);
-		swap(&start.y, &end.y);
+		swap (&start.x, &end.x);
+		swap (&start.y, &end.y);
 	}
-
-	double dx = end.x - start.x;
-	double dy = end.y - start.y;
-	double gradient = dy/dx;
-	if (dx == 0.0)
+	delta = point_node_new(end.x - start.x,end.y - start.y, 0);
+	double gradient = delta->y/delta->x;
+	if (delta->x == 0.0)
 		gradient = 1.0;
 	int xend = round(start.x);
 	int yend = start.y + gradient * (xend - start.x);
 	double xgap = rfpart_(start.x + 0.5);
-	int xpxl1 = xend;
-	int ypxl1 = ipart_(yend);
+	current = point_node_new(xend, ipart_(yend), 0);
 	if (draw->steep == 1)
 	{
-		put_pixel(ypxl1, xpxl1,  decrease_brightness(start.color, rfpart_(yend) * xgap), draw);
-		printf("%f\n", rfpart_((yend) * xgap));
-		put_pixel(ypxl1 + 1, xpxl1, decrease_brightness(start.color, fpart_(yend) * xgap), draw);
+		put_pixel(current->y, current->x,  decrease_brightness(set_color(start, end, *delta, *current, *draw), 1.0), draw);
+		put_pixel(current->y + 1, current->x, decrease_brightness(set_color(start, end, *delta, *current, *draw), fpart_(yend) * xgap), draw);
 	}
 	else
 	{
-		put_pixel(xpxl1, ypxl1, decrease_brightness(start.color, rfpart_(yend) * xgap), draw);
-		put_pixel(xpxl1, ypxl1 + 1, decrease_brightness(start.color, fpart_(yend) * xgap), draw);
+		put_pixel(current->x, current->y, decrease_brightness(set_color(start, end, *delta, *current, *draw), 1.0), draw);
+		put_pixel(current->x, current->y + 1, decrease_brightness(set_color(start, end, *delta, *current, *draw), fpart_(yend) * xgap), draw);
 	}
 	double intery = yend + gradient;
 	xend = round(end.x);
 	yend = end.y + gradient * (xend - end.x);
 	xgap = fpart_(end.x + 0.5);
-	int xpxl2 = xend;
-	int ypxl2 = ipart_(yend);
+	current_2 = point_node_new(xend, ipart_(yend), 0);
 	if (draw->steep == 1)
 	{
-		put_pixel(ypxl2, xpxl2,  decrease_brightness(start.color, rfpart_(yend) * xgap), draw);
-		put_pixel(ypxl2 + 1, xpxl2, decrease_brightness(start.color, fpart_(yend) * xgap), draw);
+		put_pixel(current_2->y, current_2->x,  decrease_brightness(set_color(start, end, *delta, *current, *draw), 1.0), draw);
+		put_pixel(current_2->y + 1, current_2->x, decrease_brightness(set_color(start, end, *delta, *current, *draw), fpart_(yend) * xgap), draw);
 	}
 	else
 	{
-		put_pixel(xpxl2, ypxl2, decrease_brightness(start.color, rfpart_(yend) * xgap), draw);
-		put_pixel(xpxl2, ypxl2 + 1, decrease_brightness(start.color, fpart_(yend) * xgap), draw);
+		put_pixel(current_2->x, current_2->y, decrease_brightness(set_color(start, end, *delta, *current, *draw), 1.0), draw);
+		put_pixel(current_2->x, current_2->y + 1, decrease_brightness(set_color(start, end, *delta, *current, *draw), fpart_(yend) * xgap), draw);
 	}
+	current->x;
 	if (draw->steep == 1)
 	{
-		int x = xpxl1 + 1;
-		while (x < xpxl2)
+		while (current->x < current_2->x)
 		{
-			put_pixel(ipart_(intery), x, decrease_brightness(start.color, rfpart_(intery)), draw);
-			put_pixel(ipart_(intery) + 1, x, decrease_brightness(start.color, fpart_(intery)), draw);
+			put_pixel(ipart_(intery), current->x, decrease_brightness(set_color(start, end, *delta, *current, *draw), rfpart_(intery)), draw);
+			put_pixel(ipart_(intery) + 1, current->x, decrease_brightness(set_color(start, end, *delta, *current, *draw), fpart_(intery)), draw);
 			intery += gradient;
-			x++;
+			current->x++;
 		}
 	}
 	else
 	{
-		int x = xpxl1 + 1;
-		while (x < xpxl2)
+		while (current->x < current_2->x)
 		{
-			put_pixel(x, ipart_(intery), decrease_brightness(start.color, rfpart_(intery)), draw);
-			put_pixel(x, ipart_(intery) + 1, decrease_brightness(start.color, fpart_(intery)), draw);
+			put_pixel(current->x, ipart_(intery), decrease_brightness(set_color(start, end, *delta, *current, *draw), rfpart_(intery)), draw);
+			put_pixel(current->x, ipart_(intery) + 1, decrease_brightness(set_color(start, end, *delta, *current, *draw), fpart_(intery)), draw);
 			intery += gradient;
-			x++;
+			current->x++;
 		}
 	}
 

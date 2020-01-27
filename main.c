@@ -6,11 +6,13 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/27 15:27:26 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/27 15:46:09 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+// TODO: add default colors to struct to make changing them easier
 
 void	init_window(t_scene **draw)
 {
@@ -21,6 +23,7 @@ void	init_window(t_scene **draw)
 	}
 
 	(*draw)->mouse = malloc(sizeof(t_mouse));
+	(*draw)->mouse->button_press = 0;
 	(*draw)->zoom = 15;
 	(*draw)->projection = 0;
 	(*draw)->padding_x = 400;
@@ -45,6 +48,8 @@ int		main(int argc, char **argv)
 			exit(1);
 		}
 		draw->map = start;
+		scene_find_minmax(draw);
+		center_origo(draw);
 		scene_find_minmax(draw);
 		append_map(&start, &draw);
 		if ((draw->mlx = mlx_init()) == NULL)

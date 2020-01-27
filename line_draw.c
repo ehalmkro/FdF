@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/27 15:34:44 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/27 20:00:24 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,16 @@ void correct_axis(t_point *start, t_point *end, t_scene *draw)
 	{
 		if (x0 > x1)
 		{
-			swap(&(start->x), &(end->x));
-			swap(&(start->y), &(end->y));
+			ft_swap(&(start->x), &(end->x));
+			ft_swap(&(start->y), &(end->y));
 		}
 	}
 	else
 	{
 		if (y0 > y1)
 		{
-			swap(&(start->x), &(end->x));
-			swap(&(start->y), &(end->y));
+			ft_swap(&(start->x), &(end->x));
+			ft_swap(&(start->y), &(end->y));
 		}
 	}
 }
@@ -239,22 +239,20 @@ void	draw_line_wu(t_point *start, t_point *end, t_scene *draw)
 void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 {
 	correct_axis(&start, &end, draw);
-	double delta_x;
-	double delta_y;
+	t_point *delta;
+	t_point *current;
 	double pixelcount;
-	t_point *pixel;
 
-	pixel = point_node_new(start.x, start.y, 0);
-	delta_x = end.x - start.x;
-	delta_y = end.y - start.y;
-	pixelcount = sqrt((delta_x * delta_x) + (delta_y * delta_y));
-	delta_x /= pixelcount;
-	delta_y /= pixelcount;
+	current = point_node_new(start.x, start.y, 0);
+	delta = point_node_new(end.x - start.x,  end.y - start.y, 0);
+	pixelcount = sqrt((delta->x * delta->x) + (delta->y * delta->y));
+	delta->x /= pixelcount;
+	delta->y /= pixelcount;
 	while (pixelcount > 0)
 	{
-		put_pixel(pixel->x, pixel->y, start.color == HEIGHT_COLOR ? start.color : end.color, draw);
-		pixel->x += delta_x;
-		pixel->y += delta_y;
+		put_pixel(current->x, current->y, set_color(start, end, *delta, *current, *draw), draw);
+		current->x += delta->x;
+		current->y += delta->y;
 		pixelcount--;
 	}
 }
