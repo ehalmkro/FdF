@@ -47,3 +47,8 @@ CMakeFiles/FdF.dir/window.c.o: ../fdf.h
 CMakeFiles/FdF.dir/window.c.o: ../window.c
 CMakeFiles/FdF.dir/window.c.o: /usr/local/include/mlx.h
 
+CMakeFiles/FdF.dir/wu.c.o: ../Libft/libft.h
+CMakeFiles/FdF.dir/wu.c.o: ../fdf.h
+CMakeFiles/FdF.dir/wu.c.o: ../wu.c
+CMakeFiles/FdF.dir/wu.c.o: /usr/local/include/mlx.h
+
