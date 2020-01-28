@@ -60,7 +60,7 @@ int		main(int argc, char **argv)
 		center_origo(draw);
 		init_window(&draw);
 		scene_find_minmax(draw);
-		append_map(&start, &draw);
+		append_map(start, draw);
 		draw_window(&draw);
 		matrix_transformation(draw, &zoom_matrix, 0);
 		render(&start, &draw);
