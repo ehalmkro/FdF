@@ -16,6 +16,12 @@ string.h
 sys/uio.h
 -
 
+/Users/ehalmkro/hive/FdF/events.c
+fdf.h
+/Users/ehalmkro/hive/FdF/fdf.h
+keycodes.h
+/Users/ehalmkro/hive/FdF/keycodes.h
+
 /Users/ehalmkro/hive/FdF/fdf.h
 Libft/libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
@@ -28,7 +34,11 @@ mlx.h
 math.h
 -
 
-/Users/ehalmkro/hive/FdF/read_write.c
+/Users/ehalmkro/hive/FdF/keycodes.h
+
+/Users/ehalmkro/hive/FdF/matrix.c
+math.h
+-
 fdf.h
 /Users/ehalmkro/hive/FdF/fdf.h
 

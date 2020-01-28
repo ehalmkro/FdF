@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/28 12:52:24 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 17:53:57 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,8 +97,8 @@ void	rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scen
 t_point *transform_isometric(t_point *data, t_scene *draw)
 {
 	t_point *ret;
-	float prev_x;
-	float prev_y;
+	double prev_x;
+	double prev_y;
 
 	prev_x = data->x;
 	prev_y = data->y;
@@ -123,5 +123,6 @@ void	matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, 
 		transformation(map->data, prev_x, prev_y, prev_z, draw, deg);
 		map = map->next;
 	}
+	free(map);
 	scene_find_minmax(draw);
 }
