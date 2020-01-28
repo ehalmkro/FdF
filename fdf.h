@@ -121,7 +121,7 @@ void			*draw_window(t_scene **draw);
 void			scene_find_minmax (t_scene *draw);
 double 			get_percent(int start, int end, int curr);
 
-void			append_map(t_map **start, t_scene **draw);
+void			append_map(t_map *start, t_scene *draw);
 
 
 void      		map_push_right(t_map **start, t_map *new);

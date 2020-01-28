@@ -6,7 +6,7 @@
 /*   By: esko <esko@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 13:29:54 by esko              #+#    #+#             */
-/*   Updated: 2020/01/28 11:54:54 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 16:11:16 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,21 @@ static t_map *get_next_y(t_map *start, float y)
 	return(ret);
 }
 
-void	append_map(t_map **start, t_scene **draw)
+void	append_map(t_map *start, t_scene *draw)
 {
 	t_map *tapehead;
 	t_map *forward;
 	double y;
 	double x;
-	tapehead = *start;
+	tapehead = start;
 
 	x = 0;
 	y = 0;
-	while (y < (*draw)->max_y - 1)
+	while (y < draw->max_y - 1)
 	{
 		y = tapehead->data->y;
 		forward = get_next_y (tapehead, y);
-		while (x < (*draw)->max_x)
+		while (x < draw->max_x)
 		{
 			x = tapehead->data->x;
 			tapehead->down = forward;
@@ -51,7 +51,7 @@ void	append_map(t_map **start, t_scene **draw)
 		}
 		x = 0;
 	}
-	(*draw)->map = *start;
+	draw->map = start;
 }
 
 t_point     *point_node_new(float x, float y, float z, t_scene *draw)
