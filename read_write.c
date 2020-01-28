@@ -26,8 +26,11 @@ static void		write_line(char *line, t_scene *draw, int y)
 	curr = draw->map;
 	while (line[i])
 	{
-		if (y == 0 && curr->data == NULL)
-			curr->data = point_node_new((float)x++, (float)y, (float)ft_atoi(line), draw);
+		if (!draw->calc)
+		{
+			curr->data = point_node_new ((float) x++, (float) y, (float) ft_atoi (line), draw);
+			draw->calc++;
+		}
 		else
 			map_push_right(&curr, map_add_node(point_node_new((float)x++, (float)y, (float)ft_atoi(&line[i]), draw)));
 		while ((ft_isdigit(line[i]) == 1 || line[i] == '-') && line[i])

@@ -125,7 +125,7 @@ void			append_map(t_map *start, t_scene *draw);
 
 
 void      		map_push_right(t_map **start, t_map *new);
-t_map			*map_add_node(t_point *data);
+t_map			*map_add_node(void *data);
 
 void			draw_line_wu(t_point start, t_point end, t_scene *draw);
 void 			draw_line_bresenham(t_point start, t_point end, t_scene *draw);
