@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/27 21:00:58 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 12:32:17 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,13 @@
 # define ZOOM_COEFF_NEG 0.9
 # define MATRIX_ROTATION_DEG 0.05
 # define Z_INCREASE	5
-# define YELLOW 0xFFFF00
-# define BLUE 0x0000FF
-# define GREEN 0x00FF00
-# define MAGENTA 0xFF00FF
+
+# define BROWN 0x5b180c
+# define PEACH 0xe65d3e
+# define PINK 0xf1a26d
+# define LEMON 0xfeda4b
+# define LIGHTYELLOW 0xfefba8
+
 # define DEFAULT_COLOR 0xFFF2A0
 # define HEIGHT_COLOR 0xF65BE3
 
@@ -51,14 +54,21 @@ typedef enum
 {
 	ISOMETRIC,
 	PARALLEL
-}	t_projection;
+}	t_proj;
+
+typedef enum
+{
+	HI,
+	LO,
+	ZERO,
+}	t_height;
 
 typedef struct				s_point
 {
 	double					x;
 	double					y;
 	double					z;
-	int 					color;
+	t_height 				height;
 }							t_point;
 
 typedef struct				s_map
@@ -82,9 +92,11 @@ typedef struct				s_scene
 {
 	t_map					*map;
 	t_mouse 				*mouse;
-	int 					projection;
+	t_proj					projection;
 	void					*mlx;
 	void					*win;
+	int 					color[3];
+	long long				calc;
 	float 					zoom;
 	float 					max_x;
 	float 					max_y;
@@ -93,19 +105,18 @@ typedef struct				s_scene
 	float 					padding_x;
 	float 					padding_y;
 	float 					padding_z;
-	int 					window_text_color;
 	void					(*draw_algorithm)(t_point start, t_point end, struct s_scene *draw);
 	double 					slope;
 	int 					steep;
 }							t_scene;
 
 
-int				read_input(char *str, t_map **start);
+int				read_input(char *str, t_scene *draw);
 
 
 
 
-t_point			*point_node_new(float x, float y, float z);
+t_point			*point_node_new(float x, float y, float z, t_scene *draw);
 void			*draw_window(t_scene **draw);
 void			scene_find_minmax (t_scene *draw);
 double 			get_percent(int start, int end, int curr);
@@ -135,7 +146,7 @@ int 			decrease_brightness(int color, double brightness);
 
 
 void			center_map(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
-t_point 		*transform_isometric(t_point *data);
+t_point 		*transform_isometric(t_point *data, t_scene *draw);
 void			rotate_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void			rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void			rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
@@ -157,6 +168,12 @@ int				mouse_release(int button, int x, int y, void *param);
 void			center_origo(t_scene *draw);
 
 int				combine_color(int r, int g, int b);
+
+void			init_window(t_scene **draw);
+
+void			compound_calc(t_scene *draw);
+
+void			switch_color(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 
 
 #endif

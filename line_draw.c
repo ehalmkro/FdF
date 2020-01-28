@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/27 20:00:24 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 11:12:13 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,6 @@ void	put_pixel(double x, double y, int color, t_scene *draw)
 {
 	mlx_pixel_put(draw->mlx, draw->win, x + draw->padding_x, y + draw->padding_y, color);
 }
-
-// TODO: IMPLEMENT XIAOLIN WU LINE ALGORITHM
-
-
 
 static double	frc_part(double nbr)
 {
@@ -243,8 +239,8 @@ void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 	t_point *current;
 	double pixelcount;
 
-	current = point_node_new(start.x, start.y, 0);
-	delta = point_node_new(end.x - start.x,  end.y - start.y, 0);
+	current = point_node_new(start.x, start.y, 0, draw);
+	delta = point_node_new(end.x - start.x,  end.y - start.y, 0, draw);
 	pixelcount = sqrt((delta->x * delta->x) + (delta->y * delta->y));
 	delta->x /= pixelcount;
 	delta->y /= pixelcount;
@@ -259,17 +255,17 @@ void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 static void 	draw_isometric(t_map *start, t_scene *draw)
 {
 	if (start->right)
-		draw->draw_algorithm(*transform_isometric(start->data), *transform_isometric(start->right->data), draw);
+		draw->draw_algorithm(*transform_isometric(start->data, draw), *transform_isometric(start->right->data, draw), draw);
 	if (start->down)
-		draw->draw_algorithm(*transform_isometric(start->data), *transform_isometric(start->down->data), draw);
+		draw->draw_algorithm(*transform_isometric(start->data, draw), *transform_isometric(start->down->data, draw), draw);
 	if (start->next)
 		draw_isometric(start->next, draw);
-	draw->draw_algorithm(*transform_isometric(start->data), *transform_isometric(start->data), draw);
+	draw->draw_algorithm(*transform_isometric(start->data, draw), *transform_isometric(start->data, draw), draw);
 }
 
 void	draw_matrix(t_map *start, t_scene *draw)
 {
-	if (draw->projection == 1)
+	if (draw->projection == ISOMETRIC)
 		draw_isometric (start, draw);
 	else
 	{

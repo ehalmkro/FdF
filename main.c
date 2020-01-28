@@ -6,13 +6,11 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/27 15:46:09 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 12:14:42 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
-// TODO: add default colors to struct to make changing them easier
 
 void	init_window(t_scene **draw)
 {
@@ -21,14 +19,16 @@ void	init_window(t_scene **draw)
 		perror ("Error: ");
 		exit (1);
 	}
-
 	(*draw)->mouse = malloc(sizeof(t_mouse));
 	(*draw)->mouse->button_press = 0;
-	(*draw)->zoom = 15;
-	(*draw)->projection = 0;
-	(*draw)->padding_x = 400;
-	(*draw)->padding_y = 400;
-	(*draw)->window_text_color = 0xFFFFFF;
+	(*draw)->zoom = 1;
+	while ((*draw)->max_x * (*draw)->zoom < WINDOW_WIDTH / 2)
+		(*draw)->zoom++;
+	(*draw)->projection = PARALLEL;
+	(*draw)->padding_x = WINDOW_WIDTH / 2 - (*draw)->max_x / 2 ;
+	(*draw)->padding_y = WINDOW_HEIGHT / 2 - (*draw)->max_y / 2;
+
+	(*draw)->draw_algorithm = &draw_line_bresenham;
 }
 
 int		main(int argc, char **argv)
@@ -42,34 +42,33 @@ int		main(int argc, char **argv)
 	{
 		start = map_add_node(NULL);
 		draw = malloc(sizeof(t_scene));
-		if (read_input(argv[1], &start) == -1)
+		draw->color[0] = LEMON;
+		draw->color[1] = PEACH;
+		draw->color[2] = BROWN;
+		draw->map = start;
+		if (read_input(argv[1], draw) == -1)
 		{
 			perror("Error: ");
 			exit(1);
 		}
-		draw->map = start;
-		scene_find_minmax(draw);
-		center_origo(draw);
-		scene_find_minmax(draw);
-		append_map(&start, &draw);
 		if ((draw->mlx = mlx_init()) == NULL)
 		{
 			perror("Error: ");
 			exit(1);
 		}
-
+		draw->map = start;
+		center_origo(draw);
 		init_window(&draw);
+		scene_find_minmax(draw);
+		append_map(&start, &draw);
 		draw_window(&draw);
 		matrix_transformation(draw, &zoom_matrix, 0);
-		draw->draw_algorithm = &draw_line_bresenham;
 		render(&start, &draw);
 		mlx_hook(draw->win, 17, 0, &close_window, draw);
 		mlx_hook(draw->win, 3, 0, &keypress, draw);
 		mlx_hook(draw->win, 4, 0, &mouse_press, draw);
 		mlx_hook(draw->win, 5, 0, &mouse_release, draw);
 		mlx_hook(draw->win, 6, 0, &mouse_move, draw);
-
-
 		mlx_loop(draw->mlx);
 	}
 

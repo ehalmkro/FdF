@@ -6,7 +6,7 @@
 /*   By: esko <esko@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 13:29:54 by esko              #+#    #+#             */
-/*   Updated: 2020/01/24 18:16:21 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 11:54:54 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	append_map(t_map **start, t_scene **draw)
 	(*draw)->map = *start;
 }
 
-t_point     *point_node_new(float x, float y, float z)
+t_point     *point_node_new(float x, float y, float z, t_scene *draw)
 {
 	t_point *ret;
 
@@ -62,10 +62,12 @@ t_point     *point_node_new(float x, float y, float z)
 	ret->x = x;
 	ret->y = y;
 	ret->z = z;
-	if (z <= 0)
-		ret->color = DEFAULT_COLOR;
-	else
-		ret->color = HEIGHT_COLOR;
+	if (z == 0)
+		ret->height = ZERO;
+	else if (z > 0)
+		ret->height = HI;
+	else if (z < 0)
+		ret->height = LO;
 	return(ret);
 }
 

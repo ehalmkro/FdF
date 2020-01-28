@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/27 15:48:48 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 12:30:27 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int		mouse_move(int x, int y, void *param)
 	draw->mouse->y = y;
 	if (draw->mouse->button_press == 1 || draw->mouse->button_press == 5)
 	{
+		matrix_transformation(draw, &switch_color, 0);
 		matrix_transformation (draw, &rotate_x, (x - draw->mouse->prev_x) * 0.001);
 		matrix_transformation (draw, &rotate_y, (y - draw->mouse->prev_y) * 0.001);
 	}
 	if (draw->mouse->button_press == 4 || draw->mouse->button_press == 5)
 		matrix_transformation (draw, &rotate_z, (y - draw->mouse->prev_y) * 0.005);
-
 	render (&(draw->map), &draw);
 }
 
@@ -90,6 +90,8 @@ int		keypress(int keycode, void *param)
 		if (keycode == ARROW_RIGHT)
 			draw->padding_x += DEFAULT_INCREMENT;
 	}
+	if (keycode == MAIN_PAD_6)
+		matrix_transformation(draw, &switch_color, 0);
 	if (keycode == MAIN_PAD_5)
 	{
 		draw->padding_z = 1;
@@ -129,10 +131,10 @@ int		keypress(int keycode, void *param)
 		matrix_transformation(draw, rotate_y, MATRIX_ROTATION_DEG);
 	if (keycode == MAIN_PAD_0)
 	{
-		if (draw->projection == 0)
-			draw->projection = 1;
+		if (draw->projection == PARALLEL)
+			draw->projection = ISOMETRIC;
 		else
-			draw->projection = 0;
+			draw->projection = PARALLEL;
 		printf("PROJECTION %u\n", draw->projection);
 	}
 
@@ -144,21 +146,5 @@ void			render(t_map **start, t_scene **draw)
 {
 	mlx_clear_window ((*draw)->mlx, (*draw)->win);
 	draw_window(draw);
-
-	//printf("X = %f, Y = %f Z = %f\n", (*draw)->map->data->x, (*draw)->map->data->y, (*draw)->map->data->z);
-	//printf("NEXT\nX = %f, Y = %f Z = %f\n", (*draw)->map->next->data->x, (*draw)->map->next->data->y, (*draw)->map->next->data->z);
-
-	/*t_point *point;
-	t_point *point2;
-	point = malloc(sizeof(t_point));
-	point2 = malloc(sizeof(t_point));
-	point = point_node_new(10, 0, 0);
-	point2 = point_node_new(50, 1000, 0);
-	point->color = 0xFFFFFF;
-	point2->color = 0xFFFFFF;
-	draw_line_gupta_sproull(*point, *point2, *draw);
-	point = point_node_new(20, 0, 0);
-	point2 = point_node_new(60, 1000, 0);
-	draw_line_bresenham(*point, *point2, *draw);*/
 	draw_matrix(*start, *draw);
 }
