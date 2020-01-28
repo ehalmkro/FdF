@@ -27,18 +27,18 @@ void 	draw_line_wu_alternate(t_point start, t_point end, t_scene *draw)
 		swap (&start.x, &end.x);
 		swap (&start.y, &end.y);
 	}
-	delta = point_node_new(end.x - start.x,end.y - start.y, 0);
+	delta = point_node_new(end.x - start.x,end.y - start.y, 0, draw);
 	double gradient = delta->y/delta->x;
 	if (delta->x == 0.0)
 		gradient = 1.0;
 	int xend = round(start.x);
 	int yend = start.y + gradient * (xend - start.x);
 	double xgap = rfpart_(start.x + 0.5);
-	current = point_node_new(xend, ipart_(yend), 0);
+	current = point_node_new(xend, ipart_(yend), 0, draw);
 	if (draw->steep == 1)
 	{
-		put_pixel(current->y, current->x,  decrease_brightness(set_color(start, end, *delta, *current, *draw), 1.0), draw);
-		put_pixel(current->y + 1, current->x, decrease_brightness(set_color(start, end, *delta, *current, *draw), fpart_(yend) * xgap), draw);
+		put_pixel(current->y, current->x,  decrease_brightness(set_color(end, start, *delta, *current, *draw), 1.0), draw);
+		put_pixel(current->y + 1, current->x, decrease_brightness(set_color(end, start, *delta, *current, *draw), fpart_(yend) * xgap), draw);
 	}
 	else
 	{
@@ -49,7 +49,7 @@ void 	draw_line_wu_alternate(t_point start, t_point end, t_scene *draw)
 	xend = round(end.x);
 	yend = end.y + gradient * (xend - end.x);
 	xgap = fpart_(end.x + 0.5);
-	current_2 = point_node_new(xend, ipart_(yend), 0);
+	current_2 = point_node_new(xend, ipart_(yend), 0, draw);
 	if (draw->steep == 1)
 	{
 		put_pixel(current_2->y, current_2->x,  decrease_brightness(set_color(start, end, *delta, *current, *draw), 1.0), draw);

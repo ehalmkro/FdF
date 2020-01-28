@@ -6,14 +6,21 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/24 12:45:01 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 12:35:07 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
+void	compound_calc(t_scene *draw)
+{
+	if (!draw->calc)
+		draw->calc = 1;
+	else
+		draw->calc += 1;
+}
 
-double get_percent(int start, int end, int curr)
+double	get_percent(int start, int end, int curr)
 {
 	double	place;
 	double	dist;
@@ -29,6 +36,7 @@ void	center_origo(t_scene *draw)
 {
 	t_map *map;
 
+	scene_find_minmax(draw);
 	map = draw->map;
 	while (map)
 	{
@@ -37,7 +45,6 @@ void	center_origo(t_scene *draw)
 		map->data->z -= (draw->max_z - draw->min_z) / 2;
 		map = map->next;
 	}
-
 }
 
 void	scene_find_minmax (t_scene *draw)
