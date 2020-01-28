@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/28 12:14:42 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 17:45:25 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,28 +33,29 @@ void	init_window(t_scene **draw)
 
 int		main(int argc, char **argv)
 {
-	t_map			*start;
-	t_scene			*draw;
+	t_map *start;
+	t_scene *draw;
 
 	if (argc != 2)
-		ft_putendl("usage: fdf source_file");
+		ft_putendl ("usage: fdf source_file");
 	else
 	{
-		start = map_add_node(NULL);
-		draw = malloc(sizeof(t_scene));
+		start = map_add_node (NULL);
+		draw = malloc (sizeof (t_scene));
 		draw->color[0] = LEMON;
 		draw->color[1] = PEACH;
 		draw->color[2] = BROWN;
 		draw->map = start;
-		if (read_input(argv[1], draw) == -1)
+		if (read_input (argv[1], draw) == -1)
 		{
-			perror("Error: ");
-			exit(1);
+			perror ("Error: ");
+			exit (1);
 		}
-		if ((draw->mlx = mlx_init()) == NULL)
+
+		if ((draw->mlx = mlx_init ()) == NULL)
 		{
-			perror("Error: ");
-			exit(1);
+			perror ("Error: ");
+			exit (1);
 		}
 		draw->map = start;
 		center_origo(draw);
@@ -70,10 +71,11 @@ int		main(int argc, char **argv)
 		mlx_hook(draw->win, 5, 0, &mouse_release, draw);
 		mlx_hook(draw->win, 6, 0, &mouse_move, draw);
 		mlx_loop(draw->mlx);
+
 	}
 
 //	LEAK TEST
-//	while(1);
+		//while (1);
 
-	return (0);
+		return (0);
 }

@@ -137,7 +137,6 @@ int		keypress(int keycode, void *param)
 			draw->projection = PARALLEL;
 		printf("PROJECTION %u\n", draw->projection);
 	}
-
 	render(&(draw->map), &draw);
 	return (0);
 }

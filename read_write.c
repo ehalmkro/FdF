@@ -6,33 +6,28 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:08:41 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/28 13:43:52 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/28 17:43:19 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-//	TODO: FIX INPUT READ: MOVING POINTER CAUSING LEAKS
-
-
 static void		write_line(char *line, t_scene *draw, int y)
 {
-	t_map *curr;
 	int x;
 	int i;
 
 	x = 0;
 	i = 0;
-	curr = draw->map;
 	while (line[i])
 	{
 		if (!draw->calc)
 		{
-			curr->data = point_node_new ((float) x++, (float) y, (float) ft_atoi (line), draw);
+			draw->map->data = point_node_new((float) x++,(float) y, (float)ft_atoi(line), draw);
 			draw->calc++;
 		}
 		else
-			map_push_right(&curr, map_add_node(point_node_new((float)x++, (float)y, (float)ft_atoi(&line[i]), draw)));
+			map_push_right(&draw->map, map_add_node(point_node_new((float)x++, (float)y, (float)ft_atoi(&line[i]), draw)));
 		while ((ft_isdigit(line[i]) == 1 || line[i] == '-') && line[i])
 			i++;
 		while (ft_isdigit(line[i]) == 0 && line[i] != '-' && line[i])
