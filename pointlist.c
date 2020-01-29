@@ -6,7 +6,7 @@
 /*   By: esko <esko@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 13:29:54 by esko              #+#    #+#             */
-/*   Updated: 2020/01/28 17:50:26 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/29 19:00:38 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	append_map(t_map *start, t_scene *draw)
 		}
 		x = 0;
 	}
-	draw->map = start;
+//	draw->map = start;
 }
 
 t_point     *point_node_new(float x, float y, float z, t_scene *draw)
@@ -76,8 +76,7 @@ t_map		*map_add_node(void *data)
 	t_map *ret;
 
 	ret = (t_map*)malloc(sizeof(t_map));
-	ret->data = (t_point*)malloc(sizeof(t_point));
-	ft_memcpy(ret->data, data, sizeof(t_point));
+	ret->data = data;
 	ret->down = NULL;
 	ret->next = NULL;
 	ret->right = NULL;

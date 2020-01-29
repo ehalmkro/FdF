@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/28 17:45:25 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/29 19:45:36 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,13 @@ int		main(int argc, char **argv)
 		ft_putendl ("usage: fdf source_file");
 	else
 	{
-		start = map_add_node (NULL);
+		start = malloc(sizeof(t_map));
+		start->next = NULL;
 		draw = malloc (sizeof (t_scene));
 		draw->color[0] = LEMON;
 		draw->color[1] = PEACH;
 		draw->color[2] = BROWN;
+		draw->color[3] = LEMON;
 		draw->map = start;
 		if (read_input (argv[1], draw) == -1)
 		{
@@ -57,7 +59,6 @@ int		main(int argc, char **argv)
 			perror ("Error: ");
 			exit (1);
 		}
-		draw->map = start;
 		center_origo(draw);
 		init_window(&draw);
 		scene_find_minmax(draw);
@@ -70,6 +71,8 @@ int		main(int argc, char **argv)
 		mlx_hook(draw->win, 4, 0, &mouse_press, draw);
 		mlx_hook(draw->win, 5, 0, &mouse_release, draw);
 		mlx_hook(draw->win, 6, 0, &mouse_move, draw);
+		if (draw->calc % 5333 == 0)
+			text_carousel(draw);
 		mlx_loop(draw->mlx);
 
 	}
