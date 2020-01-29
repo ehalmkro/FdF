@@ -37,8 +37,8 @@ void 	draw_line_wu_alternate(t_point start, t_point end, t_scene *draw)
 	current = point_node_new(xend, ipart_(yend), 0, draw);
 	if (draw->steep == 1)
 	{
-		put_pixel(current->y, current->x,  decrease_brightness(set_color(end, start, *delta, *current, *draw), 1.0), draw);
-		put_pixel(current->y + 1, current->x, decrease_brightness(set_color(end, start, *delta, *current, *draw), fpart_(yend) * xgap), draw);
+		put_pixel(current->y, current->x,  decrease_brightness(set_color(start, end, *delta, *current, *draw), 1.0), draw);
+		put_pixel(current->y + 1, current->x, decrease_brightness(set_color(start, end, *delta, *current, *draw), fpart_(yend) * xgap), draw);
 	}
 	else
 	{
@@ -60,7 +60,6 @@ void 	draw_line_wu_alternate(t_point start, t_point end, t_scene *draw)
 		put_pixel(current_2->x, current_2->y, decrease_brightness(set_color(start, end, *delta, *current, *draw), 1.0), draw);
 		put_pixel(current_2->x, current_2->y + 1, decrease_brightness(set_color(start, end, *delta, *current, *draw), fpart_(yend) * xgap), draw);
 	}
-	current->x;
 	if (draw->steep == 1)
 	{
 		while (current->x < current_2->x)
@@ -81,5 +80,4 @@ void 	draw_line_wu_alternate(t_point start, t_point end, t_scene *draw)
 			current->x++;
 		}
 	}
-
 }

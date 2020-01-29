@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/28 12:32:17 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/29 20:26:49 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,8 +95,9 @@ typedef struct				s_scene
 	t_proj					projection;
 	void					*mlx;
 	void					*win;
-	int 					color[3];
+	int 					color[4];
 	long long				calc;
+	int 					carousel;
 	float 					zoom;
 	float 					max_x;
 	float 					max_y;
@@ -175,5 +176,6 @@ void			compound_calc(t_scene *draw);
 
 void			switch_color(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 
+void 			text_carousel(t_scene *draw);
 
 #endif

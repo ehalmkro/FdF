@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/28 11:12:13 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/29 20:15:17 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,13 +92,13 @@ void	draw_line_wu(t_point start, t_point end, t_scene *draw)
 	draw->steep = fabs(end.y - start.y) > fabs(end.x - start.x) ? 1 : 0;
 	if (draw->steep)
 	{
-		swap(&start.x, &start.y);
-		swap(&end.x, &end.y);
+		ft_swap(&start.x, &start.y);
+		ft_swap(&end.x, &end.y);
 	}
 	if (end.x < start.x)
 	{
-		swap(&start.x, &end.x);
-		swap(&start.y, &end.y);
+		ft_swap(&start.x, &end.x);
+		ft_swap(&start.y, &end.y);
 	}
 	dx = end.x - start.x;
 	dy = end.y - start.y;
@@ -118,13 +118,13 @@ void	draw_line_gupta_sproull(t_point start, t_point end, t_scene *draw)
 	{
 		if (draw->steep)
 		{
-			swap (&start.x, &start.y);
-			swap (&end.x, &end.y);
+			ft_swap (&start.x, &start.y);
+			ft_swap (&end.x, &end.y);
 		}
 		if (end.x < start.x)
 		{
-			swap (&start.x, &end.x);
-			swap (&start.y, &end.y);
+			ft_swap (&start.x, &end.x);
+			ft_swap (&start.y, &end.y);
 		}
 	}
 	dx = end.x - start.x;
@@ -163,74 +163,6 @@ void	draw_line_gupta_sproull(t_point start, t_point end, t_scene *draw)
 	}
 }
 
-/*
-void	draw_line_wu(t_point *start, t_point *end, t_scene *draw)
-{
-	double x0 = start->x;
-	double x1 = end->x;
-	double y0 = start->y;
-	double y1 = end->y;
-	int x_dir;
-	if (y0 > y1)
-		ft_swap(&y0, &y1);
-	mlx_pixel_put(draw->mlx, draw->win, (int)x0, (int)y0, set_color(start, end));
-	double delta_x = x1 - x0;
-	if (delta_x >= 0.0)
-		x_dir = 1;
-	else
-	{
-		x_dir = -1;
-		delta_x *= -1;
-	}
-	double delta_y = y1 - y0;
-	if (delta_y == 0)
-	{
-		while (delta_x-- > 0)
-		{
-			x0 += x_dir;
-			mlx_pixel_put(draw->mlx, draw->win, (int)x0, (int)y0, set_color(start, end));
-		}
-		return;
-	}
-	if (delta_x == 0)
-	{
-		while (delta_y-- > 0)
-		{
-			y0++;
-			mlx_pixel_put(draw->mlx, draw->win, (int)x0, (int)y0, set_color(start, end));
-		}
-		return;
-	}
-	if (delta_x == delta_y)
-	{
-		while (delta_y-- > 0)
-		{
-			x0 += x_dir;
-			y0++;
-			mlx_pixel_put(draw->mlx, draw->win, (int)x0, (int)y0, set_color(start, end));
-		}
-		return;
-	}
-	double erroracc = 0;
-	double erroracc_tmp = 0;
-	double erroradj = 0;
-	double weighting = 0;
-	if (delta_y > delta_x)
-	{
-		erroradj = (int)delta_x << 16 / (int)delta_y;
-		while (--delta_y)
-		{
-			erroracc_tmp = erroracc;
-			erroracc += erroradj;
-			if (erroracc  <= erroracc_tmp)
-				x0 += x_dir;
-			y0++;
-			weightin
-		}
-	}
-
-}*/
-
 //		BRESENHAM LINE ALGORITHM
 void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 {
@@ -251,6 +183,8 @@ void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 		current->y += delta->y;
 		pixelcount--;
 	}
+	free(current);
+	free(delta);
 }
 static void 	draw_isometric(t_map *start, t_scene *draw)
 {
@@ -277,7 +211,4 @@ void	draw_matrix(t_map *start, t_scene *draw)
 			draw_matrix (start->next, draw);
 		draw->draw_algorithm ((*start->data), (*start->data), draw);
 	}
-	/*if (!(start->next) && !(start->down) && !(start->right))
-		mlx_pixel_put(draw->mlx, draw->win, (int)(start->data->x), (int)\
-		(start->data->y),set_color(start->data, start->data));*/
 }

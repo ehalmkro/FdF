@@ -6,45 +6,39 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/28 10:43:51 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/29 20:30:13 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-// TODO: Make function for full string output
-
-static void		set_window_text(char *str, int x, t_scene *draw)
+void 	text_carousel(t_scene *draw)
 {
-	char **words;
-	int i;
-	int y;
-	int padding;
-
-	i = 0;
-	y = 20;
-	words = ft_strsplit(str, '\n');
-	while(words[i])
-	{
-		mlx_string_put(draw->mlx, draw->win, x, y, draw->color[0], words[i++]);
-		y += 20;
-	}
+	draw->carousel == 0 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "*** F D F ***") : 0;
+	draw->carousel == 1 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "** F D F *** ") : 0;
+	draw->carousel == 2 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "* F D F ***  ") : 0;
+	draw->carousel == 3 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], " F D F *** F ") : 0;
+	draw->carousel == 4 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "F D F *** F D") : 0;
+	draw->carousel == 5 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], " D F *** F D ") : 0;
+	draw->carousel == 6 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "D F *** F D F") : 0;
+	draw->carousel == 7 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "  F *** F D F") : 0;
+	draw->carousel == 8 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "F *** F D F *") : 0;
+	draw->carousel == 9 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "*** F D F ***") : 0;
+	draw->carousel == 9 ? draw->carousel = 0 : draw->carousel++;
 
 }
 
 void			*draw_window(t_scene **draw)
 {
 	t_scene *draw_curr;
-
 	draw_curr = *draw;
 
+
 	mlx_clear_window(draw_curr->mlx, draw_curr->win);
-	set_window_text("X max:\nY max:\nZ max:\n", 20, *draw);
+	mlx_string_put(draw_curr->mlx, draw_curr->win, 790, 20, draw_curr->color[3], "Line draw algorithm:");
 	if ((*draw)->draw_algorithm == &draw_line_bresenham)
-		set_window_text("Line algorithm:\nBresenham", 850, *draw);
+		mlx_string_put(draw_curr->mlx, draw_curr->win, 750, 40, draw_curr->color[3], "Jack Elton Bresenham (1965)");
 	else if ((*draw)->draw_algorithm == &draw_line_wu_alternate)
-		set_window_text("Line algorithm:\nXiaolin Wu", 850, *draw);
-	mlx_string_put(draw_curr->mlx, draw_curr->win, 100, 20, draw_curr->color[2], ft_itoa((int)draw_curr->max_x + 1));
-	mlx_string_put(draw_curr->mlx, draw_curr->win, 100, 40, draw_curr->color[2], ft_itoa((int)draw_curr->max_y + 1));
-	mlx_string_put(draw_curr->mlx, draw_curr->win, 100, 60, draw_curr->color[2], ft_itoa((int)draw_curr->max_z + 1));
+		mlx_string_put(draw_curr->mlx, draw_curr->win, 810, 40, draw_curr->color[3], "Xiaolin Wu (1991)");
+	text_carousel(*draw);
 }
