@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 15:28:52 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 15:30:23 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,15 +91,6 @@ void	rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scen
 	data->z = (-prev_x) * sin(deg) + prev_z * cos(deg);
 }
 
-// OLD VERSION USING MATRIX_TRANSFORMATION AS PARENT
-/*void transform_isometric(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
-{
-	(void)draw;
-	(void)deg;
-	(void)prev_z;
-	data->x = (prev_x - prev_y) * cos (0.523599);
-	data->y = -(data->z) + (prev_x + prev_y) * sin (0.523599);
-}*/
 
 t_point *transform_isometric(t_point *data, t_scene *draw)
 {

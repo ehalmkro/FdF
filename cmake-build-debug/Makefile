@@ -1918,6 +1918,33 @@ events.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/events.c.s
 .PHONY : events.c.s
 
+extras.o: extras.c.o
+
+.PHONY : extras.o
+
+# target to build an object file
+extras.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/extras.c.o
+.PHONY : extras.c.o
+
+extras.i: extras.c.i
+
+.PHONY : extras.i
+
+# target to preprocess a source file
+extras.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/extras.c.i
+.PHONY : extras.c.i
+
+extras.s: extras.c.s
+
+.PHONY : extras.s
+
+# target to generate assembly for a file
+extras.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/extras.c.s
+.PHONY : extras.c.s
+
 line_draw.o: line_draw.c.o
 
 .PHONY : line_draw.o
@@ -2342,6 +2369,9 @@ help:
 	@echo "... events.o"
 	@echo "... events.i"
 	@echo "... events.s"
+	@echo "... extras.o"
+	@echo "... extras.i"
+	@echo "... extras.s"
 	@echo "... line_draw.o"
 	@echo "... line_draw.i"
 	@echo "... line_draw.s"
