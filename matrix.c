@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/29 18:59:02 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 15:28:52 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,26 @@
 void	switch_color(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
 {
 	int *rgb;
+	int ret_color;
 	(void)prev_x;
 	(void)prev_y;
 	(void)prev_z;
 	(void)deg;
-	compound_calc(draw);
+	draw->calc += 1;
 	if (draw->calc % 5333 == 0)
 		{
 		rgb = split_color(draw->color[0]);
-		draw->color[0] = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
+		free(rgb);
+		ret_color = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
+		draw->color[0] = ret_color;
 		rgb = split_color(draw->color[1]);
-		draw->color[1] = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
+		free(rgb);
+		ret_color	= combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
+		draw->color[1] = ret_color;
 		rgb = split_color(draw->color[2]);
-		draw->color[2] = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
+		free(rgb);
+		ret_color = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
+		draw->color[2] = ret_color;
 		}
 }
 

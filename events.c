@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/29 20:29:35 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 15:24:47 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		mouse_press(int button, int x, int y, void *param)
 	{
 		button == MOUSE_SCROLL_UP ? draw->zoom = ZOOM_COEFF_POS : 0;
 		button == MOUSE_SCROLL_DOWN ? draw->zoom = ZOOM_COEFF_NEG : 0;
-		matrix_transformation (draw, &zoom_matrix, 0);
+		matrix_transformation(draw, &zoom_matrix, 0);
 	}
 	if (button == MOUSE_LEFT_BUTTON)
 		draw->mouse->button_press += 1;

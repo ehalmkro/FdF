@@ -14,9 +14,6 @@
 
 void	compound_calc(t_scene *draw)
 {
-	if (!draw->calc)
-		draw->calc = 1;
-	else
 		draw->calc += 1;
 }
 
