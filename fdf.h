@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 17:32:54 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 17:42:10 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,5 +177,6 @@ void 			text_carousel(t_scene *draw);
 
 void			debug_lines(t_scene *draw);
 void			swap_double(double *a , double *b);
+int			window_idle(void *param);
 
 #endif
