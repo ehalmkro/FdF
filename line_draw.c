@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/29 20:15:17 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 16:15:20 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,13 +188,29 @@ void draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 }
 static void 	draw_isometric(t_map *start, t_scene *draw)
 {
+	t_point *begin;
+	t_point *end;
 	if (start->right)
-		draw->draw_algorithm(*transform_isometric(start->data, draw), *transform_isometric(start->right->data, draw), draw);
+	{
+		begin = transform_isometric(start->data, draw);
+		end = transform_isometric (start->right->data, draw);
+		draw->draw_algorithm(*begin, *end, draw);
+		free(begin);
+		free(end);
+	}
 	if (start->down)
-		draw->draw_algorithm(*transform_isometric(start->data, draw), *transform_isometric(start->down->data, draw), draw);
+	{
+		begin = transform_isometric(start->data, draw);
+		end = transform_isometric (start->down->data, draw);
+		draw->draw_algorithm(*begin, *end, draw);
+		free(begin);
+		free(end);
+	}
 	if (start->next)
 		draw_isometric(start->next, draw);
-	draw->draw_algorithm(*transform_isometric(start->data, draw), *transform_isometric(start->data, draw), draw);
+	begin = transform_isometric(start->data, draw);
+	draw->draw_algorithm(*begin ,*begin, draw);
+	free(begin);
 }
 
 void	draw_matrix(t_map *start, t_scene *draw)
