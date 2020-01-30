@@ -38,6 +38,7 @@ int 	decrease_brightness(int color, double brightness)
 	rgb[0] *= brightness;
 	rgb[1] *= brightness;
 	rgb[2] *= brightness;
+	free(rgb);
 	return((0 << 24) + (rgb[0] << 16) + (rgb[1] << 8) + rgb[2]);
 }
 

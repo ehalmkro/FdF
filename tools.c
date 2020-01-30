@@ -6,16 +6,11 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/29 18:59:02 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 15:28:35 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
-void	compound_calc(t_scene *draw)
-{
-		draw->calc += 1;
-}
 
 double	get_percent(int start, int end, int curr)
 {

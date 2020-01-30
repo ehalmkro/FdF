@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/29 20:30:13 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 15:39:37 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,29 @@
 
 void 	text_carousel(t_scene *draw)
 {
+	int i;
+
+	i = 10009999;
 	draw->carousel == 0 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "*** F D F ***") : 0;
+	wait(&i);
 	draw->carousel == 1 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "** F D F *** ") : 0;
+	wait(&i);
 	draw->carousel == 2 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "* F D F ***  ") : 0;
+	wait(&i);
 	draw->carousel == 3 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], " F D F *** F ") : 0;
+	wait(&i);
 	draw->carousel == 4 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "F D F *** F D") : 0;
+	wait(&i);
 	draw->carousel == 5 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], " D F *** F D ") : 0;
+	wait(&i);
 	draw->carousel == 6 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "D F *** F D F") : 0;
+	wait(&i);
 	draw->carousel == 7 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "  F *** F D F") : 0;
+	wait(&i);
 	draw->carousel == 8 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "F *** F D F *") : 0;
+	wait(&i);
 	draw->carousel == 9 ? mlx_string_put(draw->mlx, draw->win, WINDOW_WIDTH/2.5, 40, draw->color[3], "*** F D F ***") : 0;
+	wait(&i);
 	draw->carousel == 9 ? draw->carousel = 0 : draw->carousel++;
 
 }
