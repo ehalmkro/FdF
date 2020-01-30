@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 15:32:59 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 15:34:14 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,7 @@ int		main(int argc, char **argv)
 		mlx_hook(draw->win, 4, 0, &mouse_press, draw);
 		mlx_hook(draw->win, 5, 0, &mouse_release, draw);
 		mlx_hook(draw->win, 6, 0, &mouse_move, draw);
-		if (draw->calc % 133769 == 0)
-			text_carousel(draw);
+		text_carousel(draw);
 		mlx_loop(draw->mlx);
 
 	}

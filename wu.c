@@ -80,4 +80,7 @@ void 	draw_line_wu_alternate(t_point start, t_point end, t_scene *draw)
 			current->x++;
 		}
 	}
+	free(delta);
+	free(current);
+	free(current_2);
 }
