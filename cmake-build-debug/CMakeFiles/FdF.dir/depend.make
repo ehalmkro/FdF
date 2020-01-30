@@ -12,6 +12,11 @@ CMakeFiles/FdF.dir/events.c.o: ../fdf.h
 CMakeFiles/FdF.dir/events.c.o: ../keycodes.h
 CMakeFiles/FdF.dir/events.c.o: /usr/local/include/mlx.h
 
+CMakeFiles/FdF.dir/extras.c.o: ../Libft/libft.h
+CMakeFiles/FdF.dir/extras.c.o: ../extras.c
+CMakeFiles/FdF.dir/extras.c.o: ../fdf.h
+CMakeFiles/FdF.dir/extras.c.o: /usr/local/include/mlx.h
+
 CMakeFiles/FdF.dir/line_draw.c.o: ../Libft/libft.h
 CMakeFiles/FdF.dir/line_draw.c.o: ../fdf.h
 CMakeFiles/FdF.dir/line_draw.c.o: ../line_draw.c

@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 17:09:36 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 17:51:56 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,8 +142,22 @@ int		keypress(int keycode, void *param)
 			draw->projection = PARALLEL;
 		printf("PROJECTION %u\n", draw->projection);
 	}
-	render(&(draw->map), &draw);
+	//render(&(draw->map), &draw);
 	return (0);
+}
+
+int			window_idle(void *param)
+{
+	t_scene *draw;
+
+	draw = param;
+	if (draw->mouse->button_press == 0)
+	{
+		matrix_transformation (draw, &rotate_x, 0.00009);
+		matrix_transformation (draw, &rotate_y, 0.00009);
+		matrix_transformation (draw, &rotate_z, 0.00009);
+	}
+		render(&(draw->map), &draw);
 }
 
 void			render(t_map **start, t_scene **draw)
@@ -153,4 +167,6 @@ void			render(t_map **start, t_scene **draw)
 	draw_matrix(*start, *draw);
 	if ((*draw)->debug == 1)
 		debug_lines(*draw);
+	if ((*draw)->mouse->button_press == 0)
+		matrix_transformation(*draw, &rotate_x, 0.0005);
 }
