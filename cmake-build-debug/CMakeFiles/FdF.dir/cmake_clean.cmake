@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FdF.dir/color.c.o"
   "CMakeFiles/FdF.dir/events.c.o"
+  "CMakeFiles/FdF.dir/extras.c.o"
   "CMakeFiles/FdF.dir/line_draw.c.o"
   "CMakeFiles/FdF.dir/main.c.o"
   "CMakeFiles/FdF.dir/matrix.c.o"

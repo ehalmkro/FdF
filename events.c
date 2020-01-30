@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 15:24:47 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 17:09:36 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,11 @@ int		keypress(int keycode, void *param)
 		if (keycode == ARROW_RIGHT)
 			draw->padding_x += DEFAULT_INCREMENT;
 	}
+	if (keycode == MAIN_PAD_D)
+	{
+		draw->debug = draw->debug == 0 ? 1 : 0;
+		debug_lines (draw);
+	}
 	if (keycode == MAIN_PAD_6)
 		matrix_transformation(draw, &switch_color, 0);
 	if (keycode == MAIN_PAD_5)
@@ -115,8 +120,8 @@ int		keypress(int keycode, void *param)
 	}
 	if (keycode == MAIN_PAD_9)
 	{
-		if (draw->draw_algorithm != &draw_line_wu_alternate)
-			draw->draw_algorithm = &draw_line_wu_alternate;
+		if (draw->draw_algorithm != &draw_line_wu)
+			draw->draw_algorithm = &draw_line_wu;
 		else
 			draw->draw_algorithm = &draw_line_bresenham;
 /*		else
@@ -146,4 +151,6 @@ void			render(t_map **start, t_scene **draw)
 	mlx_clear_window ((*draw)->mlx, (*draw)->win);
 	draw_window(draw);
 	draw_matrix(*start, *draw);
+	if ((*draw)->debug == 1)
+		debug_lines(*draw);
 }

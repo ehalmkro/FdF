@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/29 20:26:49 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/30 17:32:54 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,8 +107,8 @@ typedef struct				s_scene
 	float 					padding_y;
 	float 					padding_z;
 	void					(*draw_algorithm)(t_point start, t_point end, struct s_scene *draw);
-	double 					slope;
 	int 					steep;
+	int 					debug;
 }							t_scene;
 
 
@@ -128,10 +128,8 @@ void			append_map(t_map *start, t_scene *draw);
 void      		map_push_right(t_map **start, t_map *new);
 t_map			*map_add_node(void *data);
 
-void			draw_line_wu(t_point start, t_point end, t_scene *draw);
 void 			draw_line_bresenham(t_point start, t_point end, t_scene *draw);
-void			draw_line_gupta_sproull(t_point start, t_point end, t_scene *draw);
-void 			draw_line_wu_alternate(t_point start, t_point end, t_scene *draw);
+void 			draw_line_wu(t_point start, t_point end, t_scene *draw);
 
 void			draw_matrix(t_map *start, t_scene *draw);
 
@@ -153,7 +151,6 @@ void			rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_sc
 void			rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void			zoom_matrix(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 void			modify_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
-void 			correct_axis(t_point *start, t_point *end, t_scene *draw);
 
 void			put_pixel(double x, double y, int color, t_scene *draw);
 
@@ -177,5 +174,8 @@ void			compound_calc(t_scene *draw);
 void			switch_color(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
 
 void 			text_carousel(t_scene *draw);
+
+void			debug_lines(t_scene *draw);
+void			swap_double(double *a , double *b);
 
 #endif

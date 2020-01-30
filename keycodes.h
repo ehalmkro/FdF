@@ -26,6 +26,8 @@
 # define MOUSE_SCROLL_LEFT	6
 # define MOUSE_SCROLL_RIGHT	7
 
+
+# define MAIN_PAD_D			2
 # define ARROW_UP			126
 # define ARROW_DOWN			125
 # define ARROW_LEFT			123
