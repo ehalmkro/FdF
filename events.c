@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 10:39:22 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:05:27 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,7 @@ int		keypress(int keycode, void *param)
 			draw->projection = PARALLEL;
 		printf("PROJECTION %u\n", draw->projection);
 	}
-	//render(&(draw->map), &draw);
+
 	return (0);
 }
 
@@ -158,6 +158,17 @@ int			window_idle(void *param)
 	}
 	render(&(draw->map), &draw);
 }
+
+void			event_handler(t_scene *draw)
+{
+	mlx_hook(draw->win, 17, 0, &close_window, draw);
+	mlx_hook(draw->win, 3, 0, &keypress, draw);
+	mlx_hook(draw->win, 4, 0, &mouse_press, draw);
+	mlx_hook(draw->win, 5, 0, &mouse_release, draw);
+	mlx_hook(draw->win, 6, 0, &mouse_move, draw);
+	mlx_loop_hook(draw->mlx, &window_idle, draw);
+}
+
 
 void			render(t_map **start, t_scene **draw)
 {
