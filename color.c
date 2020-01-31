@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:04:48 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 19:37:43 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,4 @@ int		set_color(t_point start, t_point end, t_point delta, t_point current, t_sce
 	g = get_color_point((color[0] >> 8) & 0xFF, (color[1] >> 8) & 0xFF, percentage);
 	b = get_color_point(color[0] & 0xFF, color[1] & 0xFF, percentage);
 	return ((r << 16) | (g << 8) | b);
-
 }

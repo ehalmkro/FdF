@@ -15,7 +15,8 @@
 
 void	put_pixel(float x, float y, int color, t_scene *draw)
 {
-	mlx_pixel_put(draw->mlx, draw->win, x + draw->padding_x, y + draw->padding_y, color);
+	mlx_pixel_put(draw->mlx, draw->win, x + draw->padding_x,\
+	y + draw->padding_y, color);
 }
 //		BRESENHAM LINE ALGORITHM
 
