@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:05:27 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:05:29 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,7 +131,7 @@ int				read_input(char *str, t_scene *draw);
 
 
 t_point			*point_node_new(float x, float y, float z, t_scene *draw);
-void			*draw_window(t_scene **draw);
+void			draw_window(t_scene *draw);
 void			scene_find_minmax (t_scene *draw);
 double 			get_percent(int start, int end, int curr);
 
@@ -148,7 +148,7 @@ void			draw_matrix(t_map *start, t_scene *draw);
 
 int				set_color(t_point start, t_point end, t_point delta, t_point current, t_scene draw);
 
-void			render(t_map **start, t_scene **draw);
+void			render(t_scene *draw);
 
 int				close_window(void *param);
 int				keypress(int keycode, void *param);

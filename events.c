@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:05:27 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:33:13 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int		mouse_move(int x, int y, void *param)
 	}
 	if (draw->mouse->button_press == 4 || draw->mouse->button_press == 5)
 		matrix_transformation (draw, &rotate_z, (y - draw->mouse->prev_y) * 0.005);
-	render (&(draw->map), &draw);
 }
 
 int		mouse_press(int button, int x, int y, void *param)
@@ -49,7 +48,6 @@ int		mouse_press(int button, int x, int y, void *param)
 		draw->mouse->button_press += 1;
 	if (button == MOUSE_RIGHT_BUTTON)
 		draw->mouse->button_press += 4;
-	render(&(draw->map), &draw);
 	return(0);
 }
 
@@ -156,7 +154,7 @@ int			window_idle(void *param)
 		matrix_transformation (draw, &rotate_y, 0.00009);
 		matrix_transformation (draw, &rotate_z, 0.00009);
 	}
-	render(&(draw->map), &draw);
+	render(draw);
 }
 
 void			event_handler(t_scene *draw)
@@ -167,20 +165,21 @@ void			event_handler(t_scene *draw)
 	mlx_hook(draw->win, 5, 0, &mouse_release, draw);
 	mlx_hook(draw->win, 6, 0, &mouse_move, draw);
 	mlx_loop_hook(draw->mlx, &window_idle, draw);
+	mlx_loop(draw->mlx);
 }
 
 
-void			render(t_map **start, t_scene **draw)
+void			render(t_scene *draw)
 {
-	mlx_clear_window ((*draw)->mlx, (*draw)->win);
+	mlx_clear_window(draw->mlx, draw->win);
 	draw_window(draw);
-	draw_matrix(*start, *draw);
-	if ((*draw)->debug == 1)
-		debug_lines(*draw);
-	if (timer(*draw) == 0)
+	draw_matrix(draw->map, draw);
+	if (draw->debug == 1)
+		debug_lines(draw);
+	if (timer(draw) == 0)
 	{
-		(*draw)->carousel == 9 ? (*draw)->carousel = 0 : (*draw)->carousel++;
-		matrix_transformation((*draw), &switch_color, 0);
+		draw->carousel == 9 ? draw->carousel = 0 : draw->carousel++;
+		matrix_transformation(draw, &switch_color, 0);
 	}
-	text_carousel(*draw);
+	text_carousel(draw);
 }
