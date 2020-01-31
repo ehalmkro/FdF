@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 19:21:45 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 19:23:41 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,7 +179,7 @@ void			switch_color(t_point *data, float prev_x, float prev_y, float prev_z, t_s
 void 			text_carousel(t_scene *draw);
 
 void			debug_lines(t_scene *draw);
-void			swap_double(double *a , double *b);
+
 int				window_idle(void *param);
 int				timer(t_scene *draw);
 void			event_handler(t_scene *draw);
