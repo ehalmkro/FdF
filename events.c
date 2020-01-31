@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 10:35:20 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 10:39:22 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int		mouse_move(int x, int y, void *param)
 	draw->mouse->y = y;
 	if (draw->mouse->button_press == 1 || draw->mouse->button_press == 5)
 	{
-		matrix_transformation(draw, &switch_color, 0);
 		matrix_transformation (draw, &rotate_x, (x - draw->mouse->prev_x) * 0.001);
 		matrix_transformation (draw, &rotate_y, (y - draw->mouse->prev_y) * 0.001);
 	}
@@ -170,7 +169,7 @@ void			render(t_map **start, t_scene **draw)
 	if (timer(*draw) == 0)
 	{
 		(*draw)->carousel == 9 ? (*draw)->carousel = 0 : (*draw)->carousel++;
-
+		matrix_transformation((*draw), &switch_color, 0);
 	}
 	text_carousel(*draw);
 }

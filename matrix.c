@@ -21,22 +21,18 @@ void	switch_color(t_point *data, double prev_x, double prev_y, double prev_z, t_
 	(void)prev_y;
 	(void)prev_z;
 	(void)deg;
-	draw->calc += 1;
-	if (draw->calc % 5333 == 0)
-		{
-		rgb = split_color(draw->color[0]);
-		free(rgb);
-		ret_color = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
-		draw->color[0] = ret_color;
-		rgb = split_color(draw->color[1]);
-		free(rgb);
-		ret_color	= combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
-		draw->color[1] = ret_color;
-		rgb = split_color(draw->color[2]);
-		free(rgb);
-		ret_color = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
-		draw->color[2] = ret_color;
-		}
+	rgb = split_color(draw->color[0]);
+	free(rgb);
+	ret_color = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
+	draw->color[0] = ret_color;
+	rgb = split_color(draw->color[1]);
+	free(rgb);
+	ret_color	= combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
+	draw->color[1] = ret_color;
+	rgb = split_color(draw->color[2]);
+	free(rgb);
+	ret_color = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
+	draw->color[2] = ret_color;
 }
 
 

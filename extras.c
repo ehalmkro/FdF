@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 16:41:00 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 10:35:46 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 10:40:26 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		timer(t_scene *draw)
 {
 
-	if (((clock()) -  draw->prev_time) < 50000)
+	if (((clock()) -  draw->prev_time) < 250000)
 		return(1);
 	draw->prev_time = clock();
 	return(0);
