@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 17:48:12 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 10:27:38 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,14 @@ int		main(int argc, char **argv)
 		scene_find_minmax(draw);
 		append_map(start, draw);
 		draw_window(&draw);
+		text_carousel(draw);
 		matrix_transformation(draw, &zoom_matrix, 0);
-		//render(&start, &draw);
 		mlx_hook(draw->win, 17, 0, &close_window, draw);
 		mlx_hook(draw->win, 3, 0, &keypress, draw);
 		mlx_hook(draw->win, 4, 0, &mouse_press, draw);
 		mlx_hook(draw->win, 5, 0, &mouse_release, draw);
 		mlx_hook(draw->win, 6, 0, &mouse_move, draw);
 		mlx_loop_hook(draw->mlx, &window_idle, draw);
-		text_carousel(draw);
 		mlx_loop(draw->mlx);
 
 	}

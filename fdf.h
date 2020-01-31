@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 17:42:10 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 10:21:24 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@
 # include <fcntl.h>
 # include <mlx.h>
 # include <math.h>
+
+/*
+ * time.h used only for bonus functions in extras.c
+ */
+
+# include <time.h>
 
 # define WINDOW_WIDTH 1024
 # define WINDOW_HEIGHT 768
@@ -109,6 +115,13 @@ typedef struct				s_scene
 	void					(*draw_algorithm)(t_point start, t_point end, struct s_scene *draw);
 	int 					steep;
 	int 					debug;
+
+/*
+ * prev_time used in bonus functions' timer
+ */
+
+	clock_t 				prev_time;
+
 }							t_scene;
 
 
@@ -177,6 +190,7 @@ void 			text_carousel(t_scene *draw);
 
 void			debug_lines(t_scene *draw);
 void			swap_double(double *a , double *b);
-int			window_idle(void *param);
+int				window_idle(void *param);
+int				timer(t_scene *draw);
 
 #endif
