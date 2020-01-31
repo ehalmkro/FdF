@@ -6,11 +6,28 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:08:41 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/29 18:59:02 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:52:44 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+// TODO: dupliocate minmax check remove
+
+static void 	validate_input(t_scene *draw)
+{
+	t_map *map;
+
+	map = draw->map;
+	scene_find_minmax(draw);
+	while (map)
+	{
+		!(map->right) && map->data->x < draw->max_y ? ft_error(4) : 0;
+
+	}
+
+
+}
 
 static void		write_line(char *line, t_scene *draw, int y)
 {
@@ -21,11 +38,8 @@ static void		write_line(char *line, t_scene *draw, int y)
 	i = 0;
 	while (line[i])
 	{
-		if (!draw->calc)
-		{
+		if (y == 0 && x == 0)
 			draw->map->data = point_node_new((float) x++,(float) y, (float)ft_atoi(line), draw);
-			draw->calc++;
-		}
 		else
 			map_push_right(&draw->map, map_add_node(point_node_new((float)x++, (float)y, (float)ft_atoi(&line[i]), draw)));
 		while ((ft_isdigit(line[i]) == 1 || line[i] == '-') && line[i])
