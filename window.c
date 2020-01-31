@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 17:03:24 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 10:25:53 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ void			*draw_window(t_scene **draw)
 		mlx_string_put(draw_curr->mlx, draw_curr->win, 750, 40, draw_curr->color[3], "Jack Elton Bresenham (1965)");
 	else if ((*draw)->draw_algorithm == &draw_line_wu)
 		mlx_string_put(draw_curr->mlx, draw_curr->win, 810, 40, draw_curr->color[3], "Xiaolin Wu (1991)");
-	text_carousel(*draw);
 }
