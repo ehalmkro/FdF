@@ -6,13 +6,13 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:23:25 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:42:24 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void	init_window(t_scene *draw)
+static void		init_window(t_scene *draw)
 {
 	scene_find_minmax(draw);
 	draw->color[0] = LEMON;
@@ -25,49 +25,42 @@ void	init_window(t_scene *draw)
 	while (draw->max_x * draw->zoom < WINDOW_WIDTH / 2)
 		draw->zoom++;
 	draw->projection = PARALLEL;
-	draw->padding_x = WINDOW_WIDTH / 2 - draw->max_x / 2 ;
+	draw->padding_x = WINDOW_WIDTH / 2 - draw->max_x / 2;
 	draw->padding_y = WINDOW_HEIGHT / 2 - draw->max_y / 2;
 	draw->draw_algorithm = &draw_line_bresenham;
 	center_origo(draw);
 	append_map(draw);
+	matrix_transformation(draw, &zoom_matrix, 0);
 }
 
-void	*init_scene()
+static t_scene	*init_scene(void)
 {
-	t_map *start;
+	t_map	*start;
 	t_scene *draw;
 
-	(start = malloc (sizeof (t_map))) == NULL ? ft_error(0) : 0;
+	(start = malloc(sizeof(t_map))) == NULL ? ft_error(0) : 0;
 	start->next = NULL;
-	(draw = malloc (sizeof (t_scene))) == NULL ? ft_error(0) : 0;
+	(draw = malloc(sizeof(t_scene))) == NULL ? ft_error(0) : 0;
 	draw->map = start;
-	(draw->mlx = mlx_init ()) == NULL ? ft_error(3) : 0;
-	(draw->win = mlx_new_window (draw->mlx, WINDOW_WIDTH, WINDOW_HEIGHT,\
+	(draw->mlx = mlx_init()) == NULL ? ft_error(3) : 0;
+	(draw->win = mlx_new_window(draw->mlx, WINDOW_WIDTH, WINDOW_HEIGHT,\
 	"FdF 1.0 // ehalmkro // 2020")) == NULL ? ft_error(1) : 0;
-	return(draw);
+	return (draw);
 }
 
-int		main(int argc, char **argv)
+int				main(int argc, char **argv)
 {
-	t_scene *draw;
+	t_scene	*draw;
 
 	if (argc != 2)
-		ft_putendl ("usage: fdf source_file");
+		ft_putendl("usage: fdf source_file");
 	else
 	{
 		draw = init_scene();
 		(read_input(argv[1], draw)) == -1 ? ft_error(2) : 0;
 		init_window(draw);
-		draw_window(&draw);
-		matrix_transformation(draw, &zoom_matrix, 0);
-		mlx_hook(draw->win, 17, 0, &close_window, draw);
-		mlx_hook(draw->win, 3, 0, &keypress, draw);
-		mlx_hook(draw->win, 4, 0, &mouse_press, draw);
-		mlx_hook(draw->win, 5, 0, &mouse_release, draw);
-		mlx_hook(draw->win, 6, 0, &mouse_move, draw);
-		mlx_loop_hook(draw->mlx, &window_idle, draw);
-		mlx_loop(draw->mlx);
-
+		draw_window(draw);
+		event_handler(draw);
 	}
-		return (0);
+	return (0);
 }
