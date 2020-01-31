@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 10:21:24 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 10:51:53 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ typedef struct				s_scene
 
 
 int				read_input(char *str, t_scene *draw);
-
+void			init_window(t_scene *draw);
 
 
 
@@ -135,7 +135,7 @@ void			*draw_window(t_scene **draw);
 void			scene_find_minmax (t_scene *draw);
 double 			get_percent(int start, int end, int curr);
 
-void			append_map(t_map *start, t_scene *draw);
+void			append_map(t_scene *draw);
 
 
 void      		map_push_right(t_map **start, t_map *new);
@@ -180,7 +180,7 @@ void			center_origo(t_scene *draw);
 
 int				combine_color(int r, int g, int b);
 
-void			init_window(t_scene **draw);
+
 
 void			compound_calc(t_scene *draw);
 
@@ -192,5 +192,7 @@ void			debug_lines(t_scene *draw);
 void			swap_double(double *a , double *b);
 int				window_idle(void *param);
 int				timer(t_scene *draw);
+
+void			ft_error(int error_code);
 
 #endif
