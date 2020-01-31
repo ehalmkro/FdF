@@ -30,7 +30,11 @@ math.h
 time.h
 -
 
-/Users/ehalmkro/hive/FdF/main.c
+/Users/ehalmkro/hive/FdF/read_write.c
+fdf.h
+/Users/ehalmkro/hive/FdF/fdf.h
+
+/Users/ehalmkro/hive/FdF/tools.c
 fdf.h
 /Users/ehalmkro/hive/FdF/fdf.h
 
