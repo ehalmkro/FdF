@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 19:23:41 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 20:17:20 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,15 @@ typedef struct				s_mouse
 	int 					prev_y;
 	int 					button_press;
 }							t_mouse;
+
+typedef	struct 				s_line {
+	int 					steep;
+	float					gradient;
+	t_point 				delta;
+	int 					x_start;
+	int 					x_end;
+	float 					y_intersection;
+}							t_line;
 
 typedef struct				s_scene
 {

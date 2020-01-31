@@ -18,6 +18,8 @@
 
 #include <time.h>
 
+// TODO: another timer for rgb change thing
+
 int		timer(t_scene *draw)
 {
 	if (((clock()) -  draw->prev_time) < 250000)

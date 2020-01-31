@@ -6,12 +6,19 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 19:21:45 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 20:36:08 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <math.h>
 #include "fdf.h"
+
+// TODO: conic perspective
+
+//TODO: reverse switch rgb direction if it hits the limit 254/0
+// if (color == 0 || color == 254)
+//	prev_color > curr_color ? go down : go up;
+
 
 void	switch_color(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
 {
