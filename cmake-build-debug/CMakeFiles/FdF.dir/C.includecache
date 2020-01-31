@@ -27,14 +27,12 @@ mlx.h
 -
 math.h
 -
-time.h
--
 
-/Users/ehalmkro/hive/FdF/read_write.c
+/Users/ehalmkro/hive/FdF/pointlist.c
 fdf.h
 /Users/ehalmkro/hive/FdF/fdf.h
 
-/Users/ehalmkro/hive/FdF/tools.c
+/Users/ehalmkro/hive/FdF/read_write.c
 fdf.h
 /Users/ehalmkro/hive/FdF/fdf.h
 

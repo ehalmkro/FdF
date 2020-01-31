@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:05:29 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 18:32:12 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,6 @@
 # include <mlx.h>
 # include <math.h>
 
-/*
- * time.h used only for bonus functions in extras.c
- */
-
-# include <time.h>
 
 # define WINDOW_WIDTH 1024
 # define WINDOW_HEIGHT 768
@@ -72,9 +67,9 @@ typedef enum
 
 typedef struct				s_point
 {
-	double					x;
-	double					y;
-	double					z;
+	float					x;
+	float					y;
+	float					z;
 	t_height 				height;
 }							t_point;
 
@@ -103,7 +98,6 @@ typedef struct				s_scene
 	void					*mlx;
 	void					*win;
 	int 					color[4];
-	long long				calc;
 	int 					carousel;
 	float 					zoom;
 	float 					max_x;
@@ -116,12 +110,8 @@ typedef struct				s_scene
 	void					(*draw_algorithm)(t_point start, t_point end, struct s_scene *draw);
 	int 					steep;
 	int 					debug;
-
-/*
- * prev_time used in bonus functions' timer
- */
-
-	clock_t 				prev_time;
+	size_t 					vertex_count;
+	long 					prev_time;
 
 }							t_scene;
 
@@ -133,7 +123,7 @@ int				read_input(char *str, t_scene *draw);
 t_point			*point_node_new(float x, float y, float z, t_scene *draw);
 void			draw_window(t_scene *draw);
 void			scene_find_minmax (t_scene *draw);
-double 			get_percent(int start, int end, int curr);
+float get_percent(int start, int end, int curr);
 
 void			append_map(t_scene *draw);
 
@@ -154,24 +144,24 @@ int				close_window(void *param);
 int				keypress(int keycode, void *param);
 
 int 			*split_color(int color);
-int 			decrease_brightness(int color, double brightness);
+int 			decrease_brightness(int color, float brightness);
 
 
-void			center_map(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
+void			center_map(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
 t_point 		*transform_isometric(t_point *data, t_scene *draw);
-void			rotate_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
-void			rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
-void			rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
-void			zoom_matrix(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
-void			modify_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
+void			rotate_z(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
+void			rotate_x(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
+void			rotate_y(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
+void			zoom_matrix(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
+void			modify_z(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
 
-void			put_pixel(double x, double y, int color, t_scene *draw);
+void			put_pixel(float x, float y, int color, t_scene *draw);
 
 int				mouse_move(int x, int y, void *param);
 
 
-void			matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, double prev_x, double prev_y,\
-				double prev_z, t_scene *draw, double deg), double deg);
+void			matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, float prev_x, float prev_y,\
+                float prev_z, t_scene *draw, float deg), float deg);
 
 int				mouse_press(int button, int x, int y, void *param);
 int				mouse_release(int button, int x, int y, void *param);
@@ -184,7 +174,7 @@ int				combine_color(int r, int g, int b);
 
 void			compound_calc(t_scene *draw);
 
-void			switch_color(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg);
+void			switch_color(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
 
 void 			text_carousel(t_scene *draw);
 
@@ -195,7 +185,6 @@ int				timer(t_scene *draw);
 void			event_handler(t_scene *draw);
 
 void			ft_error(int error_code);
-
 
 
 #endif

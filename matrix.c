@@ -6,14 +6,14 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 15:30:23 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:04:48 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <math.h>
 #include "fdf.h"
 
-void	switch_color(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
+void	switch_color(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
 {
 	int *rgb;
 	int ret_color;
@@ -37,7 +37,7 @@ void	switch_color(t_point *data, double prev_x, double prev_y, double prev_z, t_
 
 
 // TODO: FIX Z INCREASE
-void	modify_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
+void	modify_z(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
 {
 	(void)prev_x;
 	(void)prev_y;
@@ -48,7 +48,7 @@ void	modify_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scen
 
 }
 
-void	zoom_matrix(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
+void	zoom_matrix(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
 {
 	(void)prev_x;
 	(void)prev_y;
@@ -63,7 +63,7 @@ void	zoom_matrix(t_point *data, double prev_x, double prev_y, double prev_z, t_s
 	}
 }
 
-void	rotate_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
+void	rotate_z(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
 {
 	(void)prev_z;
 	(void)draw;
@@ -71,7 +71,7 @@ void	rotate_z(t_point *data, double prev_x, double prev_y, double prev_z, t_scen
 	data->y = prev_x * sin (deg) + prev_y * cos (deg);
 }
 
-void	rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
+void	rotate_x(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
 {
 	(void)prev_x;
 	(void)draw;
@@ -79,7 +79,7 @@ void	rotate_x(t_point *data, double prev_x, double prev_y, double prev_z, t_scen
 	data->z = (-prev_y) * sin(deg) + prev_z * cos(deg);
 }
 
-void	rotate_y(t_point *data, double prev_x, double prev_y, double prev_z, t_scene *draw, double deg)
+void	rotate_y(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
 {
 	(void)prev_y;
 	(void)draw;
@@ -101,8 +101,8 @@ t_point *transform_isometric(t_point *data, t_scene *draw)
 	return (ret);
 }
 
-void	matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, double prev_x,\
-		double prev_y, double prev_z, t_scene *draw, double deg), double deg)
+void	matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, float prev_x,\
+        float prev_y, float prev_z, t_scene *draw, float deg), float deg)
 {
 	t_map *map;
 	double prev_x;

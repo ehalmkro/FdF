@@ -6,14 +6,14 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 17:30:01 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:04:48 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include <math.h>
 
-void	put_pixel(double x, double y, int color, t_scene *draw)
+void	put_pixel(float x, float y, int color, t_scene *draw)
 {
 	mlx_pixel_put(draw->mlx, draw->win, x + draw->padding_x, y + draw->padding_y, color);
 }
