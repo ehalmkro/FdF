@@ -165,13 +165,13 @@ void drawAALine(int x0 , int y0 , int x1 , int y1)
   }
 ////
   We begin with a derivation of the Gupta/Sproull algorithm for drawing antialiased lines, this is covered in Ch 3.17. If we let D_x be the distance between the line and the closest pixel at the x+1 position, (either E or NE), then
-    D_x = (d + dx)/(2*sqrt(dx^2+dy^2))    if the closest pixel is E
-    D_x = (d - dx)/(2*sqrt(dx^2+dy^2))    if the closest pixel is NE
+    D_x = (dt + dx)/(2*sqrt(dx^2+dy^2))    if the closest pixel is E
+    D_x = (dt - dx)/(2*sqrt(dx^2+dy^2))    if the closest pixel is NE
   Based on this computation we can easily modify the Bresenham Midpoint algorithm to compute antialiased pixel intensities.
    void draw(int x0, int y0, int x1,int y1) {
     int dx = x1-x0;
     int dy = y1-y0;
-    int d=2*dy-dx;
+    int dt=2*dy-dx;
     int incrE = 2*dy;
     int incrNE = 2*(dy-dx);
     // code added for antialiasing
@@ -187,17 +187,17 @@ void drawAALine(int x0 , int y0 , int x1 , int y1)
         IntensifyPixel(x,y-1,two_dx_invDenom);       // neighbor below
     //
     while (x<x1) {
-      if (d<0) {
+      if (dt<0) {
         // code added for antialiasing
-            two_v_dx = d+dx;
+            two_v_dx = dt+dx;
         //
-        d += incrE;
+        dt += incrE;
         x++;
       }else {
         // code added for antialiasing
-            two_v_dx = d-dx;
+            two_v_dx = dt-dx;
         //
-        d += incrNE;
+        dt += incrNE;
         x++;
         y++;
       }

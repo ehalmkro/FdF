@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:08:41 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 18:35:46 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 19:21:45 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void		write_line(char *line, t_scene *draw, int y)
 	{
 		if (y == 0 && x == 0)
 		{
-			draw->map->data = point_node_new((float)x++, (float)y,\
+			draw->map->dt = point_node_new((float)x++, (float)y,\
 			(float)ft_atoi(line), draw);
 			draw->vertex_count++;
 		}
@@ -56,5 +56,7 @@ int				read_input(char *str, t_scene *draw)
 		y++;
 		free(line);
 	}
+	draw->vertex_count % y == 0 ? 0 : ft_error(4);
+	y > 2 ? 0 : ft_error(4);
 	return (0);
 }

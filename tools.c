@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 17:15:48 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 19:21:45 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ void	center_origo(t_scene *draw)
 	map = draw->map;
 	while (map)
 	{
-		map->data->x -= draw->max_x / 2;
-		map->data->y -= draw->max_y / 2;
-		map->data->z -= (draw->max_z - draw->min_z) / 2;
-		map = map->next;
+		map->dt->x -= draw->max_x / 2;
+		map->dt->y -= draw->max_y / 2;
+		map->dt->z -= (draw->max_z - draw->min_z) / 2;
+		map = map->nxt;
 	}
 	scene_find_minmax(draw);
 }
@@ -55,11 +55,11 @@ void	scene_find_minmax (t_scene *draw)
 		draw->min_z = INT_MAX;
 		while (map)
 		{
-			map->data->x > draw->max_x ? draw->max_x = map->data->x : 0;
-			map->data->y > draw->max_y ? draw->max_y = map->data->y : 0;
-			map->data->z > draw->max_z ? draw->max_z = map->data->z : 0;
-			map->data->z < draw->min_z ? draw->min_z = map->data->z : 0;
-			map = map->next;
+			map->dt->x > draw->max_x ? draw->max_x = map->dt->x : 0;
+			map->dt->y > draw->max_y ? draw->max_y = map->dt->y : 0;
+			map->dt->z > draw->max_z ? draw->max_z = map->dt->z : 0;
+			map->dt->z < draw->min_z ? draw->min_z = map->dt->z : 0;
+			map = map->nxt;
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 18:32:12 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 19:21:45 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,10 @@ typedef struct				s_point
 
 typedef struct				s_map
 {
-	t_point					*data;
-	struct s_map			*right;
-	struct s_map			*down;
-	struct s_map			*next;
+	t_point					*dt;
+	struct s_map			*rt;
+	struct s_map			*dn;
+	struct s_map			*nxt;
 }							t_map;
 
 typedef struct				s_mouse
