@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 10:55:38 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:23:25 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 void	init_window(t_scene *draw)
 {
-	draw->win = mlx_new_window(draw->mlx, WINDOW_WIDTH, WINDOW_HEIGHT, "FdF 1.0 // ehalmkro // 2020");
-	if (draw->win == NULL)
-		ft_error(1);
+	scene_find_minmax(draw);
 	draw->color[0] = LEMON;
 	draw->color[1] = PEACH;
 	draw->color[2] = BROWN;
@@ -30,29 +28,36 @@ void	init_window(t_scene *draw)
 	draw->padding_x = WINDOW_WIDTH / 2 - draw->max_x / 2 ;
 	draw->padding_y = WINDOW_HEIGHT / 2 - draw->max_y / 2;
 	draw->draw_algorithm = &draw_line_bresenham;
-	scene_find_minmax(draw);
+	center_origo(draw);
+	append_map(draw);
+}
+
+void	*init_scene()
+{
+	t_map *start;
+	t_scene *draw;
+
+	(start = malloc (sizeof (t_map))) == NULL ? ft_error(0) : 0;
+	start->next = NULL;
+	(draw = malloc (sizeof (t_scene))) == NULL ? ft_error(0) : 0;
+	draw->map = start;
+	(draw->mlx = mlx_init ()) == NULL ? ft_error(3) : 0;
+	(draw->win = mlx_new_window (draw->mlx, WINDOW_WIDTH, WINDOW_HEIGHT,\
+	"FdF 1.0 // ehalmkro // 2020")) == NULL ? ft_error(1) : 0;
+	return(draw);
 }
 
 int		main(int argc, char **argv)
 {
-	t_map *start;
 	t_scene *draw;
 
 	if (argc != 2)
 		ft_putendl ("usage: fdf source_file");
 	else
 	{
-		start = malloc(sizeof(t_map));
-		start->next = NULL;
-		draw = malloc (sizeof (t_scene));
-		draw->map = start;
-		if (read_input (argv[1], draw) == -1)
-			ft_error(2);
-		if ((draw->mlx = mlx_init ()) == NULL)
-			exit (3);
-		center_origo(draw);
+		draw = init_scene();
+		(read_input(argv[1], draw)) == -1 ? ft_error(2) : 0;
 		init_window(draw);
-		append_map(draw);
 		draw_window(&draw);
 		matrix_transformation(draw, &zoom_matrix, 0);
 		mlx_hook(draw->win, 17, 0, &close_window, draw);
@@ -64,9 +69,5 @@ int		main(int argc, char **argv)
 		mlx_loop(draw->mlx);
 
 	}
-
-//	LEAK TEST
-		//while (1);
-
 		return (0);
 }

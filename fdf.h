@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 10:51:53 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:05:27 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@
 
 # define DEFAULT_COLOR 0xFFF2A0
 # define HEIGHT_COLOR 0xF65BE3
+# define TITLE "// FdF 1.00 // ehalmkro // 2020 //"
 
 // TODO: get rid of these
 
@@ -126,7 +127,6 @@ typedef struct				s_scene
 
 
 int				read_input(char *str, t_scene *draw);
-void			init_window(t_scene *draw);
 
 
 
@@ -192,7 +192,10 @@ void			debug_lines(t_scene *draw);
 void			swap_double(double *a , double *b);
 int				window_idle(void *param);
 int				timer(t_scene *draw);
+void			event_handler(t_scene *draw);
 
 void			ft_error(int error_code);
+
+
 
 #endif
