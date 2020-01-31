@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/30 15:28:35 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 10:51:53 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ double	get_percent(int start, int end, int curr)
 		return (1.0);
 	return (place/dist);
 }
+
+//TODO: fix z axis centering
 
 void	center_origo(t_scene *draw)
 {
@@ -60,4 +62,13 @@ void	scene_find_minmax (t_scene *draw)
 			map = map->next;
 		}
 	}
+}
+
+void		ft_error(int error_code)
+{
+	error_code == 1 ? ft_putendl("Error creating new window, exiting.\n") : 0;
+	error_code == 2 ? ft_putendl("Read error, exiting.\n") : 0;
+	error_code == 3 ? ft_putendl("Error initializing MLX, exiting.\n") : 0;
+
+	exit(1);
 }
