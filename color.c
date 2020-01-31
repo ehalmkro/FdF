@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/29 18:59:02 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:04:48 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		combine_color(int r, int g, int b)
 	return((0 << 24) + (r << 16) + (g << 8) + b);
 }
 
-int 	decrease_brightness(int color, double brightness)
+int 	decrease_brightness(int color, float brightness)
 {
 	int *rgb;
 	if (brightness >= 1.0)

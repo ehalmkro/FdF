@@ -6,13 +6,13 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:05:29 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 17:15:48 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-double	get_percent(int start, int end, int curr)
+float get_percent(int start, int end, int curr)
 {
 	double	place;
 	double	dist;
@@ -66,10 +66,10 @@ void	scene_find_minmax (t_scene *draw)
 
 void		ft_error(int error_code)
 {
-	error_code == 0 ? ft_putendl("Malloc error, exiting...\n") : 0;
-	error_code == 1 ? ft_putendl("Error creating new window, exiting...\n") : 0;
-	error_code == 2 ? ft_putendl("Read error, exiting...\n") : 0;
-	error_code == 3 ? ft_putendl("Error initializing MLX, exiting...\n") : 0;
-	error_code == 4 ? ft_putendl("Invalid map, exiting...\n") : 0;
+	error_code == 0 ? ft_putendl("Malloc error, exiting...") : 0;
+	error_code == 1 ? ft_putendl("Error creating new window, exiting...") : 0;
+	error_code == 2 ? ft_putendl("Read error, exiting...") : 0;
+	error_code == 3 ? ft_putendl("Error initializing MLX, exiting...") : 0;
+	error_code == 4 ? ft_putendl("Invalid map, exiting...") : 0;
 	exit(1);
 }

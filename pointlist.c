@@ -6,13 +6,13 @@
 /*   By: esko <esko@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 13:29:54 by esko              #+#    #+#             */
-/*   Updated: 2020/01/31 15:05:27 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 17:22:15 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static t_map *get_next_y(t_map *start, float y)
+static		t_map *get_next_y(t_map *start, float y)
 {
 	t_map *ret;
 
@@ -22,7 +22,7 @@ static t_map *get_next_y(t_map *start, float y)
 	return(ret);
 }
 
-void	append_map(t_scene *draw)
+void		append_map(t_scene *draw)
 {
 	t_map *tapehead;
 	t_map *forward;
@@ -53,7 +53,7 @@ void	append_map(t_scene *draw)
 	}
 }
 
-t_point     *point_node_new(float x, float y, float z, t_scene *draw)
+t_point 	*point_node_new(float x, float y, float z, t_scene *draw)
 {
 	t_point *ret;
 
@@ -82,7 +82,7 @@ t_map		*map_add_node(void *data)
 	return (ret);
 }
 
-void        map_push_right(t_map **start, t_map *new)
+void		map_push_right(t_map **start, t_map *new)
 {
 	t_map *curr;
 
