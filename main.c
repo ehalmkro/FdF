@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 18:09:58 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 19:10:38 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ static void		init_window(t_scene *draw)
 	draw->padding_x = WINDOW_WIDTH / 2 - draw->max_x / 2;
 	draw->padding_y = WINDOW_HEIGHT / 2 - draw->max_y / 2;
 	draw->draw_algorithm = &draw_line_bresenham;
-	center_origo(draw);
 	append_map(draw);
+	center_origo(draw);
 	matrix_transformation(draw, &zoom_matrix, 0);
 }
 
@@ -40,7 +40,7 @@ static t_scene	*init_scene(void)
 	t_scene *draw;
 
 	(start = malloc(sizeof(t_map))) == NULL ? ft_error(0) : 0;
-	start->next = NULL;
+	start->nxt = NULL;
 	(draw = malloc(sizeof(t_scene))) == NULL ? ft_error(0) : 0;
 	draw->map = start;
 	(draw->mlx = mlx_init()) == NULL ? ft_error(3) : 0;

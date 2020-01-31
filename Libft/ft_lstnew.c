@@ -15,7 +15,7 @@
 /*
 **Allocates and returns a “fresh” link. The variables content and content_size
 **of the new link are initialized by copy of the parameters of the function.
-**The variable next is initialized to NULL. If the allocation fails, the
+**The variable nxt is initialized to NULL. If the allocation fails, the
 **returns NULL.
 */
 

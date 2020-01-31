@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:04:48 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 19:21:45 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,11 +111,11 @@ void	matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, 
 	map = draw->map;
 	while (map)
 	{
-		prev_x = map->data->x;
-		prev_y = map->data->y;
-		prev_z = map->data->z;
-		transformation(map->data, prev_x, prev_y, prev_z, draw, deg);
-		map = map->next;
+		prev_x = map->dt->x;
+		prev_y = map->dt->y;
+		prev_z = map->dt->z;
+		transformation(map->dt, prev_x, prev_y, prev_z, draw, deg);
+		map = map->nxt;
 	}
 	free(map);
 	scene_find_minmax(draw);

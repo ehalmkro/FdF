@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:04:48 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/01/31 19:21:45 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,25 +49,25 @@ static void 	draw_isometric(t_map *start, t_scene *draw)
 {
 	t_point *begin;
 	t_point *end;
-	if (start->right)
+	if (start->rt)
 	{
-		begin = transform_isometric(start->data, draw);
-		end = transform_isometric(start->right->data, draw);
+		begin = transform_isometric(start->dt, draw);
+		end = transform_isometric(start->rt->dt, draw);
 		draw->draw_algorithm(*begin, *end, draw);
 		free(begin);
 		free(end);
 	}
-	if (start->down)
+	if (start->dn)
 	{
-		begin = transform_isometric(start->data, draw);
-		end = transform_isometric (start->down->data, draw);
+		begin = transform_isometric(start->dt, draw);
+		end = transform_isometric (start->dn->dt, draw);
 		draw->draw_algorithm(*begin, *end, draw);
 		free(begin);
 		free(end);
 	}
-	if (start->next)
-		draw_isometric(start->next, draw);
-	begin = transform_isometric(start->data, draw);
+	if (start->nxt)
+		draw_isometric(start->nxt, draw);
+	begin = transform_isometric(start->dt, draw);
 	draw->draw_algorithm(*begin ,*begin, draw);
 	free(begin);
 }
@@ -78,12 +78,12 @@ void	draw_matrix(t_map *start, t_scene *draw)
 		draw_isometric (start, draw);
 	else
 	{
-		if (start->right)
-			draw->draw_algorithm ((*start->data), (*start->right->data), draw);
-		if (start->down)
-			draw->draw_algorithm ((*start->data), (*start->down->data), draw);
-		if (start->next)
-			draw_matrix (start->next, draw);
-		draw->draw_algorithm ((*start->data), (*start->data), draw);
+		if (start->rt)
+			draw->draw_algorithm ((*start->dt), (*start->rt->dt), draw);
+		if (start->dn)
+			draw->draw_algorithm ((*start->dt), (*start->dn->dt), draw);
+		if (start->nxt)
+			draw_matrix (start->nxt, draw);
+		draw->draw_algorithm ((*start->dt), (*start->dt), draw);
 	}
 }
