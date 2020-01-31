@@ -3,9 +3,9 @@
 
 // TODO: Norminette fix wu
 
-void swap_double(double* a , double *b)
+static void swap_float(float *a , float *b)
 {
-	double temp = *a;
+	float temp = *a;
 	*a = *b;
 	*b = temp;
 }
@@ -19,13 +19,13 @@ void 	draw_line_wu(t_point start, t_point end, t_scene *draw)
 
 	if (draw->steep)
 	{
-		swap_double(&start.x, &start.y);
-		swap_double(&end.x, &end.y);
+		swap_float(&start.x, &start.y);
+		swap_float(&end.x, &end.y);
 	}
 	if (end.x < start.x)
 	{
-		swap_double(&start.x, &end.x);
-		swap_double(&start.y, &end.y);
+		swap_float(&start.x, &end.x);
+		swap_float(&start.y, &end.y);
 	}
 
 	delta = point_node_new(end.x - start.x,end.y - start.y, 0, draw);
