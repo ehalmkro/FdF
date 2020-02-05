@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 16:41:00 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 18:26:49 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 19:40:59 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@
 
 #include <time.h>
 
-// TODO: another timer for rgb change thing
 
-int		timer(t_scene *draw)
+int		timer(t_scene *draw, size_t ticks, int index)
 {
-	if (((clock()) -  draw->prev_time) < 250000)
+	if (((clock()) -  draw->prev_time[index]) < ticks)
 		return(1);
-	draw->prev_time = clock();
+	draw->prev_time[index] = clock();
 	return(0);
 }
 

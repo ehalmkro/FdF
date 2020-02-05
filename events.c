@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:33:13 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 19:46:48 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		mouse_move(int x, int y, void *param)
 	}
 	if (draw->mouse->button_press == 4 || draw->mouse->button_press == 5)
 		matrix_transformation (draw, &rotate_z, (y - draw->mouse->prev_y) * 0.005);
+	return (0);
 }
 
 int		mouse_press(int button, int x, int y, void *param)
@@ -92,14 +93,6 @@ int		keypress(int keycode, void *param)
 		draw->debug = draw->debug == 0 ? 1 : 0;
 		debug_lines (draw);
 	}
-	if (keycode == MAIN_PAD_6)
-		matrix_transformation(draw, &switch_color, 0);
-	if (keycode == MAIN_PAD_5)
-	{
-		draw->padding_z = 1;
-		matrix_transformation(draw, &modify_z, 0);
-		draw->padding_z = 0;
-	}
 	if (keycode == NUM_PAD_PLUS)
 	{
 		draw->zoom = ZOOM_COEFF_POS;
@@ -121,25 +114,14 @@ int		keypress(int keycode, void *param)
 			draw->draw_algorithm = &draw_line_wu;
 		else
 			draw->draw_algorithm = &draw_line_bresenham;
-/*		else
-			draw->draw_algorithm = &draw_line_gupta_sproull;*/
 	}
-	if (keycode == MAIN_PAD_MORE)
-	{
-		matrix_transformation(draw, rotate_z, MATRIX_ROTATION_DEG);
-		//matrix_transformation(draw, center_map);
-	}
-	if (keycode == MAIN_PAD_LESS)
-		matrix_transformation(draw, rotate_y, MATRIX_ROTATION_DEG);
 	if (keycode == MAIN_PAD_0)
 	{
 		if (draw->projection == PARALLEL)
 			draw->projection = ISOMETRIC;
 		else
 			draw->projection = PARALLEL;
-		printf("PROJECTION %u\n", draw->projection);
 	}
-
 	return (0);
 }
 
@@ -155,6 +137,7 @@ int			window_idle(void *param)
 		matrix_transformation (draw, &rotate_z, 0.00009);
 	}
 	render(draw);
+	return (0);
 }
 
 void			event_handler(t_scene *draw)
@@ -172,14 +155,15 @@ void			event_handler(t_scene *draw)
 void			render(t_scene *draw)
 {
 	mlx_clear_window(draw->mlx, draw->win);
-	draw_window(draw);
-	draw_matrix(draw->map, draw);
 	if (draw->debug == 1)
 		debug_lines(draw);
-	if (timer(draw) == 0)
+	if (timer(draw, 25000, 0) == 0)
 	{
 		draw->carousel == 9 ? draw->carousel = 0 : draw->carousel++;
-		matrix_transformation(draw, &switch_color, 0);
+		text_carousel(draw);
 	}
-	text_carousel(draw);
+	if (timer(draw, 50000, 1) == 0)
+		switch_color(draw);
+	draw_window(draw);
+	draw_matrix(draw->map, draw);
 }

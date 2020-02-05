@@ -6,54 +6,43 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 20:36:08 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 19:47:55 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <math.h>
 #include "fdf.h"
 
-// TODO: conic perspective
-
-//TODO: reverse switch rgb direction if it hits the limit 254/0
-// if (color == 0 || color == 254)
-//	prev_color > curr_color ? go down : go up;
-
-
-void	switch_color(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
+void	switch_color(t_scene *draw)
 {
+	size_t i;
+	size_t j;
 	int *rgb;
-	int ret_color;
-	(void)prev_x;
-	(void)prev_y;
-	(void)prev_z;
-	(void)deg;
-	rgb = split_color(draw->color[0]);
-	free(rgb);
-	ret_color = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
-	draw->color[0] = ret_color;
-	rgb = split_color(draw->color[1]);
-	free(rgb);
-	ret_color	= combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
-	draw->color[1] = ret_color;
-	rgb = split_color(draw->color[2]);
-	free(rgb);
-	ret_color = combine_color(rgb[0] + 1, rgb[1] + 1, rgb[2] + 1);
-	draw->color[2] = ret_color;
+
+	i = 0;
+
+	while (i < 3)
+	{
+		rgb = split_color(draw->color[i]);
+		j = 0;
+		while (j < 3)
+		{
+			if (rgb[j] + draw->c_dir[i][j] < 255 && rgb[j] + draw->c_dir[i][j] > 0)
+				rgb[j] += draw->c_dir[i][j];
+			else
+			{
+				draw->c_dir[i][j] *= -1;
+				rgb[j] = rgb[j] == 0 ? rgb[j]++ : rgb[j] + draw->c_dir[i][j];
+			}
+			j++;
+		}
+		draw->color[i] = combine_color(rgb[0], rgb[1], rgb[2]);
+		printf("R%d\tG%d\tB%d\n", rgb[0], rgb[1], rgb[2]);
+		free(rgb);
+		i++;
+	}
 }
 
-
-// TODO: FIX Z INCREASE
-void	modify_z(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
-{
-	(void)prev_x;
-	(void)prev_y;
-	(void)deg;
-	(void)prev_z;
-	(draw->padding_z == 1 && data->z != 0) ? data->z += Z_INCREASE : 0;
-	(draw->padding_z == -1 && data->z != 0) ? data->z -= Z_INCREASE : 0;
-
-}
 
 void	zoom_matrix(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
 {
@@ -109,7 +98,7 @@ t_point *transform_isometric(t_point *data, t_scene *draw)
 }
 
 void	matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, float prev_x,\
-        float prev_y, float prev_z, t_scene *draw, float deg), float deg)
+		float prev_y, float prev_z, t_scene *draw, float deg), float deg)
 {
 	t_map *map;
 	double prev_x;

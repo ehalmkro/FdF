@@ -6,29 +6,51 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 19:10:38 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 19:41:25 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
+
+void 			init_c_dir(t_scene *draw)
+{
+	int i;
+	int j;
+
+	i = 0;
+	while (i < 3)
+	{
+		j = 0;
+		while (j < 3)
+		{
+			draw->c_dir[i][j] = 1;
+			j++;
+		}
+		i++;
+	}
+
+}
+
 static void		init_window(t_scene *draw)
 {
 	scene_find_minmax(draw);
-	draw->color[0] = LEMON;
-	draw->color[1] = PEACH;
-	draw->color[2] = BROWN;
+	draw->color[0] = 0x487860;
+	draw->color[1] = 0xD95838;
+	draw->color[2] = 0xE0E04C;
 	draw->color[3] = LEMON;
 	draw->vertex_count = 0;
 	(draw->mouse = malloc(sizeof(t_mouse))) == NULL ? ft_error(0) : 0;
 	draw->mouse->button_press = 0;
 	draw->zoom = 1;
+	init_c_dir(draw);
 	while (draw->max_x * draw->zoom < WINDOW_WIDTH / 2)
 		draw->zoom++;
 	draw->projection = PARALLEL;
 	draw->padding_x = WINDOW_WIDTH / 2 - draw->max_x / 2;
 	draw->padding_y = WINDOW_HEIGHT / 2 - draw->max_y / 2;
 	draw->draw_algorithm = &draw_line_bresenham;
+	draw->carousel = 0;
 	append_map(draw);
 	center_origo(draw);
 	matrix_transformation(draw, &zoom_matrix, 0);

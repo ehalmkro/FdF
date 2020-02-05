@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 19:37:43 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 17:04:43 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int 	*split_color(int color)
 {
 	int *ret;
 	ret = malloc(sizeof(int*) * 3);
-	ret[0] = color & 255;
+	ret[2] = color & 255;
 	color >>= 8;
 	ret[1] = color & 255;
-	ret[2] = color >> 8;
+	ret[0] = color >> 8;
 	return (ret);
 }
 
