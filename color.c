@@ -6,11 +6,35 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/05 17:04:43 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 20:12:42 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+void	change_palette(t_scene *draw)
+{
+	int *rgb;
+	char random;
+	int i;
+	int j;
+
+	i = 0;
+	while (i < 3)
+	{
+		j = 0;
+		rgb = split_color(draw->color[i]);
+		while (j < 3)
+		{
+			random = rgb[j] * 25 + ((rgb[j] * 33) % 3) * 20;
+			rgb[j++] = (int)random;
+		}
+		draw->color[i] = combine_color(rgb[0], rgb[1], rgb[2]);
+		free(rgb);
+		i++;
+	}
+}
+
 
 int 	*split_color(int color)
 {
