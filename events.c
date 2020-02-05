@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/05 19:52:37 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 20:11:15 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,8 @@ int		keypress(int keycode, void *param)
 		else
 			draw->projection = PARALLEL;
 	}
+	if (keycode == MAIN_PAD_MORE)
+		change_palette(draw);
 	return (0);
 }
 
@@ -159,7 +161,7 @@ void			render(t_scene *draw)
 		debug_lines(draw);
 	if (timer(draw, 30000, 0) == 0)
 		draw->carousel == 9 ? draw->carousel = 0 : draw->carousel++;
-	if (timer(draw, 50000, 1) == 0)
+	if (timer(draw, 30000, 1) == 0)
 		switch_color(draw);
 	draw_window(draw);
 	draw_matrix(draw->map, draw);

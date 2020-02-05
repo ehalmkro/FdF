@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/05 19:19:12 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 19:46:21 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -203,6 +203,7 @@ void			event_handler(t_scene *draw);
 
 void			ft_error(int error_code);
 void 			init_c_dir(t_scene *draw);
+void			change_palette(t_scene *draw);
 
 
 #endif
