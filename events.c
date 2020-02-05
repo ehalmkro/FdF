@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/05 19:46:48 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 19:52:37 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,11 +157,8 @@ void			render(t_scene *draw)
 	mlx_clear_window(draw->mlx, draw->win);
 	if (draw->debug == 1)
 		debug_lines(draw);
-	if (timer(draw, 25000, 0) == 0)
-	{
+	if (timer(draw, 30000, 0) == 0)
 		draw->carousel == 9 ? draw->carousel = 0 : draw->carousel++;
-		text_carousel(draw);
-	}
 	if (timer(draw, 50000, 1) == 0)
 		switch_color(draw);
 	draw_window(draw);
