@@ -6,7 +6,7 @@
 /*   By: esko <esko@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 13:29:54 by esko              #+#    #+#             */
-/*   Updated: 2020/01/31 19:21:45 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 14:38:59 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ t_point			*point_node_new(float x, float y, float z, t_scene *draw)
 {
 	t_point		*ret;
 
+	(void)draw;
 	ret = (t_point*)malloc(sizeof(t_point));
 	ret->x = x;
 	ret->y = y;

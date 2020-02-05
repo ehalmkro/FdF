@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 20:17:20 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/05 19:19:12 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@
 # define ZOOM_COEFF_POS 1.15
 # define ZOOM_COEFF_NEG 0.9
 # define MATRIX_ROTATION_DEG 0.05
-# define Z_INCREASE	5
+# define Z_INCREASE	1.15
+# define Z_DECREASE	0.9
 
 # define BROWN 0x5b180c
 # define PEACH 0xe65d3e
@@ -51,6 +52,12 @@
 #define rfpart_(X) (1.0-fpart_(X))
 
 // TODO: implement this enum
+
+typedef enum
+{
+	true,
+	false,
+}	t_boolean;
 
 typedef enum
 {
@@ -106,6 +113,7 @@ typedef struct				s_scene
 	t_proj					projection;
 	void					*mlx;
 	void					*win;
+	int 					c_dir[3][3];
 	int 					color[4];
 	int 					carousel;
 	float 					zoom;
@@ -120,7 +128,7 @@ typedef struct				s_scene
 	int 					steep;
 	int 					debug;
 	size_t 					vertex_count;
-	long 					prev_time;
+	long 					prev_time[2];
 
 }							t_scene;
 
@@ -183,17 +191,18 @@ int				combine_color(int r, int g, int b);
 
 void			compound_calc(t_scene *draw);
 
-void			switch_color(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
+void			switch_color(t_scene *draw);
 
 void 			text_carousel(t_scene *draw);
 
 void			debug_lines(t_scene *draw);
 
 int				window_idle(void *param);
-int				timer(t_scene *draw);
+int				timer(t_scene *draw, size_t ticks, int index);
 void			event_handler(t_scene *draw);
 
 void			ft_error(int error_code);
+void 			init_c_dir(t_scene *draw);
 
 
 #endif
