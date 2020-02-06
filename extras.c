@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 16:41:00 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 19:06:54 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 20:24:54 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,17 +110,20 @@ void	debug_lines(t_scene *draw)
 	t_point *line;
 	t_point *line2;
 
-	x = -200;
-	y = -200;
+	x = -400;
+	y = -400;
 	i = 0;
 	line = point_node_new(x, y, 10, draw);
-	line2 = point_node_new(fabs(x * 5), fabs(y * 5), 10, draw);
+	line2 = point_node_new(fabs(x * 10), fabs(y * 10), 10, draw);
 	line->height = LO;
 	line2->height = HI;
-	while (i < 50)
+	while (i < 22)
 	{
 		draw->draw_algorithm(*line, *line2, draw);
-		line2->x += 50;
+		line->x += 3;
+		line->y += 3;
+		line2->x += 250;
+		line2->y += 30;
 		i++;
 	}
 	free(line);
