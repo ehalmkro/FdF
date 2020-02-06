@@ -37,12 +37,10 @@ void	switch_color(t_scene *draw)
 			j++;
 		}
 		draw->color[i] = combine_color(rgb[0], rgb[1], rgb[2]);
-		printf("R%d\tG%d\tB%d\n", rgb[0], rgb[1], rgb[2]);
 		free(rgb);
 		i++;
 	}
 }
-
 
 void	zoom_matrix(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
 {
