@@ -335,6 +335,9 @@
 		<Unit filename="/Users/ehalmkro/hive/FdF/matrix.c">
 			<Option target="FdF"/>
 		</Unit>
+		<Unit filename="/Users/ehalmkro/hive/FdF/mouse_events.c">
+			<Option target="FdF"/>
+		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/pointlist.c">
 			<Option target="FdF"/>
 		</Unit>

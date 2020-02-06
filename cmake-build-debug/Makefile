@@ -2026,6 +2026,33 @@ matrix.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/matrix.c.s
 .PHONY : matrix.c.s
 
+mouse_events.o: mouse_events.c.o
+
+.PHONY : mouse_events.o
+
+# target to build an object file
+mouse_events.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/mouse_events.c.o
+.PHONY : mouse_events.c.o
+
+mouse_events.i: mouse_events.c.i
+
+.PHONY : mouse_events.i
+
+# target to preprocess a source file
+mouse_events.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/mouse_events.c.i
+.PHONY : mouse_events.c.i
+
+mouse_events.s: mouse_events.c.s
+
+.PHONY : mouse_events.s
+
+# target to generate assembly for a file
+mouse_events.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/mouse_events.c.s
+.PHONY : mouse_events.c.s
+
 pointlist.o: pointlist.c.o
 
 .PHONY : pointlist.o
@@ -2381,6 +2408,9 @@ help:
 	@echo "... matrix.o"
 	@echo "... matrix.i"
 	@echo "... matrix.s"
+	@echo "... mouse_events.o"
+	@echo "... mouse_events.i"
+	@echo "... mouse_events.s"
 	@echo "... pointlist.o"
 	@echo "... pointlist.i"
 	@echo "... pointlist.s"

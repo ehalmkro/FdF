@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/05 19:47:55 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 17:51:02 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,20 @@ void	zoom_matrix(t_point *data, float prev_x, float prev_y, float prev_z, t_scen
 	(void)prev_x;
 	(void)prev_y;
 	(void)prev_z;
-	(void)deg;
-	if (draw->zoom > 0)
+	if (deg == 0)
 	{
-		printf ("X: %f Y: %f Z: %f\n", data->x, data->y, data->z);
 		data->x *= draw->zoom;
 		data->y *= draw->zoom;
 		data->z *= draw->zoom;
+	}
+	else if (deg == 1 || deg == -1)
+	{
+		deg == -1 ? data->x *= ZOOM_COEFF_NEG : 0;
+		deg == -1 ? data->y *= ZOOM_COEFF_NEG : 0;
+		deg == -1 ? data->z *= ZOOM_COEFF_NEG : 0;
+		deg == 1 ? data->x *= ZOOM_COEFF_POS : 0;
+		deg == 1 ? data->y *= ZOOM_COEFF_POS : 0;
+		deg == 1 ? data->z *= ZOOM_COEFF_POS : 0;
 	}
 }
 
