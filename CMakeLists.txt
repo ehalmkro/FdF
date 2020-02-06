@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(FdF)
 file(GLOB SOURCES "Libft/*.c")
-add_executable(FdF main.c pointlist.c window.c tools.c color.c read_write.c line_draw.c events.c keycodes.h matrix.c wu.c extras.c)
+add_executable(FdF main.c pointlist.c window.c tools.c color.c read_write.c line_draw.c events.c keycodes.h matrix.c wu.c extras.c mouse_events.c)
 add_library(ft STATIC ${SOURCES})
 include_directories(/usr/local/include)
 include_directories(/usr/local/include)

@@ -16,9 +16,11 @@ string.h
 sys/uio.h
 -
 
-/Users/ehalmkro/hive/FdF/color.c
+/Users/ehalmkro/hive/FdF/extras.c
 fdf.h
 /Users/ehalmkro/hive/FdF/fdf.h
+time.h
+-
 
 /Users/ehalmkro/hive/FdF/fdf.h
 Libft/libft.h
