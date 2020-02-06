@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/05 20:12:42 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 17:02:01 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,13 +82,13 @@ int		set_color(t_point start, t_point end, t_point delta, t_point current, t_sce
 	start.height == HI ? color[0] = draw.color[2] : 0;
 	start.height == ZERO ? color[0] = draw.color[1] : 0;
 	start.height == LO ? color[0] = draw.color[0] : 0;
-	end.height == LO ? color[1] = draw.color[2] : 0;
+	end.height == HI ? color[1] = draw.color[2] : 0;
 	end.height == ZERO ? color[1] = draw.color[1] : 0;
 	end.height == LO ? color[1] = draw.color[0] : 0;
 	if (delta.x > delta.y)
-		percentage = get_percent(start.x, end.x, current.x);
+		percentage = get_percent((int)start.x, (int)end.x, (int)current.x);
 	else
-		percentage = get_percent(start.y, end.y, current.y);
+		percentage = get_percent((int)start.y, (int)end.y, (int)current.y);
 	r = get_color_point((color[0] >> 16) & 0xFF, (color[1] >> 16) & 0xFF, percentage);
 	g = get_color_point((color[0] >> 8) & 0xFF, (color[1] >> 8) & 0xFF, percentage);
 	b = get_color_point(color[0] & 0xFF, color[1] & 0xFF, percentage);

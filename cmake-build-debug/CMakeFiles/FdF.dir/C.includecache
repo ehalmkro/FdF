@@ -16,11 +16,9 @@ string.h
 sys/uio.h
 -
 
-/Users/ehalmkro/hive/FdF/events.c
+/Users/ehalmkro/hive/FdF/color.c
 fdf.h
 /Users/ehalmkro/hive/FdF/fdf.h
-keycodes.h
-/Users/ehalmkro/hive/FdF/keycodes.h
 
 /Users/ehalmkro/hive/FdF/fdf.h
 Libft/libft.h
@@ -33,8 +31,6 @@ mlx.h
 -
 math.h
 -
-
-/Users/ehalmkro/hive/FdF/keycodes.h
 
 /usr/local/include/mlx.h
 
