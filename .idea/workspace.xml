@@ -15,11 +15,9 @@
     <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/matrix.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/matrix.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/events.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/events.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FdF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events.c" beforeDir="false" afterPath="$PROJECT_DIR$/events.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keycodes.h" beforeDir="false" afterPath="$PROJECT_DIR$/keycodes.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mouse_events.c" beforeDir="false" afterPath="$PROJECT_DIR$/mouse_events.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extras.c" beforeDir="false" afterPath="$PROJECT_DIR$/extras.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,14 +198,7 @@
       <workItem from="1580908520107" duration="22000" />
       <workItem from="1580908577164" duration="16837000" />
       <workItem from="1581001123155" duration="3720000" />
-      <workItem from="1581005598939" duration="4948000" />
-    </task>
-    <task id="LOCAL-00006" summary="demoing">
-      <created>1579006849283</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1579006849283</updated>
+      <workItem from="1581005598939" duration="5434000" />
     </task>
     <task id="LOCAL-00007" summary="remove minilibx, fix header accordingly, add new .c file to Makefile">
       <created>1579010495420</created>
@@ -545,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581012786411</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="polish headers">
+      <created>1581013204606</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1581013204606</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix leak on map_add" />
     <MESSAGE value="fix leaks // TODO: wu leaks" />
     <MESSAGE value="fix RGB leaks" />
     <MESSAGE value="wu draw algorithm leaks fix'd" />
@@ -600,7 +597,8 @@
     <MESSAGE value="header norme fix" />
     <MESSAGE value="fix wu gradient" />
     <MESSAGE value="void unused params" />
-    <option name="LAST_COMMIT_MESSAGE" value="void unused params" />
+    <MESSAGE value="polish headers" />
+    <option name="LAST_COMMIT_MESSAGE" value="polish headers" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="373" key="#Notifications" timestamp="1579857381237">
@@ -619,30 +617,30 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1018" y="474" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1580398419290" />
-    <state x="535" y="23" key="CommitChangelistDialog2" timestamp="1581012786308">
+    <state x="535" y="23" key="CommitChangelistDialog2" timestamp="1581013532735">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="301" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579439018118" />
-    <state x="535" y="23" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1581012786308" />
-    <state width="29" height="1313" key="GridCell.Tab.0.bottom" timestamp="1581012858780">
+    <state x="535" y="23" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1581013532735" />
+    <state width="29" height="1313" key="GridCell.Tab.0.bottom" timestamp="1581013537764">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="29" height="1313" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581012858780" />
+    <state width="29" height="1313" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581013537764" />
     <state width="29" height="1222" key="GridCell.Tab.0.bottom/0.23.2560.1371@0.23.2560.1371" timestamp="1581012508687" />
-    <state width="29" height="1313" key="GridCell.Tab.0.center" timestamp="1581012858779">
+    <state width="29" height="1313" key="GridCell.Tab.0.center" timestamp="1581013537764">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="29" height="1313" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581012858779" />
+    <state width="29" height="1313" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581013537764" />
     <state width="29" height="1222" key="GridCell.Tab.0.center/0.23.2560.1371@0.23.2560.1371" timestamp="1581012508687" />
-    <state width="29" height="1313" key="GridCell.Tab.0.left" timestamp="1581012858779">
+    <state width="29" height="1313" key="GridCell.Tab.0.left" timestamp="1581013537763">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="29" height="1313" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581012858779" />
+    <state width="29" height="1313" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581013537763" />
     <state width="29" height="1222" key="GridCell.Tab.0.left/0.23.2560.1371@0.23.2560.1371" timestamp="1581012508687" />
-    <state width="29" height="1313" key="GridCell.Tab.0.right" timestamp="1581012858780">
+    <state width="29" height="1313" key="GridCell.Tab.0.right" timestamp="1581013537764">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="29" height="1313" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581012858780" />
+    <state width="29" height="1313" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581013537764" />
     <state width="29" height="1222" key="GridCell.Tab.0.right/0.23.2560.1371@0.23.2560.1371" timestamp="1581012508687" />
     <state width="2518" height="272" key="GridCell.Tab.1.bottom" timestamp="1580495879113">
       <screen x="0" y="0" width="2560" height="1440" />
@@ -669,10 +667,10 @@
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1579437206715" />
     <state x="938" y="108" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1580910615554" />
-    <state x="880" y="456" key="Vcs.Push.Dialog.v2" timestamp="1581012789255">
+    <state x="880" y="456" key="Vcs.Push.Dialog.v2" timestamp="1581013206173">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="880" y="456" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1581012789255" />
+    <state x="880" y="456" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1581013206173" />
     <state x="959" y="543" key="com.intellij.ide.util.TipDialog" timestamp="1580317142890">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
