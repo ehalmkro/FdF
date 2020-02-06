@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 16:41:00 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 18:08:11 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 19:06:54 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,35 @@ int		timer(t_scene *draw, size_t ticks, int index)
 		return (1);
 	draw->prev_time[index] = clock();
 	return (0);
+}
+
+void	switch_color(t_scene *draw)
+{
+	size_t	i;
+	size_t	j;
+	int		*rgb;
+
+	i = 0;
+	while (i < 3)
+	{
+		rgb = split_color(draw->color[i]);
+		j = 0;
+		while (j < 3)
+		{
+			if (rgb[j] + draw->c_dir[i][j] < 255 && \
+			rgb[j] + draw->c_dir[i][j] > 0)
+				rgb[j] += draw->c_dir[i][j];
+			else
+			{
+				draw->c_dir[i][j] *= -1;
+				rgb[j] = rgb[j] == 0 ? rgb[j]++ : rgb[j] + draw->c_dir[i][j];
+			}
+			j++;
+		}
+		draw->color[i] = combine_color(rgb[0], rgb[1], rgb[2]);
+		free(rgb);
+		i++;
+	}
 }
 
 void	change_palette(t_scene *draw)
