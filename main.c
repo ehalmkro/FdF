@@ -6,14 +6,19 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/05 19:41:25 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 18:19:19 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
+/*
+**	Initializing RGB color direction variables as 1, meaning ascending RGB
+** values with -1 being descending. One column per each color, one row
+** per each 8bit RGB component to allow individual directions for each.
+*/
 
-void 			init_c_dir(t_scene *draw)
+void			init_c_dir(t_scene *draw)
 {
 	int i;
 	int j;
@@ -29,7 +34,6 @@ void 			init_c_dir(t_scene *draw)
 		}
 		i++;
 	}
-
 }
 
 static void		init_window(t_scene *draw)

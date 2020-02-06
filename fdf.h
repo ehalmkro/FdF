@@ -165,7 +165,6 @@ int 			decrease_brightness(int color, float brightness);
 
 
 void			center_map(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
-t_point 		*transform_isometric(t_point *data, t_scene *draw);
 void			rotate_z(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
 void			rotate_x(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
 void			rotate_y(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);

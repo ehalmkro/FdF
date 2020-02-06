@@ -32,6 +32,12 @@ CMakeFiles/FdF.dir/matrix.c.o: ../fdf.h
 CMakeFiles/FdF.dir/matrix.c.o: ../matrix.c
 CMakeFiles/FdF.dir/matrix.c.o: /usr/local/include/mlx.h
 
+CMakeFiles/FdF.dir/mouse_events.c.o: ../Libft/libft.h
+CMakeFiles/FdF.dir/mouse_events.c.o: ../fdf.h
+CMakeFiles/FdF.dir/mouse_events.c.o: ../keycodes.h
+CMakeFiles/FdF.dir/mouse_events.c.o: ../mouse_events.c
+CMakeFiles/FdF.dir/mouse_events.c.o: /usr/local/include/mlx.h
+
 CMakeFiles/FdF.dir/pointlist.c.o: ../Libft/libft.h
 CMakeFiles/FdF.dir/pointlist.c.o: ../fdf.h
 CMakeFiles/FdF.dir/pointlist.c.o: ../pointlist.c
