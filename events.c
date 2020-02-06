@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 17:57:25 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 20:17:44 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,20 @@ int			keypress(int keycode, void *param)
 	t_scene *draw;
 
 	draw = param;
-	keycode == MAIN_PAD_ESC ? exit(0) : 0;
+	keycode == ESC ? exit(0) : 0;
 	keycode == ARROW_UP ? draw->padding_y -= DEFAULT_INCREMENT : 0;
 	keycode == ARROW_DOWN ? draw->padding_y += DEFAULT_INCREMENT : 0;
 	keycode == ARROW_LEFT ? draw->padding_x -= DEFAULT_INCREMENT : 0;
 	keycode == ARROW_RIGHT ? draw->padding_x += DEFAULT_INCREMENT : 0;
-	keycode == MAIN_PAD_MORE ? change_palette(draw) : 0;
-	keycode == NUM_PAD_PLUS ? matrix_transformation(draw, zoom_matrix, 1) : 0;
-	keycode == NUM_PAD_MINUS ? matrix_transformation(draw, zoom_matrix, -1) : 0;
-	if (keycode == MAIN_PAD_D)
+	keycode == GREATER_THAN ? change_palette(draw) : 0;
+	keycode == PLUS ? matrix_transformation(draw, zoom_matrix, 1) : 0;
+	keycode == MINUS ? matrix_transformation(draw, zoom_matrix, -1) : 0;
+	if (keycode == D)
 		draw->debug = draw->debug == 0 ? 1 : 0;
-	if (keycode == MAIN_PAD_9)
+	if (keycode == NUMBER_ROW_9)
 		draw->draw_algorithm = draw->draw_algorithm == &draw_line_wu ? \
 		&draw_line_bresenham : &draw_line_wu;
-	if (keycode == MAIN_PAD_0)
+	if (keycode == NUMBER_ROW_0)
 	{
 		if (draw->projection == PARALLEL)
 			draw->projection = ISOMETRIC;
