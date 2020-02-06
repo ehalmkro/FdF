@@ -6,19 +6,16 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 19:13:41 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 19:22:59 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <math.h>
 #include "fdf.h"
 
-void	zoom_matrix(t_point *data, float prev_x, float prev_y, float prev_z, \
-		t_scene *draw, float deg)
+void	zoom_matrix(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
-	(void)prev_x;
-	(void)prev_y;
-	(void)prev_z;
+	(void)vertex;
 	if (deg == 0)
 	{
 		data->x *= draw->zoom;
@@ -36,45 +33,37 @@ void	zoom_matrix(t_point *data, float prev_x, float prev_y, float prev_z, \
 	}
 }
 
-void	rotate_z(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
+void	rotate_z(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
-	(void)prev_z;
-	(void)draw;
-	data->x = prev_x * cos (deg) - prev_y * sin (deg);
-	data->y = prev_x * sin (deg) + prev_y * cos (deg);
+	data->x = vertex.x * cos(deg) - vertex.y * sin(deg);
+	data->y = vertex.x * sin(deg) + vertex.y * cos(deg);
 }
 
-void	rotate_x(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
+void	rotate_x(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
-	(void)prev_x;
-	(void)draw;
-	data->y = prev_y * cos(deg) + prev_z * sin(deg);
-	data->z = (-prev_y) * sin(deg) + prev_z * cos(deg);
+	data->y = vertex.y * cos(deg) + vertex.z * sin(deg);
+	data->z = (-vertex.y) * sin(deg) + vertex.z * cos(deg);
 }
 
-void	rotate_y(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg)
+void	rotate_y(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
-	(void)prev_y;
-	(void)draw;
-	data->x = prev_x * cos(deg) + prev_z * sin(deg);
-	data->z = (-prev_x) * sin(deg) + prev_z * cos(deg);
+	data->x = vertex.x * cos(deg) + vertex.z * sin(deg);
+	data->z = (-vertex.x) * sin(deg) + vertex.z * cos(deg);
 }
 
-void	matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, float prev_x,\
-		float prev_y, float prev_z, t_scene *draw, float deg), float deg)
+void	matrix_transformation(t_scene *draw, void (*transformation)\
+(t_point *data, t_point vertex, t_scene *draw, float deg), float deg)
 {
-	t_map *map;
-	double prev_x;
-	double prev_y;
-	double prev_z;
+	t_map	*map;
+	t_point	*vertex;
+
 	map = draw->map;
 	while (map)
 	{
-		prev_x = map->dt->x;
-		prev_y = map->dt->y;
-		prev_z = map->dt->z;
-		transformation(map->dt, prev_x, prev_y, prev_z, draw, deg);
+		vertex = point_node_new(map->dt->x, map->dt->y, map->dt->z, draw);
+		transformation(map->dt, *vertex, draw, deg);
 		map = map->nxt;
+		free(vertex);
 	}
 	free(map);
 	scene_find_minmax(draw);

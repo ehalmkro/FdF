@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/05 19:46:21 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 19:11:02 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,10 +165,10 @@ int 			decrease_brightness(int color, float brightness);
 
 
 void			center_map(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
-void			rotate_z(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
-void			rotate_x(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
-void			rotate_y(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
-void			zoom_matrix(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
+void			rotate_z(t_point *data, t_point vertex, t_scene *draw, float deg);
+void			rotate_x(t_point *data, t_point vertex, t_scene *draw, float deg);
+void			rotate_y(t_point *data, t_point vertex, t_scene *draw, float deg);
+void			zoom_matrix(t_point *data, t_point vertex, t_scene *draw, float deg);
 void			modify_z(t_point *data, float prev_x, float prev_y, float prev_z, t_scene *draw, float deg);
 
 void			put_pixel(float x, float y, int color, t_scene *draw);
@@ -176,8 +176,7 @@ void			put_pixel(float x, float y, int color, t_scene *draw);
 int				mouse_move(int x, int y, void *param);
 
 
-void			matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, float prev_x, float prev_y,\
-                float prev_z, t_scene *draw, float deg), float deg);
+void			matrix_transformation(t_scene *draw, void (*transformation)(t_point *data, t_point vertex, t_scene *draw, float deg), float deg);
 
 int				mouse_press(int button, int x, int y, void *param);
 int				mouse_release(int button, int x, int y, void *param);
