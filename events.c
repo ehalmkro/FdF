@@ -54,9 +54,9 @@ int			window_idle(void *param)
 	draw = param;
 	if (draw->mouse->button_press == 0)
 	{
-		matrix_transformation(draw, &rotate_x, 0.00009);
-		matrix_transformation(draw, &rotate_y, 0.00009);
-		matrix_transformation(draw, &rotate_z, 0.00009);
+		matrix_transformation(draw, &rot_x, 0.00009);
+		matrix_transformation(draw, &rot_y, 0.00009);
+		matrix_transformation(draw, &rot_z, 0.00009);
 	}
 	render(draw);
 	return (0);
