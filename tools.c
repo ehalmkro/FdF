@@ -6,25 +6,27 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 19:21:45 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 19:28:29 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-float get_percent(int start, int end, int curr)
+float	get_percent(int start, int end, int curr)
 {
-	double	place;
-	double	dist;
+	float	place;
+	float	dist;
 
 	place = curr - start;
 	dist = end - start;
 	if (dist == 0)
 		return (1.0);
-	return (place/dist);
+	return (place / dist);
 }
 
-//TODO: fix z axis centering
+/*
+** TODO: fix z axis centering
+*/
 
 void	center_origo(t_scene *draw)
 {
@@ -41,13 +43,12 @@ void	center_origo(t_scene *draw)
 	scene_find_minmax(draw);
 }
 
-void	scene_find_minmax (t_scene *draw)
+void	scene_find_minmax(t_scene *draw)
 {
 	t_map *map;
- 	map = draw->map;
 
-
- 	if (map)
+	map = draw->map;
+	if (map)
 	{
 		draw->max_x = INT_MIN;
 		draw->max_y = INT_MIN;
@@ -64,7 +65,7 @@ void	scene_find_minmax (t_scene *draw)
 	}
 }
 
-void		ft_error(int error_code)
+void	ft_error(int error_code)
 {
 	error_code == 0 ? ft_putendl("Malloc error, exiting...") : 0;
 	error_code == 1 ? ft_putendl("Error creating new window, exiting...") : 0;

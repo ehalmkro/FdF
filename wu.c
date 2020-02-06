@@ -1,5 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   wu.c                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/06 19:31:14 by ehalmkro          #+#    #+#             */
+/*   Updated: 2020/02/06 19:32:34 by ehalmkro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fdf.h"
 #include "math.h"
+
+#define ipart_(X) ((int)(X))
+#define round_(X) ((int)(((double)(X))+0.5))
+#define fpart_(X) (((double)(X))-(double)ipart_(X))
+#define rfpart_(X) (1.0-fpart_(X))
+
 
 // TODO: Norminette fix wu
 
@@ -9,10 +27,6 @@ static void swap_float(float *a , float *b)
 	*a = *b;
 	*b = temp;
 }
-
-// TODO: ONE FUNCTIONING WU PLZ
-
-
 
 static void	endpoint_swap(t_point *start, t_point *end, t_scene *draw)
 {

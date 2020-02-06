@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 17:37:14 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 17:37:14 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 19:25:30 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int		mouse_move(int x, int y, void *param)
 	draw->mouse->y = y;
 	if (draw->mouse->button_press == 1 || draw->mouse->button_press == 5)
 	{
-		matrix_transformation (draw, &rotate_x, (x - draw->mouse->prev_x) * 0.001);
-		matrix_transformation (draw, &rotate_y, (y - draw->mouse->prev_y) * 0.001);
+		matrix_transformation(draw, &rot_x, (x - draw->mouse->prev_x) * 0.001);
+		matrix_transformation(draw, &rot_y, (y - draw->mouse->prev_y) * 0.001);
 	}
 	if (draw->mouse->button_press == 4 || draw->mouse->button_press == 5)
-		matrix_transformation (draw, &rotate_z, (y - draw->mouse->prev_y) * 0.005);
+		matrix_transformation(draw, &rot_z, (y - draw->mouse->prev_y) * 0.005);
 	return (0);
 }
 
@@ -49,7 +49,7 @@ int		mouse_press(int button, int x, int y, void *param)
 		draw->mouse->button_press += 1;
 	if (button == MOUSE_RIGHT_BUTTON)
 		draw->mouse->button_press += 4;
-	return(0);
+	return (0);
 }
 
 int		mouse_release(int button, int x, int y, void *param)
