@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 19:23:12 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/06 19:25:30 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,21 @@ void	zoom_matrix(t_point *data, t_point vertex, t_scene *draw, float deg)
 
 void	rot_z(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
+	(void)draw;
 	data->x = vertex.x * cos(deg) - vertex.y * sin(deg);
 	data->y = vertex.x * sin(deg) + vertex.y * cos(deg);
 }
 
 void	rot_x(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
+	(void)draw;
 	data->y = vertex.y * cos(deg) + vertex.z * sin(deg);
 	data->z = (-vertex.y) * sin(deg) + vertex.z * cos(deg);
 }
 
 void	rot_y(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
+	(void)draw;
 	data->x = vertex.x * cos(deg) + vertex.z * sin(deg);
 	data->z = (-vertex.x) * sin(deg) + vertex.z * cos(deg);
 }
