@@ -12,7 +12,7 @@
 
 NAME = FdF
 SRC = main.c color.c events.c extras.c line_draw.c matrix.c mouse_events.c \
-	pointlist.c read_write.c tools.c window.c wu.c
+	pointlist.c read_write.c tools.c window.c wu.c wu_utils.c
 LIB = Libft/
 MLIB = /usr/local/lib
 MFLAGS = -lmlx -I /usr/local/include -L/usr/local/lib -framework OpenGL -framework Appkit

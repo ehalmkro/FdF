@@ -14,12 +14,12 @@
 
 void	ft_lstaddback(t_list **alst, t_list *new)
 {
-    t_list *current;
+	t_list *current;
 
-    if (!alst || !new)
-        return ;
-    current = *alst;
-    while (current->next)
-        current = current->next;
-    current->next = new;
+	if (!alst || !new)
+		return ;
+	current = *alst;
+	while (current->next)
+		current = current->next;
+	current->next = new;
 }

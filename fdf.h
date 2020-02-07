@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/07 19:30:30 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 19:55:06 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,9 @@ typedef struct			s_line {
 	int					steep;
 	float				gradient;
 	int					x_end;
-	int 				y_end;
+	int					y_end;
 	float				y_isct;
-	float 				x_gap;
+	float				x_gap;
 }						t_line;
 
 typedef struct			s_scene
@@ -130,11 +130,11 @@ void					put_pixel(float x, float y, int color, t_scene *draw);
 void					event_handler(t_scene *draw);
 void					render(t_scene *draw);
 
-void					swap_float(float *a, float *b);
 void					swap_height(t_height *a, t_height *b);
 void					endpoint_swap(t_point *start, t_point *end, \
 						t_line *line);
-
+float					decimal_part(float x);
+float					offset_part(float x);
 
 int						mouse_press(int button, int x, int y, void *param);
 int						mouse_release(int button, int x, int y, void *param);
@@ -152,7 +152,7 @@ void					change_palette(t_scene *draw);
 void					init_c_dir(t_scene *draw);
 
 void					matrix_transformation(t_scene *draw, \
-void 					(*transformation)(t_point *data, t_point vertex, \
+void					(*transformation)(t_point *data, t_point vertex, \
 						t_scene *draw, float deg), float deg);
 void					rot_x(t_point *data, t_point vertex, t_scene *draw, \
 						float deg);

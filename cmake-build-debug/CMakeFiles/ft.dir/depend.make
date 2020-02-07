@@ -8,6 +8,8 @@ CMakeFiles/ft.dir/Libft/ft_bzero.c.o: ../Libft/libft.h
 
 CMakeFiles/ft.dir/Libft/ft_count_if.c.o: ../Libft/ft_count_if.c
 
+CMakeFiles/ft.dir/Libft/ft_fswap.c.o: ../Libft/ft_fswap.c
+
 CMakeFiles/ft.dir/Libft/ft_isalnum.c.o: ../Libft/ft_isalnum.c
 CMakeFiles/ft.dir/Libft/ft_isalnum.c.o: ../Libft/libft.h
 

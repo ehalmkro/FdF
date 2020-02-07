@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 19:31:34 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/07 19:43:52 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 19:57:20 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,16 @@ void		swap_height(t_height *a, t_height *b)
 	temp = *a;
 	*a = *b;
 	*b = temp;
+}
+
+float		decimal_part(float x)
+{
+	return ((float)x - (float)((int)x));
+}
+
+float		offset_part(float x)
+{
+	return (1.0 - decimal_part(x));
 }
 
 void		endpoint_swap(t_point *start, t_point *end, t_line *line)

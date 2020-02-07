@@ -36,7 +36,7 @@ void			draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 	while (pixelcount > 0)
 	{
 		put_pixel(current->x, current->y, set_grd(start_end, *delta, \
-        *current, *draw), draw);
+		*current, *draw), draw);
 		current->x += delta->x;
 		current->y += delta->y;
 		pixelcount--;
@@ -61,7 +61,7 @@ static t_point	*transform_isometric(t_point *data, t_scene *draw)
 	prev_x = data->x;
 	prev_y = data->y;
 	ret = new_node((prev_x - prev_y) * cos(0.523599), -(data->z) + \
-    (prev_x + prev_y) * sin(0.523599), data->z, draw);
+	(prev_x + prev_y) * sin(0.523599), data->z, draw);
 	ret->height = data->height;
 	return (ret);
 }
