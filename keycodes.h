@@ -27,6 +27,7 @@
 # define ARROW_RIGHT		124
 
 # define D					2
+# define C					8
 # define PLUS				69
 # define MINUS				78
 # define GREATER_THAN		47

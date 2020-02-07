@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 20:17:44 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 20:55:45 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,13 @@ int			keypress(int keycode, void *param)
 	keycode == MINUS ? matrix_transformation(draw, zoom_matrix, -1) : 0;
 	if (keycode == D)
 		draw->debug = draw->debug == 0 ? 1 : 0;
+	if (keycode == C)
+		draw->display_ctrls = draw->display_ctrls == 0 ? 1 : 0;
 	if (keycode == NUMBER_ROW_9)
 		draw->draw_algorithm = draw->draw_algorithm == &draw_line_wu ? \
 		&draw_line_bresenham : &draw_line_wu;
 	if (keycode == NUMBER_ROW_0)
-	{
-		if (draw->projection == PARALLEL)
-			draw->projection = ISOMETRIC;
-		else
-			draw->projection = PARALLEL;
-	}
+		draw->projection = draw->projection == PARALLEL ? ISOMETRIC : PARALLEL;
 	return (0);
 }
 
@@ -76,7 +73,7 @@ void		event_handler(t_scene *draw)
 void		render(t_scene *draw)
 {
 	mlx_clear_window(draw->mlx, draw->win);
-	if (timer(draw, 30000, 0) == 0)
+	if (timer(draw, 45000, 0) == 0)
 		draw->carousel == 9 ? draw->carousel = 0 : draw->carousel++;
 	if (timer(draw, 30000, 1) == 0)
 		switch_color(draw);
