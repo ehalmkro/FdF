@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/07 19:55:06 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 21:02:39 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,11 @@
 # define DEFAULT_INCREMENT 5
 # define ZOOM_COEFF_POS 1.15
 # define ZOOM_COEFF_NEG 0.9
-# define MATRIX_ROTATION_DEG 0.05
-# define Z_INCREASE	1.15
-# define Z_DECREASE	0.9
 
-# define BROWN 0x5b180c
-# define PEACH 0xe65d3e
-# define PINK 0xf1a26d
-# define LEMON 0xfeda4b
-# define LIGHTYELLOW 0xfefba8
+# define PINK 0xF222FF
+# define TEAL 0x00F1FF
+# define MAGENTA 0xFF019A
+# define YELLOW 0xFF901F
 
 typedef enum
 {
@@ -106,6 +102,7 @@ typedef struct			s_scene
 						struct s_scene *draw);
 	int					debug;
 	size_t				vertex_count;
+	int					display_ctrls;
 	long				prev_time[2];
 
 }						t_scene;

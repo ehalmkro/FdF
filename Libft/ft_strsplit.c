@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 11:28:53 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/01/31 15:05:27 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 20:19:02 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,27 +46,29 @@ static size_t	wordlength(char const *s, char c)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	size_t		i;
 	size_t		h;
+	size_t		i;
+	size_t		j;
 	char		**ret;
 
 	i = 0;
 	h = 0;
+	j = 0;
 	if (!s || !(ret = (char**)malloc(sizeof(char*) * wordcount(s, c) + 1)))
 		return (NULL);
-	while (s[i])
+	while (*(s + i))
 	{
-		while (*s == c && *s)
-			s++;
-		if (*s != c && *s)
+		while (*(s + i) == c && *(s + i))
+			i++;
+		if (*(s + i) != c && *(s + i))
 		{
-			if (!(ret[h] = (char*)malloc(sizeof(char) * wordlength(s, c) + 1)))
+			if (!(ret[h] = (char*)malloc(sizeof(char) * wordlength((&s[i]), c) + 1)))
 				return (NULL);
-			while (*s != c && *s)
-				ret[h][i++] = (char)*s++;
-			ret[h][i] = '\0';
+			while (*(s + i) != c && *(s + i))
+				ret[h][j++] = (char)s[i++];
+			ret[h][j] = '\0';
 			h++;
-			i = 0;
+			j = 0;
 		}
 		ret[h] = NULL;
 	}

@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/07 17:12:20 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 21:01:11 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ void			init_c_dir(t_scene *draw)
 static void		init_window(t_scene *draw)
 {
 	scene_find_minmax(draw);
-	draw->color[0] = 0x487860;
-	draw->color[1] = 0xD95838;
-	draw->color[2] = 0xE0E04C;
-	draw->color[3] = LEMON;
+	draw->color[0] = TEAL;
+	draw->color[1] = MAGENTA;
+	draw->color[2] = YELLOW;
+	draw->color[3] = PINK;
 	draw->vertex_count = 0;
 	(draw->mouse = (t_mouse*)malloc(sizeof(t_mouse))) == NULL ? ft_error(0) : 0;
 	draw->mouse->button_press = 0;
@@ -55,6 +55,7 @@ static void		init_window(t_scene *draw)
 	draw->padding_y = WINDOW_HEIGHT / 2 - draw->max_y / 2;
 	draw->draw_algorithm = &draw_line_bresenham;
 	draw->carousel = 0;
+	draw->display_ctrls = 0;
 	append_map(draw);
 	center_origo(draw);
 	matrix_transformation(draw, &zoom_matrix, 0);
