@@ -63,3 +63,8 @@ CMakeFiles/FdF.dir/wu.c.o
  /Users/ehalmkro/hive/FdF/fdf.h
  /Users/ehalmkro/hive/FdF/wu.c
  /usr/local/include/mlx.h
+CMakeFiles/FdF.dir/wu_utils.c.o
+ /Users/ehalmkro/hive/FdF/Libft/libft.h
+ /Users/ehalmkro/hive/FdF/fdf.h
+ /Users/ehalmkro/hive/FdF/wu_utils.c
+ /usr/local/include/mlx.h

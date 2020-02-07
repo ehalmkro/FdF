@@ -217,6 +217,33 @@ Libft/ft_count_if.c.s:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/Libft/ft_count_if.c.s
 .PHONY : Libft/ft_count_if.c.s
 
+Libft/ft_fswap.o: Libft/ft_fswap.c.o
+
+.PHONY : Libft/ft_fswap.o
+
+# target to build an object file
+Libft/ft_fswap.c.o:
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/Libft/ft_fswap.c.o
+.PHONY : Libft/ft_fswap.c.o
+
+Libft/ft_fswap.i: Libft/ft_fswap.c.i
+
+.PHONY : Libft/ft_fswap.i
+
+# target to preprocess a source file
+Libft/ft_fswap.c.i:
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/Libft/ft_fswap.c.i
+.PHONY : Libft/ft_fswap.c.i
+
+Libft/ft_fswap.s: Libft/ft_fswap.c.s
+
+.PHONY : Libft/ft_fswap.s
+
+# target to generate assembly for a file
+Libft/ft_fswap.c.s:
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/Libft/ft_fswap.c.s
+.PHONY : Libft/ft_fswap.c.s
+
 Libft/ft_isalnum.o: Libft/ft_isalnum.c.o
 
 .PHONY : Libft/ft_isalnum.o
@@ -2188,6 +2215,33 @@ wu.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/wu.c.s
 .PHONY : wu.c.s
 
+wu_utils.o: wu_utils.c.o
+
+.PHONY : wu_utils.o
+
+# target to build an object file
+wu_utils.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/wu_utils.c.o
+.PHONY : wu_utils.c.o
+
+wu_utils.i: wu_utils.c.i
+
+.PHONY : wu_utils.i
+
+# target to preprocess a source file
+wu_utils.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/wu_utils.c.i
+.PHONY : wu_utils.c.i
+
+wu_utils.s: wu_utils.c.s
+
+.PHONY : wu_utils.s
+
+# target to generate assembly for a file
+wu_utils.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/wu_utils.c.s
+.PHONY : wu_utils.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2207,6 +2261,9 @@ help:
 	@echo "... Libft/ft_count_if.o"
 	@echo "... Libft/ft_count_if.i"
 	@echo "... Libft/ft_count_if.s"
+	@echo "... Libft/ft_fswap.o"
+	@echo "... Libft/ft_fswap.i"
+	@echo "... Libft/ft_fswap.s"
 	@echo "... Libft/ft_isalnum.o"
 	@echo "... Libft/ft_isalnum.i"
 	@echo "... Libft/ft_isalnum.s"
@@ -2426,6 +2483,9 @@ help:
 	@echo "... wu.o"
 	@echo "... wu.i"
 	@echo "... wu.s"
+	@echo "... wu_utils.o"
+	@echo "... wu_utils.i"
+	@echo "... wu_utils.s"
 .PHONY : help
 
 

@@ -23,7 +23,7 @@ ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c ft_strequ.c\
 ft_strnequ.c ft_strjoin.c ft_strsub.c ft_strtrim.c ft_itoa.c\
 ft_strmapi.c ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c\
 ft_lstdel.c ft_lstmap.c ft_swap.c ft_wordcount.c ft_wordlength.c\
-ft_count_if.c ft_strsplit.c ft_lstaddback.c get_next_line.c
+ft_count_if.c ft_strsplit.c ft_lstaddback.c get_next_line.c ft_fswap.c
 OBJECTS = $(subst .c,.o, $(SRC))
 FLAGS = -Wall -Werror -Wextra
 

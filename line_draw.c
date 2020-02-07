@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/07 11:33:58 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 18:43:30 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void			draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 	float	pixelcount;
 	t_map	*start_end;
 
-	current = point_node_new(start.x, start.y, 0, draw);
-	delta = point_node_new(end.x - start.x, end.y - start.y, 0, draw);
+	current = new_node(start.x, start.y, 0, draw);
+	delta = new_node(end.x - start.x, end.y - start.y, 0, draw);
 	pixelcount = sqrt((delta->x * delta->x) + (delta->y * delta->y));
 	delta->x /= pixelcount;
 	delta->y /= pixelcount;
@@ -35,8 +35,8 @@ void			draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 	start_end->nxt = map_add_node(&end);
 	while (pixelcount > 0)
 	{
-		put_pixel(current->x, current->y, set_color(start_end, *delta, \
-		*current, *draw), draw);
+		put_pixel(current->x, current->y, set_grd(start_end, *delta, \
+        *current, *draw), draw);
 		current->x += delta->x;
 		current->y += delta->y;
 		pixelcount--;
@@ -60,8 +60,8 @@ static t_point	*transform_isometric(t_point *data, t_scene *draw)
 
 	prev_x = data->x;
 	prev_y = data->y;
-	ret = point_node_new((prev_x - prev_y) * cos(0.523599), -(data->z) +\
-	(prev_x + prev_y) * sin(0.523599), data->z, draw);
+	ret = new_node((prev_x - prev_y) * cos(0.523599), -(data->z) + \
+    (prev_x + prev_y) * sin(0.523599), data->z, draw);
 	ret->height = data->height;
 	return (ret);
 }

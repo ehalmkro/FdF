@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:05:47 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/07 12:18:42 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 18:43:30 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		combine_color(int r, int g, int b)
 	return ((0 << 24) + (r << 16) + (g << 8) + b);
 }
 
-int		decrease_brightness(int color, float brightness)
+int		set_light(int color, float brightness)
 {
 	int *rgb;
 
@@ -48,7 +48,7 @@ int		get_color_point(int start, int end, double percentage)
 	return ((int)((1 - percentage) * start + percentage * end));
 }
 
-int		set_color(t_map *start_end, t_point delta, t_point current,\
+int		set_grd(t_map *start_end, t_point delta, t_point current,\
 		t_scene draw)
 {
 	int		r;

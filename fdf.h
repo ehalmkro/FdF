@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/07 11:13:44 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 19:30:30 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,13 @@ typedef struct			s_mouse
 }						t_mouse;
 
 typedef struct			s_line {
+	t_point				*delta;
 	int					steep;
 	float				gradient;
-	t_point				delta;
-	int					x_start;
 	int					x_end;
-	float				y_intersection;
+	int 				y_end;
+	float				y_isct;
+	float 				x_gap;
 }						t_line;
 
 typedef struct			s_scene
@@ -102,8 +103,7 @@ typedef struct			s_scene
 	float				padding_x;
 	float				padding_y;
 	void				(*draw_algorithm)(t_point start, t_point end, \
-	struct s_scene *draw);
-	int					steep;
+						struct s_scene *draw);
 	int					debug;
 	size_t				vertex_count;
 	long				prev_time[2];
@@ -118,18 +118,23 @@ float					get_percent(int start, int end, int curr);
 void					center_origo(t_scene *draw);
 
 void					map_push_next(t_map **start, t_map *new);
-t_point					*point_node_new(float x, float y, float z, \
-t_scene *draw);
+t_point					*new_node(float x, float y, float z, t_scene *draw);
 t_map					*map_add_node(void *data);
 void					append_map(t_scene *draw);
 
 void					draw_line_bresenham(t_point start, t_point end, \
-t_scene *draw);
+						t_scene *draw);
 void					draw_line_wu(t_point start, t_point end, t_scene *draw);
 void					draw_matrix(t_map *start, t_scene *draw);
 void					put_pixel(float x, float y, int color, t_scene *draw);
 void					event_handler(t_scene *draw);
 void					render(t_scene *draw);
+
+void					swap_float(float *a, float *b);
+void					swap_height(t_height *a, t_height *b);
+void					endpoint_swap(t_point *start, t_point *end, \
+						t_line *line);
+
 
 int						mouse_press(int button, int x, int y, void *param);
 int						mouse_release(int button, int x, int y, void *param);
@@ -137,26 +142,26 @@ int						mouse_move(int x, int y, void *param);
 int						close_window(void *param);
 int						keypress(int keycode, void *param);
 
-int						set_color(t_map *start_end, t_point delta, \
-t_point current, t_scene draw);
+int						set_grd(t_map *start_end, t_point delta, \
+						t_point current, t_scene draw);
 int						*split_color(int color);
-int						decrease_brightness(int color, float brightness);
+int						set_light(int color, float brightness);
 int						combine_color(int r, int g, int b);
 void					switch_color(t_scene *draw);
 void					change_palette(t_scene *draw);
 void					init_c_dir(t_scene *draw);
 
 void					matrix_transformation(t_scene *draw, \
-void (*transformation)(t_point *data, t_point vertex, t_scene *draw, \
-float deg), float deg);
+void 					(*transformation)(t_point *data, t_point vertex, \
+						t_scene *draw, float deg), float deg);
 void					rot_x(t_point *data, t_point vertex, t_scene *draw, \
-float deg);
+						float deg);
 void					rot_y(t_point *data, t_point vertex, t_scene *draw, \
-float deg);
+						float deg);
 void					rot_z(t_point *data, t_point vertex, t_scene *draw, \
-float deg);
+						float deg);
 void					zoom_matrix(t_point *data, t_point vertex, \
-t_scene *draw, float deg);
+						t_scene *draw, float deg);
 
 void					text_carousel(t_scene *draw);
 void					debug_lines(t_scene *draw);

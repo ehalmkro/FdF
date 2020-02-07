@@ -96,9 +96,22 @@ CMakeFiles/ft.dir/Libft/ft_count_if.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft.dir/Libft/ft_count_if.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/Libft/ft_count_if.c -o CMakeFiles/ft.dir/Libft/ft_count_if.c.s
 
+CMakeFiles/ft.dir/Libft/ft_fswap.c.o: CMakeFiles/ft.dir/flags.make
+CMakeFiles/ft.dir/Libft/ft_fswap.c.o: ../Libft/ft_fswap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ft.dir/Libft/ft_fswap.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_fswap.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_fswap.c
+
+CMakeFiles/ft.dir/Libft/ft_fswap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft.dir/Libft/ft_fswap.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ehalmkro/hive/FdF/Libft/ft_fswap.c > CMakeFiles/ft.dir/Libft/ft_fswap.c.i
+
+CMakeFiles/ft.dir/Libft/ft_fswap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft.dir/Libft/ft_fswap.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/Libft/ft_fswap.c -o CMakeFiles/ft.dir/Libft/ft_fswap.c.s
+
 CMakeFiles/ft.dir/Libft/ft_isalnum.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_isalnum.c.o: ../Libft/ft_isalnum.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ft.dir/Libft/ft_isalnum.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ft.dir/Libft/ft_isalnum.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_isalnum.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_isalnum.c
 
 CMakeFiles/ft.dir/Libft/ft_isalnum.c.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/ft.dir/Libft/ft_isalnum.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_isalpha.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_isalpha.c.o: ../Libft/ft_isalpha.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ft.dir/Libft/ft_isalpha.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ft.dir/Libft/ft_isalpha.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_isalpha.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_isalpha.c
 
 CMakeFiles/ft.dir/Libft/ft_isalpha.c.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/ft.dir/Libft/ft_isalpha.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_isascii.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_isascii.c.o: ../Libft/ft_isascii.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ft.dir/Libft/ft_isascii.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft.dir/Libft/ft_isascii.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_isascii.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_isascii.c
 
 CMakeFiles/ft.dir/Libft/ft_isascii.c.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/ft.dir/Libft/ft_isascii.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_isdigit.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_isdigit.c.o: ../Libft/ft_isdigit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft.dir/Libft/ft_isdigit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft.dir/Libft/ft_isdigit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_isdigit.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_isdigit.c
 
 CMakeFiles/ft.dir/Libft/ft_isdigit.c.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/ft.dir/Libft/ft_isdigit.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_isprint.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_isprint.c.o: ../Libft/ft_isprint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft.dir/Libft/ft_isprint.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft.dir/Libft/ft_isprint.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_isprint.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_isprint.c
 
 CMakeFiles/ft.dir/Libft/ft_isprint.c.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/ft.dir/Libft/ft_isprint.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_itoa.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_itoa.c.o: ../Libft/ft_itoa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft.dir/Libft/ft_itoa.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft.dir/Libft/ft_itoa.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_itoa.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_itoa.c
 
 CMakeFiles/ft.dir/Libft/ft_itoa.c.i: cmake_force
@@ -176,7 +189,7 @@ CMakeFiles/ft.dir/Libft/ft_itoa.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_lstadd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_lstadd.c.o: ../Libft/ft_lstadd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft.dir/Libft/ft_lstadd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft.dir/Libft/ft_lstadd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_lstadd.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_lstadd.c
 
 CMakeFiles/ft.dir/Libft/ft_lstadd.c.i: cmake_force
@@ -189,7 +202,7 @@ CMakeFiles/ft.dir/Libft/ft_lstadd.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_lstaddback.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_lstaddback.c.o: ../Libft/ft_lstaddback.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft.dir/Libft/ft_lstaddback.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft.dir/Libft/ft_lstaddback.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_lstaddback.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_lstaddback.c
 
 CMakeFiles/ft.dir/Libft/ft_lstaddback.c.i: cmake_force
@@ -202,7 +215,7 @@ CMakeFiles/ft.dir/Libft/ft_lstaddback.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_lstdel.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_lstdel.c.o: ../Libft/ft_lstdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft.dir/Libft/ft_lstdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft.dir/Libft/ft_lstdel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_lstdel.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_lstdel.c
 
 CMakeFiles/ft.dir/Libft/ft_lstdel.c.i: cmake_force
@@ -215,7 +228,7 @@ CMakeFiles/ft.dir/Libft/ft_lstdel.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_lstdelone.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_lstdelone.c.o: ../Libft/ft_lstdelone.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft.dir/Libft/ft_lstdelone.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ft.dir/Libft/ft_lstdelone.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_lstdelone.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_lstdelone.c
 
 CMakeFiles/ft.dir/Libft/ft_lstdelone.c.i: cmake_force
@@ -228,7 +241,7 @@ CMakeFiles/ft.dir/Libft/ft_lstdelone.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_lstiter.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_lstiter.c.o: ../Libft/ft_lstiter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ft.dir/Libft/ft_lstiter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft.dir/Libft/ft_lstiter.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_lstiter.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_lstiter.c
 
 CMakeFiles/ft.dir/Libft/ft_lstiter.c.i: cmake_force
@@ -241,7 +254,7 @@ CMakeFiles/ft.dir/Libft/ft_lstiter.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_lstmap.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_lstmap.c.o: ../Libft/ft_lstmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft.dir/Libft/ft_lstmap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft.dir/Libft/ft_lstmap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_lstmap.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_lstmap.c
 
 CMakeFiles/ft.dir/Libft/ft_lstmap.c.i: cmake_force
@@ -254,7 +267,7 @@ CMakeFiles/ft.dir/Libft/ft_lstmap.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_lstnew.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_lstnew.c.o: ../Libft/ft_lstnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft.dir/Libft/ft_lstnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft.dir/Libft/ft_lstnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_lstnew.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_lstnew.c
 
 CMakeFiles/ft.dir/Libft/ft_lstnew.c.i: cmake_force
@@ -267,7 +280,7 @@ CMakeFiles/ft.dir/Libft/ft_lstnew.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_memalloc.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_memalloc.c.o: ../Libft/ft_memalloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft.dir/Libft/ft_memalloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft.dir/Libft/ft_memalloc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_memalloc.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_memalloc.c
 
 CMakeFiles/ft.dir/Libft/ft_memalloc.c.i: cmake_force
@@ -280,7 +293,7 @@ CMakeFiles/ft.dir/Libft/ft_memalloc.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_memccpy.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_memccpy.c.o: ../Libft/ft_memccpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft.dir/Libft/ft_memccpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ft.dir/Libft/ft_memccpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_memccpy.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_memccpy.c
 
 CMakeFiles/ft.dir/Libft/ft_memccpy.c.i: cmake_force
@@ -293,7 +306,7 @@ CMakeFiles/ft.dir/Libft/ft_memccpy.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_memchr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_memchr.c.o: ../Libft/ft_memchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ft.dir/Libft/ft_memchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ft.dir/Libft/ft_memchr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_memchr.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_memchr.c
 
 CMakeFiles/ft.dir/Libft/ft_memchr.c.i: cmake_force
@@ -306,7 +319,7 @@ CMakeFiles/ft.dir/Libft/ft_memchr.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_memcmp.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_memcmp.c.o: ../Libft/ft_memcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ft.dir/Libft/ft_memcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ft.dir/Libft/ft_memcmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_memcmp.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_memcmp.c
 
 CMakeFiles/ft.dir/Libft/ft_memcmp.c.i: cmake_force
@@ -319,7 +332,7 @@ CMakeFiles/ft.dir/Libft/ft_memcmp.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_memcpy.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_memcpy.c.o: ../Libft/ft_memcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ft.dir/Libft/ft_memcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ft.dir/Libft/ft_memcpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_memcpy.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_memcpy.c
 
 CMakeFiles/ft.dir/Libft/ft_memcpy.c.i: cmake_force
@@ -332,7 +345,7 @@ CMakeFiles/ft.dir/Libft/ft_memcpy.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_memdel.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_memdel.c.o: ../Libft/ft_memdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ft.dir/Libft/ft_memdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ft.dir/Libft/ft_memdel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_memdel.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_memdel.c
 
 CMakeFiles/ft.dir/Libft/ft_memdel.c.i: cmake_force
@@ -345,7 +358,7 @@ CMakeFiles/ft.dir/Libft/ft_memdel.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_memmove.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_memmove.c.o: ../Libft/ft_memmove.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ft.dir/Libft/ft_memmove.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ft.dir/Libft/ft_memmove.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_memmove.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_memmove.c
 
 CMakeFiles/ft.dir/Libft/ft_memmove.c.i: cmake_force
@@ -358,7 +371,7 @@ CMakeFiles/ft.dir/Libft/ft_memmove.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_memset.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_memset.c.o: ../Libft/ft_memset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ft.dir/Libft/ft_memset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ft.dir/Libft/ft_memset.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_memset.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_memset.c
 
 CMakeFiles/ft.dir/Libft/ft_memset.c.i: cmake_force
@@ -371,7 +384,7 @@ CMakeFiles/ft.dir/Libft/ft_memset.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_putchar.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_putchar.c.o: ../Libft/ft_putchar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ft.dir/Libft/ft_putchar.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ft.dir/Libft/ft_putchar.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_putchar.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_putchar.c
 
 CMakeFiles/ft.dir/Libft/ft_putchar.c.i: cmake_force
@@ -384,7 +397,7 @@ CMakeFiles/ft.dir/Libft/ft_putchar.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_putchar_fd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_putchar_fd.c.o: ../Libft/ft_putchar_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ft.dir/Libft/ft_putchar_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ft.dir/Libft/ft_putchar_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_putchar_fd.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_putchar_fd.c
 
 CMakeFiles/ft.dir/Libft/ft_putchar_fd.c.i: cmake_force
@@ -397,7 +410,7 @@ CMakeFiles/ft.dir/Libft/ft_putchar_fd.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_putendl.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_putendl.c.o: ../Libft/ft_putendl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ft.dir/Libft/ft_putendl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ft.dir/Libft/ft_putendl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_putendl.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_putendl.c
 
 CMakeFiles/ft.dir/Libft/ft_putendl.c.i: cmake_force
@@ -410,7 +423,7 @@ CMakeFiles/ft.dir/Libft/ft_putendl.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_putendl_fd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_putendl_fd.c.o: ../Libft/ft_putendl_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ft.dir/Libft/ft_putendl_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ft.dir/Libft/ft_putendl_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_putendl_fd.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_putendl_fd.c
 
 CMakeFiles/ft.dir/Libft/ft_putendl_fd.c.i: cmake_force
@@ -423,7 +436,7 @@ CMakeFiles/ft.dir/Libft/ft_putendl_fd.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_putnbr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_putnbr.c.o: ../Libft/ft_putnbr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ft.dir/Libft/ft_putnbr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ft.dir/Libft/ft_putnbr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_putnbr.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_putnbr.c
 
 CMakeFiles/ft.dir/Libft/ft_putnbr.c.i: cmake_force
@@ -436,7 +449,7 @@ CMakeFiles/ft.dir/Libft/ft_putnbr.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_putnbr_fd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_putnbr_fd.c.o: ../Libft/ft_putnbr_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ft.dir/Libft/ft_putnbr_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ft.dir/Libft/ft_putnbr_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_putnbr_fd.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_putnbr_fd.c
 
 CMakeFiles/ft.dir/Libft/ft_putnbr_fd.c.i: cmake_force
@@ -449,7 +462,7 @@ CMakeFiles/ft.dir/Libft/ft_putnbr_fd.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_putstr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_putstr.c.o: ../Libft/ft_putstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ft.dir/Libft/ft_putstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ft.dir/Libft/ft_putstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_putstr.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_putstr.c
 
 CMakeFiles/ft.dir/Libft/ft_putstr.c.i: cmake_force
@@ -462,7 +475,7 @@ CMakeFiles/ft.dir/Libft/ft_putstr.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_putstr_fd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_putstr_fd.c.o: ../Libft/ft_putstr_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ft.dir/Libft/ft_putstr_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ft.dir/Libft/ft_putstr_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_putstr_fd.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_putstr_fd.c
 
 CMakeFiles/ft.dir/Libft/ft_putstr_fd.c.i: cmake_force
@@ -475,7 +488,7 @@ CMakeFiles/ft.dir/Libft/ft_putstr_fd.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strcat.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strcat.c.o: ../Libft/ft_strcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ft.dir/Libft/ft_strcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ft.dir/Libft/ft_strcat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strcat.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strcat.c
 
 CMakeFiles/ft.dir/Libft/ft_strcat.c.i: cmake_force
@@ -488,7 +501,7 @@ CMakeFiles/ft.dir/Libft/ft_strcat.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strchr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strchr.c.o: ../Libft/ft_strchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ft.dir/Libft/ft_strchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/ft.dir/Libft/ft_strchr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strchr.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strchr.c
 
 CMakeFiles/ft.dir/Libft/ft_strchr.c.i: cmake_force
@@ -501,7 +514,7 @@ CMakeFiles/ft.dir/Libft/ft_strchr.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strclr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strclr.c.o: ../Libft/ft_strclr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/ft.dir/Libft/ft_strclr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/ft.dir/Libft/ft_strclr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strclr.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strclr.c
 
 CMakeFiles/ft.dir/Libft/ft_strclr.c.i: cmake_force
@@ -514,7 +527,7 @@ CMakeFiles/ft.dir/Libft/ft_strclr.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strcmp.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strcmp.c.o: ../Libft/ft_strcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/ft.dir/Libft/ft_strcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/ft.dir/Libft/ft_strcmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strcmp.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strcmp.c
 
 CMakeFiles/ft.dir/Libft/ft_strcmp.c.i: cmake_force
@@ -527,7 +540,7 @@ CMakeFiles/ft.dir/Libft/ft_strcmp.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strcpy.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strcpy.c.o: ../Libft/ft_strcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/ft.dir/Libft/ft_strcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/ft.dir/Libft/ft_strcpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strcpy.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strcpy.c
 
 CMakeFiles/ft.dir/Libft/ft_strcpy.c.i: cmake_force
@@ -540,7 +553,7 @@ CMakeFiles/ft.dir/Libft/ft_strcpy.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strdel.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strdel.c.o: ../Libft/ft_strdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/ft.dir/Libft/ft_strdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/ft.dir/Libft/ft_strdel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strdel.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strdel.c
 
 CMakeFiles/ft.dir/Libft/ft_strdel.c.i: cmake_force
@@ -553,7 +566,7 @@ CMakeFiles/ft.dir/Libft/ft_strdel.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strdup.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strdup.c.o: ../Libft/ft_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/ft.dir/Libft/ft_strdup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/ft.dir/Libft/ft_strdup.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strdup.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strdup.c
 
 CMakeFiles/ft.dir/Libft/ft_strdup.c.i: cmake_force
@@ -566,7 +579,7 @@ CMakeFiles/ft.dir/Libft/ft_strdup.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strequ.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strequ.c.o: ../Libft/ft_strequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/ft.dir/Libft/ft_strequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/ft.dir/Libft/ft_strequ.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strequ.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strequ.c
 
 CMakeFiles/ft.dir/Libft/ft_strequ.c.i: cmake_force
@@ -579,7 +592,7 @@ CMakeFiles/ft.dir/Libft/ft_strequ.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_striter.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_striter.c.o: ../Libft/ft_striter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/ft.dir/Libft/ft_striter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/ft.dir/Libft/ft_striter.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_striter.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_striter.c
 
 CMakeFiles/ft.dir/Libft/ft_striter.c.i: cmake_force
@@ -592,7 +605,7 @@ CMakeFiles/ft.dir/Libft/ft_striter.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_striteri.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_striteri.c.o: ../Libft/ft_striteri.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/ft.dir/Libft/ft_striteri.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/ft.dir/Libft/ft_striteri.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_striteri.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_striteri.c
 
 CMakeFiles/ft.dir/Libft/ft_striteri.c.i: cmake_force
@@ -605,7 +618,7 @@ CMakeFiles/ft.dir/Libft/ft_striteri.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strjoin.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strjoin.c.o: ../Libft/ft_strjoin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/ft.dir/Libft/ft_strjoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/ft.dir/Libft/ft_strjoin.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strjoin.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strjoin.c
 
 CMakeFiles/ft.dir/Libft/ft_strjoin.c.i: cmake_force
@@ -618,7 +631,7 @@ CMakeFiles/ft.dir/Libft/ft_strjoin.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strlcat.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strlcat.c.o: ../Libft/ft_strlcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/ft.dir/Libft/ft_strlcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/ft.dir/Libft/ft_strlcat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strlcat.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strlcat.c
 
 CMakeFiles/ft.dir/Libft/ft_strlcat.c.i: cmake_force
@@ -631,7 +644,7 @@ CMakeFiles/ft.dir/Libft/ft_strlcat.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strlen.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strlen.c.o: ../Libft/ft_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/ft.dir/Libft/ft_strlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/ft.dir/Libft/ft_strlen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strlen.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strlen.c
 
 CMakeFiles/ft.dir/Libft/ft_strlen.c.i: cmake_force
@@ -644,7 +657,7 @@ CMakeFiles/ft.dir/Libft/ft_strlen.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strmap.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strmap.c.o: ../Libft/ft_strmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/ft.dir/Libft/ft_strmap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/ft.dir/Libft/ft_strmap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strmap.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strmap.c
 
 CMakeFiles/ft.dir/Libft/ft_strmap.c.i: cmake_force
@@ -657,7 +670,7 @@ CMakeFiles/ft.dir/Libft/ft_strmap.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strmapi.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strmapi.c.o: ../Libft/ft_strmapi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/ft.dir/Libft/ft_strmapi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/ft.dir/Libft/ft_strmapi.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strmapi.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strmapi.c
 
 CMakeFiles/ft.dir/Libft/ft_strmapi.c.i: cmake_force
@@ -670,7 +683,7 @@ CMakeFiles/ft.dir/Libft/ft_strmapi.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strncat.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strncat.c.o: ../Libft/ft_strncat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/ft.dir/Libft/ft_strncat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/ft.dir/Libft/ft_strncat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strncat.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strncat.c
 
 CMakeFiles/ft.dir/Libft/ft_strncat.c.i: cmake_force
@@ -683,7 +696,7 @@ CMakeFiles/ft.dir/Libft/ft_strncat.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strncmp.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strncmp.c.o: ../Libft/ft_strncmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/ft.dir/Libft/ft_strncmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/ft.dir/Libft/ft_strncmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strncmp.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strncmp.c
 
 CMakeFiles/ft.dir/Libft/ft_strncmp.c.i: cmake_force
@@ -696,7 +709,7 @@ CMakeFiles/ft.dir/Libft/ft_strncmp.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strncpy.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strncpy.c.o: ../Libft/ft_strncpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/ft.dir/Libft/ft_strncpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/ft.dir/Libft/ft_strncpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strncpy.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strncpy.c
 
 CMakeFiles/ft.dir/Libft/ft_strncpy.c.i: cmake_force
@@ -709,7 +722,7 @@ CMakeFiles/ft.dir/Libft/ft_strncpy.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strnequ.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strnequ.c.o: ../Libft/ft_strnequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/ft.dir/Libft/ft_strnequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/ft.dir/Libft/ft_strnequ.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strnequ.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strnequ.c
 
 CMakeFiles/ft.dir/Libft/ft_strnequ.c.i: cmake_force
@@ -722,7 +735,7 @@ CMakeFiles/ft.dir/Libft/ft_strnequ.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strnew.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strnew.c.o: ../Libft/ft_strnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/ft.dir/Libft/ft_strnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/ft.dir/Libft/ft_strnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strnew.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strnew.c
 
 CMakeFiles/ft.dir/Libft/ft_strnew.c.i: cmake_force
@@ -735,7 +748,7 @@ CMakeFiles/ft.dir/Libft/ft_strnew.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strnstr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strnstr.c.o: ../Libft/ft_strnstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/ft.dir/Libft/ft_strnstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/ft.dir/Libft/ft_strnstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strnstr.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strnstr.c
 
 CMakeFiles/ft.dir/Libft/ft_strnstr.c.i: cmake_force
@@ -748,7 +761,7 @@ CMakeFiles/ft.dir/Libft/ft_strnstr.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strrchr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strrchr.c.o: ../Libft/ft_strrchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/ft.dir/Libft/ft_strrchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/ft.dir/Libft/ft_strrchr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strrchr.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strrchr.c
 
 CMakeFiles/ft.dir/Libft/ft_strrchr.c.i: cmake_force
@@ -761,7 +774,7 @@ CMakeFiles/ft.dir/Libft/ft_strrchr.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strsplit.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strsplit.c.o: ../Libft/ft_strsplit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/ft.dir/Libft/ft_strsplit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/ft.dir/Libft/ft_strsplit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strsplit.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strsplit.c
 
 CMakeFiles/ft.dir/Libft/ft_strsplit.c.i: cmake_force
@@ -774,7 +787,7 @@ CMakeFiles/ft.dir/Libft/ft_strsplit.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strstr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strstr.c.o: ../Libft/ft_strstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/ft.dir/Libft/ft_strstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/ft.dir/Libft/ft_strstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strstr.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strstr.c
 
 CMakeFiles/ft.dir/Libft/ft_strstr.c.i: cmake_force
@@ -787,7 +800,7 @@ CMakeFiles/ft.dir/Libft/ft_strstr.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strsub.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strsub.c.o: ../Libft/ft_strsub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/ft.dir/Libft/ft_strsub.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/ft.dir/Libft/ft_strsub.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strsub.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strsub.c
 
 CMakeFiles/ft.dir/Libft/ft_strsub.c.i: cmake_force
@@ -800,7 +813,7 @@ CMakeFiles/ft.dir/Libft/ft_strsub.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_strtrim.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_strtrim.c.o: ../Libft/ft_strtrim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/ft.dir/Libft/ft_strtrim.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/ft.dir/Libft/ft_strtrim.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_strtrim.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_strtrim.c
 
 CMakeFiles/ft.dir/Libft/ft_strtrim.c.i: cmake_force
@@ -813,7 +826,7 @@ CMakeFiles/ft.dir/Libft/ft_strtrim.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_swap.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_swap.c.o: ../Libft/ft_swap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/ft.dir/Libft/ft_swap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/ft.dir/Libft/ft_swap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_swap.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_swap.c
 
 CMakeFiles/ft.dir/Libft/ft_swap.c.i: cmake_force
@@ -826,7 +839,7 @@ CMakeFiles/ft.dir/Libft/ft_swap.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_tolower.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_tolower.c.o: ../Libft/ft_tolower.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/ft.dir/Libft/ft_tolower.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/ft.dir/Libft/ft_tolower.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_tolower.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_tolower.c
 
 CMakeFiles/ft.dir/Libft/ft_tolower.c.i: cmake_force
@@ -839,7 +852,7 @@ CMakeFiles/ft.dir/Libft/ft_tolower.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_toupper.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_toupper.c.o: ../Libft/ft_toupper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/ft.dir/Libft/ft_toupper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/ft.dir/Libft/ft_toupper.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_toupper.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_toupper.c
 
 CMakeFiles/ft.dir/Libft/ft_toupper.c.i: cmake_force
@@ -852,7 +865,7 @@ CMakeFiles/ft.dir/Libft/ft_toupper.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_wordcount.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_wordcount.c.o: ../Libft/ft_wordcount.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/ft.dir/Libft/ft_wordcount.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/ft.dir/Libft/ft_wordcount.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_wordcount.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_wordcount.c
 
 CMakeFiles/ft.dir/Libft/ft_wordcount.c.i: cmake_force
@@ -865,7 +878,7 @@ CMakeFiles/ft.dir/Libft/ft_wordcount.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/ft_wordlength.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/ft_wordlength.c.o: ../Libft/ft_wordlength.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/ft.dir/Libft/ft_wordlength.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/ft.dir/Libft/ft_wordlength.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/ft_wordlength.c.o   -c /Users/ehalmkro/hive/FdF/Libft/ft_wordlength.c
 
 CMakeFiles/ft.dir/Libft/ft_wordlength.c.i: cmake_force
@@ -878,7 +891,7 @@ CMakeFiles/ft.dir/Libft/ft_wordlength.c.s: cmake_force
 
 CMakeFiles/ft.dir/Libft/get_next_line.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/Libft/get_next_line.c.o: ../Libft/get_next_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/ft.dir/Libft/get_next_line.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/ft.dir/Libft/get_next_line.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/Libft/get_next_line.c.o   -c /Users/ehalmkro/hive/FdF/Libft/get_next_line.c
 
 CMakeFiles/ft.dir/Libft/get_next_line.c.i: cmake_force
@@ -894,6 +907,7 @@ ft_OBJECTS = \
 "CMakeFiles/ft.dir/Libft/ft_atoi.c.o" \
 "CMakeFiles/ft.dir/Libft/ft_bzero.c.o" \
 "CMakeFiles/ft.dir/Libft/ft_count_if.c.o" \
+"CMakeFiles/ft.dir/Libft/ft_fswap.c.o" \
 "CMakeFiles/ft.dir/Libft/ft_isalnum.c.o" \
 "CMakeFiles/ft.dir/Libft/ft_isalpha.c.o" \
 "CMakeFiles/ft.dir/Libft/ft_isascii.c.o" \
@@ -962,6 +976,7 @@ ft_EXTERNAL_OBJECTS =
 libft.a: CMakeFiles/ft.dir/Libft/ft_atoi.c.o
 libft.a: CMakeFiles/ft.dir/Libft/ft_bzero.c.o
 libft.a: CMakeFiles/ft.dir/Libft/ft_count_if.c.o
+libft.a: CMakeFiles/ft.dir/Libft/ft_fswap.c.o
 libft.a: CMakeFiles/ft.dir/Libft/ft_isalnum.c.o
 libft.a: CMakeFiles/ft.dir/Libft/ft_isalpha.c.o
 libft.a: CMakeFiles/ft.dir/Libft/ft_isascii.c.o
@@ -1025,7 +1040,7 @@ libft.a: CMakeFiles/ft.dir/Libft/ft_wordlength.c.o
 libft.a: CMakeFiles/ft.dir/Libft/get_next_line.c.o
 libft.a: CMakeFiles/ft.dir/build.make
 libft.a: CMakeFiles/ft.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Linking C static library libft.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Linking C static library libft.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ft.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft.dir/link.txt --verbose=$(VERBOSE)
 

@@ -23,14 +23,14 @@ static void		write_line(char *line, t_scene *draw, int y)
 	{
 		if (y == 0 && x == 0)
 		{
-			draw->map->dt = point_node_new((float)x++, (float)y,\
-			(float)ft_atoi(line), draw);
+			draw->map->dt = new_node((float) x++, (float) y, \
+            (float) ft_atoi(line), draw);
 			draw->vertex_count++;
 		}
 		else
 		{
-			map_push_next(&draw->map, map_add_node(point_node_new((float)x++, \
-			(float)y, (float)ft_atoi(&line[i]), draw)));
+			map_push_next(&draw->map, map_add_node(new_node((float) x++, \
+            (float) y, (float) ft_atoi(&line[i]), draw)));
 			draw->vertex_count++;
 		}
 		while (line[i] != ' ' && line[i])

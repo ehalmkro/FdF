@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FdF.dir/tools.c.o"
   "CMakeFiles/FdF.dir/window.c.o"
   "CMakeFiles/FdF.dir/wu.c.o"
+  "CMakeFiles/FdF.dir/wu_utils.c.o"
   "FdF"
   "FdF.pdb"
 )

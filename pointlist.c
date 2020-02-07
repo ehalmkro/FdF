@@ -29,7 +29,7 @@ void			append_map(t_scene *draw)
 	t_point	*point;
 
 	c = draw->map;
-	point = point_node_new(0, 0, 0, draw);
+	point = new_node(0, 0, 0, draw);
 	while (point->y < draw->max_y - 1)
 	{
 		point->y = c->dt->y;
@@ -51,7 +51,7 @@ void			append_map(t_scene *draw)
 	free(point);
 }
 
-t_point			*point_node_new(float x, float y, float z, t_scene *draw)
+t_point			*new_node(float x, float y, float z, t_scene *draw)
 {
 	t_point		*ret;
 
