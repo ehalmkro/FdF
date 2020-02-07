@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 19:42:13 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 11:13:44 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,7 @@ void					scene_find_minmax (t_scene *draw);
 float					get_percent(int start, int end, int curr);
 void					center_origo(t_scene *draw);
 
-void					map_push_right(t_map **start, t_map *new);
+void					map_push_next(t_map **start, t_map *new);
 t_point					*point_node_new(float x, float y, float z, \
 t_scene *draw);
 t_map					*map_add_node(void *data);
@@ -137,7 +137,7 @@ int						mouse_move(int x, int y, void *param);
 int						close_window(void *param);
 int						keypress(int keycode, void *param);
 
-int						set_color(t_point start, t_point end, t_point delta, \
+int						set_color(t_map *start_end, t_point delta, \
 t_point current, t_scene draw);
 int						*split_color(int color);
 int						decrease_brightness(int color, float brightness);

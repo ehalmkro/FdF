@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 19:11:54 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 11:33:58 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,32 @@ void			draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 {
 	t_point	*delta;
 	t_point	*current;
-	double	pixelcount;
+	float	pixelcount;
+	t_map	*start_end;
 
 	current = point_node_new(start.x, start.y, 0, draw);
 	delta = point_node_new(end.x - start.x, end.y - start.y, 0, draw);
 	pixelcount = sqrt((delta->x * delta->x) + (delta->y * delta->y));
 	delta->x /= pixelcount;
 	delta->y /= pixelcount;
+	start_end = map_add_node(&start);
+	start_end->nxt = map_add_node(&end);
 	while (pixelcount > 0)
 	{
-		put_pixel(current->x, current->y, set_color(start, end, *delta, \
+		put_pixel(current->x, current->y, set_color(start_end, *delta, \
 		*current, *draw), draw);
 		current->x += delta->x;
 		current->y += delta->y;
 		pixelcount--;
 	}
+	free(start_end);
+	free(start_end->nxt);
 	free(current);
 	free(delta);
 }
 
 /*
-** Does the isometric transformation vertex by vertex befote drawing using
+** Does the isometric transformation vertex by vertex before drawing using
 ** temporary t_points to not leak memory
 */
 
