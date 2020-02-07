@@ -63,3 +63,8 @@ CMakeFiles/FdF.dir/wu.c.o: ../fdf.h
 CMakeFiles/FdF.dir/wu.c.o: ../wu.c
 CMakeFiles/FdF.dir/wu.c.o: /usr/local/include/mlx.h
 
+CMakeFiles/FdF.dir/wu_utils.c.o: ../Libft/libft.h
+CMakeFiles/FdF.dir/wu_utils.c.o: ../fdf.h
+CMakeFiles/FdF.dir/wu_utils.c.o: ../wu_utils.c
+CMakeFiles/FdF.dir/wu_utils.c.o: /usr/local/include/mlx.h
+

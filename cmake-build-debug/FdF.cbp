@@ -131,6 +131,9 @@
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_count_if.c">
 			<Option target="ft"/>
 		</Unit>
+		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_fswap.c">
+			<Option target="ft"/>
+		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_isalnum.c">
 			<Option target="ft"/>
 		</Unit>
@@ -351,6 +354,9 @@
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/wu.c">
+			<Option target="FdF"/>
+		</Unit>
+		<Unit filename="/Users/ehalmkro/hive/FdF/wu_utils.c">
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/CMakeLists.txt">

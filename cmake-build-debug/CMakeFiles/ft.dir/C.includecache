@@ -6,25 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/ehalmkro/hive/FdF/Libft/ft_atoi.c
-
 /Users/ehalmkro/hive/FdF/Libft/ft_bzero.c
 libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
 
-/Users/ehalmkro/hive/FdF/Libft/ft_count_if.c
+/Users/ehalmkro/hive/FdF/Libft/ft_fswap.c
 
 /Users/ehalmkro/hive/FdF/Libft/ft_isalnum.c
 libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
-
-/Users/ehalmkro/hive/FdF/Libft/ft_isalpha.c
-
-/Users/ehalmkro/hive/FdF/Libft/ft_isascii.c
-
-/Users/ehalmkro/hive/FdF/Libft/ft_isdigit.c
-
-/Users/ehalmkro/hive/FdF/Libft/ft_isprint.c
 
 /Users/ehalmkro/hive/FdF/Libft/ft_itoa.c
 libft.h
@@ -130,12 +120,6 @@ libft.h
 libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
 
-/Users/ehalmkro/hive/FdF/Libft/ft_strclr.c
-
-/Users/ehalmkro/hive/FdF/Libft/ft_strcmp.c
-
-/Users/ehalmkro/hive/FdF/Libft/ft_strcpy.c
-
 /Users/ehalmkro/hive/FdF/Libft/ft_strdel.c
 libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
@@ -208,8 +192,6 @@ libft.h
 libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
 
-/Users/ehalmkro/hive/FdF/Libft/ft_strstr.c
-
 /Users/ehalmkro/hive/FdF/Libft/ft_strsub.c
 libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
@@ -217,12 +199,6 @@ libft.h
 /Users/ehalmkro/hive/FdF/Libft/ft_strtrim.c
 libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
-
-/Users/ehalmkro/hive/FdF/Libft/ft_swap.c
-
-/Users/ehalmkro/hive/FdF/Libft/ft_tolower.c
-
-/Users/ehalmkro/hive/FdF/Libft/ft_toupper.c
 
 /Users/ehalmkro/hive/FdF/Libft/ft_wordcount.c
 libft.h

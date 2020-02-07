@@ -6,14 +6,14 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 18:19:19 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 17:12:20 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
 /*
-**	Initializing RGB color direction variables as 1, meaning ascending RGB
+**	Initializing RGB pulse color direction variables as 1, meaning ascending RGB
 ** values with -1 being descending. One column per each color, one row
 ** per each 8bit RGB component to allow individual directions for each.
 */
@@ -44,7 +44,7 @@ static void		init_window(t_scene *draw)
 	draw->color[2] = 0xE0E04C;
 	draw->color[3] = LEMON;
 	draw->vertex_count = 0;
-	(draw->mouse = malloc(sizeof(t_mouse))) == NULL ? ft_error(0) : 0;
+	(draw->mouse = (t_mouse*)malloc(sizeof(t_mouse))) == NULL ? ft_error(0) : 0;
 	draw->mouse->button_press = 0;
 	draw->zoom = 1;
 	init_c_dir(draw);
@@ -65,9 +65,9 @@ static t_scene	*init_scene(void)
 	t_map	*start;
 	t_scene *draw;
 
-	(start = malloc(sizeof(t_map))) == NULL ? ft_error(0) : 0;
+	(start = (t_map*)malloc(sizeof(t_map))) == NULL ? ft_error(0) : 0;
 	start->nxt = NULL;
-	(draw = malloc(sizeof(t_scene))) == NULL ? ft_error(0) : 0;
+	(draw = (t_scene*)malloc(sizeof(t_scene))) == NULL ? ft_error(0) : 0;
 	draw->map = start;
 	(draw->mlx = mlx_init()) == NULL ? ft_error(3) : 0;
 	(draw->win = mlx_new_window(draw->mlx, WINDOW_WIDTH, WINDOW_HEIGHT,\

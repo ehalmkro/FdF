@@ -97,6 +97,7 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 void				ft_swap(void *a, void *b);
+void				ft_fswap(float *a, float *b);
 size_t				ft_wordcount(char const *s, char c);
 size_t				ft_wordlength(char const *s, char c);
 int				ft_count_if(char **tab, int (*f)(char*));

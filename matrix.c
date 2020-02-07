@@ -63,7 +63,7 @@ void	matrix_transformation(t_scene *draw, void (*transformation)\
 	map = draw->map;
 	while (map)
 	{
-		vertex = point_node_new(map->dt->x, map->dt->y, map->dt->z, draw);
+		vertex = new_node(map->dt->x, map->dt->y, map->dt->z, draw);
 		transformation(map->dt, *vertex, draw, deg);
 		map = map->nxt;
 		free(vertex);
