@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 19:31:14 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/06 20:10:30 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 11:13:44 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void	endpoint_swap(t_point *start, t_point *end, t_scene *draw)
 }
 void 		draw_line_wu(t_point start, t_point end, t_scene *draw)
 {
-	t_point		*delta;
+	/*t_point		*delta;
 	t_point		*current;
 	t_point		*current_2;
 
@@ -118,5 +118,5 @@ void 		draw_line_wu(t_point start, t_point end, t_scene *draw)
 	}
 	free(delta);
 	free(current);
-	free(current_2);
+	free(current_2);*/
 }

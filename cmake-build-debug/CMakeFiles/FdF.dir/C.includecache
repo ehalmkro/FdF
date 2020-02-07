@@ -16,12 +16,6 @@ string.h
 sys/uio.h
 -
 
-/Users/ehalmkro/hive/FdF/extras.c
-fdf.h
-/Users/ehalmkro/hive/FdF/fdf.h
-time.h
--
-
 /Users/ehalmkro/hive/FdF/fdf.h
 Libft/libft.h
 /Users/ehalmkro/hive/FdF/Libft/libft.h
@@ -31,6 +25,12 @@ fcntl.h
 -
 mlx.h
 -
+math.h
+-
+
+/Users/ehalmkro/hive/FdF/line_draw.c
+fdf.h
+/Users/ehalmkro/hive/FdF/fdf.h
 math.h
 -
 
