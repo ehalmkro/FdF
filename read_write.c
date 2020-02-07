@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:08:41 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/07 12:19:19 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/07 19:56:27 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ static void		write_line(char *line, t_scene *draw, int y)
 	{
 		if (y == 0 && x == 0)
 		{
-			draw->map->dt = new_node((float) x++, (float) y, \
-            (float) ft_atoi(line), draw);
+			draw->map->dt = new_node((float)x++, (float)y, \
+			(float)ft_atoi(line), draw);
 			draw->vertex_count++;
 		}
 		else
 		{
-			map_push_next(&draw->map, map_add_node(new_node((float) x++, \
-            (float) y, (float) ft_atoi(&line[i]), draw)));
+			map_push_next(&draw->map, map_add_node(new_node((float)x++, \
+			(float)y, (float)ft_atoi(&line[i]), draw)));
 			draw->vertex_count++;
 		}
 		while (line[i] != ' ' && line[i])
