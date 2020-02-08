@@ -12,31 +12,161 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="">
+    <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="norminette ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libft/ft_strsplit.c" beforeDir="false" afterPath="$PROJECT_DIR$/Libft/ft_strsplit.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Libft/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/author" beforeDir="false" afterPath="$PROJECT_DIR$/Libft/author" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_bzero.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_count_if.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_isalnum.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_isalpha.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_isascii.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_isdigit.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_isprint.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_itoa.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_lstadd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_lstaddback.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_lstdel.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_lstdelone.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_lstiter.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_lstmap.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_lstnew.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_memalloc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_memccpy.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_memchr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_memcmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_memcpy.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_memdel.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_memmove.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_putchar.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_putchar_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_putendl_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_putnbr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_putnbr_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_putstr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_putstr_fd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strclr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strcmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strequ.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_striter.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_striteri.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strlcat.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strmap.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strmapi.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strncat.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strncmp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strncpy.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strnequ.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strnstr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strrchr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strsplit.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strstr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_strtrim.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_swap.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_tolower.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_toupper.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_wordcount.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/ft_wordlength.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libft/libft.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/color.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/color.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/events.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/events.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/line_draw.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/line_draw.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/matrix.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/matrix.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/pointlist.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/pointlist.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/read_write.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/read_write.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/tools.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/tools.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/window.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/window.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/wu.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/wu.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/color.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/events.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/line_draw.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/matrix.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/pointlist.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/read_write.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/tools.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/window.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/wu.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_lstaddback.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_lstaddback.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strsplit.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strsplit.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_bzero.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_count_if.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_isalnum.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_isalpha.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_isascii.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_isdigit.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_isprint.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_itoa.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_lstadd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_lstaddback.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_lstdel.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_lstdelone.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_lstiter.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_lstmap.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_lstnew.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_memalloc.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_memccpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_memchr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_memcmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_memcpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_memdel.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_memmove.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_putchar.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_putchar_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_putendl_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_putnbr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_putnbr_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_putstr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_putstr_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strclr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strcmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strequ.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_striter.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_striteri.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strlcat.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strmap.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strmapi.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strncat.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strncmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strncpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strnequ.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strnstr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strrchr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strsplit.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strstr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_strtrim.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_swap.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_tolower.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_toupper.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_wordcount.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/Libft/ft_wordlength.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FdF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FdF.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libft.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events.c" beforeDir="false" afterPath="$PROJECT_DIR$/events.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extras.c" beforeDir="false" afterPath="$PROJECT_DIR$/extras.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fdf.h" beforeDir="false" afterPath="$PROJECT_DIR$/fdf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keycodes.h" beforeDir="false" afterPath="$PROJECT_DIR$/keycodes.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/window.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/color.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/color.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/events.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extras.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/extras.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fdf.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/fdf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keycodes.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/keycodes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/line_draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/line_draw.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matrix.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrix.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mouse_events.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/mouse_events.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pointlist.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/pointlist.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_write.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_write.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/window.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wu.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/wu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wu_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/wu_utils.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +181,15 @@
     <favorites_list name="FdF" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="00a24318a6cd205f3f8098db96600b4a6c6cdde2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
     <option name="UPDATE_TYPE" value="MERGE" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -82,17 +218,20 @@
     <property name="SearchEverywhereHistoryKey" value="draw&#9;FILE&#9;file:///Users/ehalmkro/hive/FdF/draw_window.c" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test_maps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Libft" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test_maps" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Libft" />
+      <recent name="$PROJECT_DIR$/test_maps" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.42">
@@ -633,6 +772,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="744" y="382" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1580915336638" />
+    <state x="1007" y="499" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581168304742">
+      <screen x="0" y="23" width="2560" height="1371" />
+    </state>
+    <state x="1007" y="499" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1371@0.23.2560.1371" timestamp="1581168304742" />
     <state x="968" y="443" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579857396378">
       <screen x="0" y="23" width="2560" height="1371" />
     </state>
@@ -641,31 +784,32 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1018" y="474" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1581096728054" />
-    <state x="535" y="23" key="CommitChangelistDialog2" timestamp="1581098697364">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="535" y="45" width="1490" height="1308" key="CommitChangelistDialog2" timestamp="1581168395521">
+      <screen x="0" y="23" width="2560" height="1371" />
     </state>
     <state x="301" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579439018118" />
     <state x="535" y="23" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1581098697364" />
-    <state width="278" height="1313" key="GridCell.Tab.0.bottom" timestamp="1581103151461">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="535" y="45" width="1490" height="1308" key="CommitChangelistDialog2/0.23.2560.1371@0.23.2560.1371" timestamp="1581168395521" />
+    <state width="685" height="833" key="GridCell.Tab.0.bottom" timestamp="1581168476821">
+      <screen x="0" y="23" width="2560" height="1371" />
     </state>
-    <state width="278" height="1313" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581103151461" />
-    <state width="29" height="1222" key="GridCell.Tab.0.bottom/0.23.2560.1371@0.23.2560.1371" timestamp="1581012508687" />
-    <state width="278" height="1313" key="GridCell.Tab.0.center" timestamp="1581103151460">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="741" height="1013" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581166927620" />
+    <state width="685" height="833" key="GridCell.Tab.0.bottom/0.23.2560.1371@0.23.2560.1371" timestamp="1581168476821" />
+    <state width="685" height="833" key="GridCell.Tab.0.center" timestamp="1581168476820">
+      <screen x="0" y="23" width="2560" height="1371" />
     </state>
-    <state width="278" height="1313" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581103151460" />
-    <state width="29" height="1222" key="GridCell.Tab.0.center/0.23.2560.1371@0.23.2560.1371" timestamp="1581012508687" />
-    <state width="278" height="1313" key="GridCell.Tab.0.left" timestamp="1581103151460">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="741" height="1013" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581166927619" />
+    <state width="685" height="833" key="GridCell.Tab.0.center/0.23.2560.1371@0.23.2560.1371" timestamp="1581168476820" />
+    <state width="685" height="833" key="GridCell.Tab.0.left" timestamp="1581168476819">
+      <screen x="0" y="23" width="2560" height="1371" />
     </state>
-    <state width="278" height="1313" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581103151460" />
-    <state width="29" height="1222" key="GridCell.Tab.0.left/0.23.2560.1371@0.23.2560.1371" timestamp="1581012508687" />
-    <state width="278" height="1313" key="GridCell.Tab.0.right" timestamp="1581103151460">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="741" height="1013" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581166927619" />
+    <state width="685" height="833" key="GridCell.Tab.0.left/0.23.2560.1371@0.23.2560.1371" timestamp="1581168476819" />
+    <state width="685" height="833" key="GridCell.Tab.0.right" timestamp="1581168476820">
+      <screen x="0" y="23" width="2560" height="1371" />
     </state>
-    <state width="278" height="1313" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581103151460" />
-    <state width="29" height="1222" key="GridCell.Tab.0.right/0.23.2560.1371@0.23.2560.1371" timestamp="1581012508687" />
+    <state width="741" height="1013" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581166927619" />
+    <state width="685" height="833" key="GridCell.Tab.0.right/0.23.2560.1371@0.23.2560.1371" timestamp="1581168476820" />
     <state width="2518" height="272" key="GridCell.Tab.1.bottom" timestamp="1581099289802">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -713,10 +857,11 @@
     </state>
     <state x="502" y="369" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1579437128653" />
     <state x="892" y="590" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1440@0.0.2560.1440" timestamp="1580224592011" />
-    <state x="936" y="461" width="1047" height="695" key="find.popup" timestamp="1581068579890">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="936" y="462" width="1047" height="662" key="find.popup" timestamp="1581167865793">
+      <screen x="0" y="23" width="2560" height="1371" />
     </state>
     <state x="936" y="461" width="1047" height="695" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1581068579890" />
+    <state x="936" y="462" width="1047" height="662" key="find.popup/0.23.2560.1371@0.23.2560.1371" timestamp="1581167865793" />
     <state x="1115" y="622" key="git4idea.ui.GitStashDialog" timestamp="1581088339814">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

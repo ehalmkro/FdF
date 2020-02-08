@@ -4,19 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/ehalmkro/hive/FdF/color.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/color.c.o"
-  "/Users/ehalmkro/hive/FdF/events.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/events.c.o"
-  "/Users/ehalmkro/hive/FdF/extras.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/extras.c.o"
-  "/Users/ehalmkro/hive/FdF/line_draw.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/line_draw.c.o"
-  "/Users/ehalmkro/hive/FdF/main.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/main.c.o"
-  "/Users/ehalmkro/hive/FdF/matrix.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/matrix.c.o"
-  "/Users/ehalmkro/hive/FdF/mouse_events.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/mouse_events.c.o"
-  "/Users/ehalmkro/hive/FdF/pointlist.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/pointlist.c.o"
-  "/Users/ehalmkro/hive/FdF/read_write.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/read_write.c.o"
-  "/Users/ehalmkro/hive/FdF/tools.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/tools.c.o"
-  "/Users/ehalmkro/hive/FdF/window.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/window.c.o"
-  "/Users/ehalmkro/hive/FdF/wu.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/wu.c.o"
-  "/Users/ehalmkro/hive/FdF/wu_utils.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/wu_utils.c.o"
+  "/Users/ehalmkro/hive/FdF/src/color.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/color.c.o"
+  "/Users/ehalmkro/hive/FdF/src/events.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/events.c.o"
+  "/Users/ehalmkro/hive/FdF/src/extras.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/extras.c.o"
+  "/Users/ehalmkro/hive/FdF/src/line_draw.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/line_draw.c.o"
+  "/Users/ehalmkro/hive/FdF/src/main.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/main.c.o"
+  "/Users/ehalmkro/hive/FdF/src/matrix.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/matrix.c.o"
+  "/Users/ehalmkro/hive/FdF/src/mouse_events.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/mouse_events.c.o"
+  "/Users/ehalmkro/hive/FdF/src/pointlist.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/pointlist.c.o"
+  "/Users/ehalmkro/hive/FdF/src/read_write.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/read_write.c.o"
+  "/Users/ehalmkro/hive/FdF/src/tools.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/tools.c.o"
+  "/Users/ehalmkro/hive/FdF/src/window.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/window.c.o"
+  "/Users/ehalmkro/hive/FdF/src/wu.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/wu.c.o"
+  "/Users/ehalmkro/hive/FdF/src/wu_utils.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/wu_utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
