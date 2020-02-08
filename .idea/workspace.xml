@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="FdF" targetName="FdF" />
       <config projectName="FdF" targetName="ft" />
+      <config projectName="FdF" targetName="FdF" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -12,15 +12,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Libft/ft_strjoin.c" beforeDir="false" afterPath="$PROJECT_DIR$/Libft/ft_strjoin.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libft/libft.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/fdf.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/fdf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extras.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/extras.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/line_draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/line_draw.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matrix.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/matrix.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wu.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/wu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wu_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/wu_utils.c" afterDir="false" />
+    <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="clean code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FdF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libft.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/read_write.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_write.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/me.fdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/pnp_flat.fdf" beforeDir="false" afterPath="$PROJECT_DIR$/test_maps/pnp_flat.fdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/pylone.fdf" beforeDir="false" afterPath="$PROJECT_DIR$/test_maps/pylone.fdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,20 +72,20 @@
     <property name="SearchEverywhereHistoryKey" value="draw&#9;FILE&#9;file:///Users/ehalmkro/hive/FdF/draw_window.c" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Libft" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test_maps" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test_maps" />
+      <recent name="$PROJECT_DIR$/Libft" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Libft" />
-      <recent name="$PROJECT_DIR$/test_maps" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.42">
@@ -216,13 +216,7 @@
       <workItem from="1581001123155" duration="3720000" />
       <workItem from="1581005598939" duration="5434000" />
       <workItem from="1581091286410" duration="11500000" />
-    </task>
-    <task id="LOCAL-00012" summary="add color">
-      <created>1579191154545</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1579191154545</updated>
+      <workItem from="1581168869573" duration="2418000" />
     </task>
     <task id="LOCAL-00013" summary="Lots of work for nothing. Add line draw">
       <created>1579278410969</created>
@@ -560,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581168501269</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="clean code">
+      <created>1581168791729</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1581168791729</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +591,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="isometric transformation leak fix" />
     <MESSAGE value="remove unnecessary functions" />
     <MESSAGE value="add idle animation" />
     <MESSAGE value="add timer for text carousel" />
@@ -615,7 +615,8 @@
     <MESSAGE value="norme fix" />
     <MESSAGE value="norminette ok" />
     <MESSAGE value="fix directory structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix directory structure" />
+    <MESSAGE value="clean code" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="373" key="#Notifications" timestamp="1579857381237">
@@ -642,32 +643,32 @@
       <screen x="0" y="23" width="2560" height="1371" />
     </state>
     <state x="1027" y="575" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2560.1371@0.23.2560.1371" timestamp="1581168522114" />
-    <state x="535" y="45" width="1490" height="1308" key="CommitChangelistDialog2" timestamp="1581168734023">
-      <screen x="0" y="23" width="2560" height="1371" />
+    <state x="535" y="23" width="1490" height="1308" key="CommitChangelistDialog2" timestamp="1581169307288">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="301" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579439018118" />
-    <state x="535" y="23" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1581098697364" />
-    <state x="535" y="45" width="1490" height="1308" key="CommitChangelistDialog2/0.23.2560.1371@0.23.2560.1371" timestamp="1581168734023" />
-    <state width="685" height="833" key="GridCell.Tab.0.bottom" timestamp="1581168476821">
-      <screen x="0" y="23" width="2560" height="1371" />
+    <state x="535" y="23" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1581169307288" />
+    <state x="535" y="45" width="1490" height="1308" key="CommitChangelistDialog2/0.23.2560.1371@0.23.2560.1371" timestamp="1581168791638" />
+    <state width="740" height="1313" key="GridCell.Tab.0.bottom" timestamp="1581171256748">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="741" height="1013" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581166927620" />
-    <state width="685" height="833" key="GridCell.Tab.0.bottom/0.23.2560.1371@0.23.2560.1371" timestamp="1581168476821" />
-    <state width="685" height="833" key="GridCell.Tab.0.center" timestamp="1581168476820">
-      <screen x="0" y="23" width="2560" height="1371" />
+    <state width="740" height="1313" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581171256748" />
+    <state width="685" height="833" key="GridCell.Tab.0.bottom/0.23.2560.1371@0.23.2560.1371" timestamp="1581168820794" />
+    <state width="740" height="1313" key="GridCell.Tab.0.center" timestamp="1581171256747">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="741" height="1013" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581166927619" />
-    <state width="685" height="833" key="GridCell.Tab.0.center/0.23.2560.1371@0.23.2560.1371" timestamp="1581168476820" />
-    <state width="685" height="833" key="GridCell.Tab.0.left" timestamp="1581168476819">
-      <screen x="0" y="23" width="2560" height="1371" />
+    <state width="740" height="1313" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581171256747" />
+    <state width="685" height="833" key="GridCell.Tab.0.center/0.23.2560.1371@0.23.2560.1371" timestamp="1581168820794" />
+    <state width="740" height="1313" key="GridCell.Tab.0.left" timestamp="1581171256746">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="741" height="1013" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581166927619" />
-    <state width="685" height="833" key="GridCell.Tab.0.left/0.23.2560.1371@0.23.2560.1371" timestamp="1581168476819" />
-    <state width="685" height="833" key="GridCell.Tab.0.right" timestamp="1581168476820">
-      <screen x="0" y="23" width="2560" height="1371" />
+    <state width="740" height="1313" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581171256746" />
+    <state width="685" height="833" key="GridCell.Tab.0.left/0.23.2560.1371@0.23.2560.1371" timestamp="1581168820794" />
+    <state width="740" height="1313" key="GridCell.Tab.0.right" timestamp="1581171256748">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="741" height="1013" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581166927619" />
-    <state width="685" height="833" key="GridCell.Tab.0.right/0.23.2560.1371@0.23.2560.1371" timestamp="1581168476820" />
+    <state width="740" height="1313" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581171256748" />
+    <state width="685" height="833" key="GridCell.Tab.0.right/0.23.2560.1371@0.23.2560.1371" timestamp="1581168820794" />
     <state width="2518" height="272" key="GridCell.Tab.1.bottom" timestamp="1581099289802">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -697,11 +698,11 @@
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1579437206715" />
     <state x="938" y="108" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1581098186458" />
-    <state x="880" y="457" key="Vcs.Push.Dialog.v2" timestamp="1581168503061">
-      <screen x="0" y="23" width="2560" height="1371" />
+    <state x="880" y="456" key="Vcs.Push.Dialog.v2" timestamp="1581169335096">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="880" y="456" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1581098699256" />
-    <state x="880" y="457" key="Vcs.Push.Dialog.v2/0.23.2560.1371@0.23.2560.1371" timestamp="1581168503061" />
+    <state x="880" y="456" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1581169335096" />
+    <state x="880" y="457" key="Vcs.Push.Dialog.v2/0.23.2560.1371@0.23.2560.1371" timestamp="1581168794946" />
     <state x="959" y="543" key="com.intellij.ide.util.TipDialog" timestamp="1580317142890">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
