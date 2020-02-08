@@ -73,13 +73,13 @@ static t_line	*init_wu(t_point *start, t_point *end, t_scene *draw)
 	t_line *line;
 
 	((line = (t_line*)malloc(sizeof(t_line))) == NULL) ? ft_error(0) : 0;
-	line->steep = fabs(end->y - start->y) > fabs(end->x - start->x) ? 1 : 0;
+	line->steep = fabsf(end->y - start->y) > fabsf(end->x - start->x) ? 1 : 0;
 	if (line->steep == 1 || start->x > end->x)
 		endpoint_swap(start, end, line);
 	line->delta = new_node(end->x - start->x, end->y - start->y, 0, draw);
 	line->gradient = line->delta->y / line->delta->x;
 	line->delta->x == 0.0 ? line->gradient = 1.0 : 0;
-	line->x_end = round(start->x);
+	line->x_end = roundf(start->x);
 	line->y_end = start->y + line->gradient * (line->x_end - start->x);
 	line->x_gap = offset_part(start->x + 0.5);
 	return (line);
@@ -94,13 +94,13 @@ void			draw_line_wu(t_point start, t_point end, t_scene *draw)
 	line = init_wu(&start, &end, draw);
 	start_end = map_add_node(&start);
 	start_end->nxt = map_add_node(&end);
-	pxl = map_add_node(new_node(line->x_end, (int)(line->y_end), 0, draw));
+	pxl = map_add_node(new_node(line->x_end, line->y_end, 0, draw));
 	draw_endpoint_wu(pxl, start_end, line, draw);
 	line->y_isct = line->y_end + line->gradient;
-	line->x_end = round(end.x);
+	line->x_end = roundf(end.x);
 	line->y_end = end.y + line->gradient * (line->x_end - end.x);
 	line->x_gap = decimal_part(end.x + 0.5);
-	pxl->nxt = map_add_node(new_node(line->x_end, (int)(line->y_end), 0, \
+	pxl->nxt = map_add_node(new_node(line->x_end, line->y_end, 0, \
 	draw));
 	draw_endpoint_wu(pxl->nxt, start_end, line, draw);
 	loop_wu(pxl, line, start_end, draw);

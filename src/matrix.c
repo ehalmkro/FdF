@@ -36,22 +36,22 @@ void	zoom_matrix(t_point *data, t_point vertex, t_scene *draw, float deg)
 void	rot_z(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
 	(void)draw;
-	data->x = vertex.x * cos(deg) - vertex.y * sin(deg);
-	data->y = vertex.x * sin(deg) + vertex.y * cos(deg);
+	data->x = vertex.x * cosf(deg) - vertex.y * sinf(deg);
+	data->y = vertex.x * sinf(deg) + vertex.y * cosf(deg);
 }
 
 void	rot_x(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
 	(void)draw;
-	data->y = vertex.y * cos(deg) + vertex.z * sin(deg);
-	data->z = (-vertex.y) * sin(deg) + vertex.z * cos(deg);
+	data->y = vertex.y * cosf(deg) + vertex.z * sinf(deg);
+	data->z = (-vertex.y) * sinf(deg) + vertex.z * cosf(deg);
 }
 
 void	rot_y(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
 	(void)draw;
-	data->x = vertex.x * cos(deg) + vertex.z * sin(deg);
-	data->z = (-vertex.x) * sin(deg) + vertex.z * cos(deg);
+	data->x = vertex.x * cosf(deg) + vertex.z * sinf(deg);
+	data->z = (-vertex.x) * sinf(deg) + vertex.z * cosf(deg);
 }
 
 void	matrix_transformation(t_scene *draw, void (*transformation)\

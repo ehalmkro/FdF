@@ -28,7 +28,7 @@ void			draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 
 	current = new_node(start.x, start.y, 0, draw);
 	delta = new_node(end.x - start.x, end.y - start.y, 0, draw);
-	pixelcount = sqrt((delta->x * delta->x) + (delta->y * delta->y));
+	pixelcount = sqrtf((delta->x * delta->x) + (delta->y * delta->y));
 	delta->x /= pixelcount;
 	delta->y /= pixelcount;
 	start_end = map_add_node(&start);

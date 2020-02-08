@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 14:29:54 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/08 15:21:40 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/08 15:24:02 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char				*ft_strdup(const char *s1);
 void				ft_strdel(char **as);
 char				*ft_strchr(const char *s, int c);
 void				ft_putendl(char const *s);
-int					get_next_line(const int fd, char **line);
+int					get_next_line(int fd, char **line);
 void				ft_fswap(float *a, float *b);
 int					ft_atoi(const char *str);
 void				*ft_memset(void *b, int c, size_t len);

@@ -23,7 +23,7 @@ void		swap_height(t_height *a, t_height *b)
 
 float		decimal_part(float x)
 {
-	return ((float)x - (float)((int)x));
+	return (x - (float)((int)x));
 }
 
 float		offset_part(float x)
