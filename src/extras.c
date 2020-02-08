@@ -114,7 +114,7 @@ void	debug_lines(t_scene *draw)
 	y = -400;
 	i = 0;
 	line = new_node(x, y, 10, draw);
-	line2 = new_node(fabs(x * 10), fabs(y * 10), 10, draw);
+	line2 = new_node(fabsf(x * 10), fabsf(y * 10), 10, draw);
 	line->height = LO;
 	line2->height = HI;
 	while (i < 22)

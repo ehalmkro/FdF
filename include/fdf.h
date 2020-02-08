@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/08 14:46:49 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/08 14:50:13 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 # define WINDOW_WIDTH 1024
 # define WINDOW_HEIGHT 768
-# define INT_MIN -2147483648
+# define INT_MIN (-2147483648)
 # define INT_MAX 2147483647
 # define DEFAULT_INCREMENT 5
 # define ZOOM_COEFF_POS 1.15
