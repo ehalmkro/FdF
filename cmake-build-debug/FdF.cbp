@@ -125,112 +125,19 @@
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_atoi.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_bzero.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_count_if.c">
-			<Option target="ft"/>
-		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_fswap.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_isalnum.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_isalpha.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_isascii.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_isdigit.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_isprint.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_itoa.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_lstadd.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_lstaddback.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_lstdel.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_lstdelone.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_lstiter.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_lstmap.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_lstnew.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_memalloc.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_memccpy.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_memchr.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_memcmp.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_memcpy.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_memdel.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_memmove.c">
 			<Option target="ft"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_memset.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_putchar.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_putchar_fd.c">
-			<Option target="ft"/>
-		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_putendl.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_putendl_fd.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_putnbr.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_putnbr_fd.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_putstr.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_putstr_fd.c">
 			<Option target="ft"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strcat.c">
 			<Option target="ft"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strchr.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strclr.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strcmp.c">
 			<Option target="ft"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strcpy.c">
@@ -242,121 +149,61 @@
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strdup.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strequ.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_striter.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_striteri.c">
-			<Option target="ft"/>
-		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strjoin.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strlcat.c">
 			<Option target="ft"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strlen.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strmap.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strmapi.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strncat.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strncmp.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strncpy.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strnequ.c">
-			<Option target="ft"/>
-		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strnew.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strnstr.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strrchr.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strsplit.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strstr.c">
 			<Option target="ft"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strsub.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_strtrim.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_swap.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_tolower.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_toupper.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_wordcount.c">
-			<Option target="ft"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/ft_wordlength.c">
-			<Option target="ft"/>
-		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/Libft/get_next_line.c">
 			<Option target="ft"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/color.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/include/keycodes.h">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/events.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/color.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/extras.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/events.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/keycodes.h">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/extras.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/line_draw.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/line_draw.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/main.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/main.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/matrix.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/matrix.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/mouse_events.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/mouse_events.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/pointlist.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/pointlist.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/read_write.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/read_write.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/tools.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/tools.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/window.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/window.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/wu.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/wu.c">
 			<Option target="FdF"/>
 		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/wu_utils.c">
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/wu_utils.c">
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/CMakeLists.txt">
