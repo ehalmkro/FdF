@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:59:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/08 14:48:52 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 10:39:43 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,24 @@ float	get_percent(int start, int end, int curr)
 	return (place / dist);
 }
 
-/*
-** TODO: fix z axis centering
-*/
-
 void	center_origo(t_scene *draw)
 {
-	t_map *map;
+	t_map	*map;
+	float	z_sum;
 
+	z_sum = 0;
 	map = draw->map;
 	while (map)
 	{
 		map->dt->x -= draw->max_x / 2;
 		map->dt->y -= draw->max_y / 2;
-		map->dt->z -= (draw->max_z - draw->min_z) / 2;
+		z_sum += map->dt->z;
+		map = map->nxt;
+	}
+	map = draw->map;
+	while (map)
+	{
+		map->dt->z -= z_sum / draw->vertex_count;
 		map = map->nxt;
 	}
 	scene_find_minmax(draw);

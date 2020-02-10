@@ -200,18 +200,18 @@ CMakeFiles/FdF.dir/src/extras.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FdF.dir/src/extras.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/src/extras.c -o CMakeFiles/FdF.dir/src/extras.c.s
 
-CMakeFiles/FdF.dir/src/mouse_events.c.o: CMakeFiles/FdF.dir/flags.make
-CMakeFiles/FdF.dir/src/mouse_events.c.o: ../src/mouse_events.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/FdF.dir/src/mouse_events.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/FdF.dir/src/mouse_events.c.o   -c /Users/ehalmkro/hive/FdF/src/mouse_events.c
+CMakeFiles/FdF.dir/src/events_mouse.c.o: CMakeFiles/FdF.dir/flags.make
+CMakeFiles/FdF.dir/src/events_mouse.c.o: ../src/events_mouse.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/FdF.dir/src/events_mouse.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/FdF.dir/src/events_mouse.c.o   -c /Users/ehalmkro/hive/FdF/src/events_mouse.c
 
-CMakeFiles/FdF.dir/src/mouse_events.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FdF.dir/src/mouse_events.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ehalmkro/hive/FdF/src/mouse_events.c > CMakeFiles/FdF.dir/src/mouse_events.c.i
+CMakeFiles/FdF.dir/src/events_mouse.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FdF.dir/src/events_mouse.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ehalmkro/hive/FdF/src/events_mouse.c > CMakeFiles/FdF.dir/src/events_mouse.c.i
 
-CMakeFiles/FdF.dir/src/mouse_events.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FdF.dir/src/mouse_events.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/src/mouse_events.c -o CMakeFiles/FdF.dir/src/mouse_events.c.s
+CMakeFiles/FdF.dir/src/events_mouse.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FdF.dir/src/events_mouse.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ehalmkro/hive/FdF/src/events_mouse.c -o CMakeFiles/FdF.dir/src/events_mouse.c.s
 
 CMakeFiles/FdF.dir/src/wu_utils.c.o: CMakeFiles/FdF.dir/flags.make
 CMakeFiles/FdF.dir/src/wu_utils.c.o: ../src/wu_utils.c
@@ -239,7 +239,7 @@ FdF_OBJECTS = \
 "CMakeFiles/FdF.dir/src/matrix.c.o" \
 "CMakeFiles/FdF.dir/src/wu.c.o" \
 "CMakeFiles/FdF.dir/src/extras.c.o" \
-"CMakeFiles/FdF.dir/src/mouse_events.c.o" \
+"CMakeFiles/FdF.dir/src/events_mouse.c.o" \
 "CMakeFiles/FdF.dir/src/wu_utils.c.o"
 
 # External object files for target FdF
@@ -256,7 +256,7 @@ FdF: CMakeFiles/FdF.dir/src/events.c.o
 FdF: CMakeFiles/FdF.dir/src/matrix.c.o
 FdF: CMakeFiles/FdF.dir/src/wu.c.o
 FdF: CMakeFiles/FdF.dir/src/extras.c.o
-FdF: CMakeFiles/FdF.dir/src/mouse_events.c.o
+FdF: CMakeFiles/FdF.dir/src/events_mouse.c.o
 FdF: CMakeFiles/FdF.dir/src/wu_utils.c.o
 FdF: CMakeFiles/FdF.dir/build.make
 FdF: libft.a

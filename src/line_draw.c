@@ -55,8 +55,8 @@ void			draw_line_bresenham(t_point start, t_point end, t_scene *draw)
 static t_point	*transform_isometric(t_point *data, t_scene *draw)
 {
 	t_point		*ret;
-	double		prev_x;
-	double		prev_y;
+	float		prev_x;
+	float		prev_y;
 
 	prev_x = data->x;
 	prev_y = data->y;

@@ -6,11 +6,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/ehalmkro/hive/FdF/src/color.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/color.c.o"
   "/Users/ehalmkro/hive/FdF/src/events.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/events.c.o"
+  "/Users/ehalmkro/hive/FdF/src/events_mouse.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/events_mouse.c.o"
   "/Users/ehalmkro/hive/FdF/src/extras.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/extras.c.o"
   "/Users/ehalmkro/hive/FdF/src/line_draw.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/line_draw.c.o"
   "/Users/ehalmkro/hive/FdF/src/main.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/main.c.o"
   "/Users/ehalmkro/hive/FdF/src/matrix.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/matrix.c.o"
-  "/Users/ehalmkro/hive/FdF/src/mouse_events.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/mouse_events.c.o"
   "/Users/ehalmkro/hive/FdF/src/pointlist.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/pointlist.c.o"
   "/Users/ehalmkro/hive/FdF/src/read_write.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/read_write.c.o"
   "/Users/ehalmkro/hive/FdF/src/tools.c" "/Users/ehalmkro/hive/FdF/cmake-build-debug/CMakeFiles/FdF.dir/src/tools.c.o"

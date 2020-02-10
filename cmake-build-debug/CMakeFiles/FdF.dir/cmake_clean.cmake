@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FdF.dir/src/color.c.o"
   "CMakeFiles/FdF.dir/src/events.c.o"
+  "CMakeFiles/FdF.dir/src/events_mouse.c.o"
   "CMakeFiles/FdF.dir/src/extras.c.o"
   "CMakeFiles/FdF.dir/src/line_draw.c.o"
   "CMakeFiles/FdF.dir/src/main.c.o"
   "CMakeFiles/FdF.dir/src/matrix.c.o"
-  "CMakeFiles/FdF.dir/src/mouse_events.c.o"
   "CMakeFiles/FdF.dir/src/pointlist.c.o"
   "CMakeFiles/FdF.dir/src/read_write.c.o"
   "CMakeFiles/FdF.dir/src/tools.c.o"

@@ -12,7 +12,7 @@
 
 NAME = FdF
 SRC_DIR = src/
-SRC_FILES = main.c color.c events.c extras.c line_draw.c matrix.c mouse_events.c \
+SRC_FILES = main.c color.c events.c extras.c line_draw.c matrix.c events_mouse.c \
 	pointlist.c read_write.c tools.c window.c wu.c wu_utils.c
 SOURCES = $(addprefix $(SRC_DIR), $(SRC_FILES))
 LIB = Libft/

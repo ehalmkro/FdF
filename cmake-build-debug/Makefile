@@ -568,6 +568,33 @@ src/events.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/src/events.c.s
 .PHONY : src/events.c.s
 
+src/events_mouse.o: src/events_mouse.c.o
+
+.PHONY : src/events_mouse.o
+
+# target to build an object file
+src/events_mouse.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/src/events_mouse.c.o
+.PHONY : src/events_mouse.c.o
+
+src/events_mouse.i: src/events_mouse.c.i
+
+.PHONY : src/events_mouse.i
+
+# target to preprocess a source file
+src/events_mouse.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/src/events_mouse.c.i
+.PHONY : src/events_mouse.c.i
+
+src/events_mouse.s: src/events_mouse.c.s
+
+.PHONY : src/events_mouse.s
+
+# target to generate assembly for a file
+src/events_mouse.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/src/events_mouse.c.s
+.PHONY : src/events_mouse.c.s
+
 src/extras.o: src/extras.c.o
 
 .PHONY : src/extras.o
@@ -675,33 +702,6 @@ src/matrix.s: src/matrix.c.s
 src/matrix.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/src/matrix.c.s
 .PHONY : src/matrix.c.s
-
-src/mouse_events.o: src/mouse_events.c.o
-
-.PHONY : src/mouse_events.o
-
-# target to build an object file
-src/mouse_events.c.o:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/src/mouse_events.c.o
-.PHONY : src/mouse_events.c.o
-
-src/mouse_events.i: src/mouse_events.c.i
-
-.PHONY : src/mouse_events.i
-
-# target to preprocess a source file
-src/mouse_events.c.i:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/src/mouse_events.c.i
-.PHONY : src/mouse_events.c.i
-
-src/mouse_events.s: src/mouse_events.c.s
-
-.PHONY : src/mouse_events.s
-
-# target to generate assembly for a file
-src/mouse_events.c.s:
-	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/src/mouse_events.c.s
-.PHONY : src/mouse_events.c.s
 
 src/pointlist.o: src/pointlist.c.o
 
@@ -923,6 +923,9 @@ help:
 	@echo "... src/events.o"
 	@echo "... src/events.i"
 	@echo "... src/events.s"
+	@echo "... src/events_mouse.o"
+	@echo "... src/events_mouse.i"
+	@echo "... src/events_mouse.s"
 	@echo "... src/extras.o"
 	@echo "... src/extras.i"
 	@echo "... src/extras.s"
@@ -935,9 +938,6 @@ help:
 	@echo "... src/matrix.o"
 	@echo "... src/matrix.i"
 	@echo "... src/matrix.s"
-	@echo "... src/mouse_events.o"
-	@echo "... src/mouse_events.i"
-	@echo "... src/mouse_events.s"
 	@echo "... src/pointlist.o"
 	@echo "... src/pointlist.i"
 	@echo "... src/pointlist.s"

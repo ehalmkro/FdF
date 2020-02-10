@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/08 14:48:52 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 10:36:51 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ static void		init_window(t_scene *draw)
 	draw->color[1] = MAGENTA;
 	draw->color[2] = YELLOW;
 	draw->color[3] = PINK;
-	draw->vertex_count = 0;
 	(draw->mouse = (t_mouse*)malloc(sizeof(t_mouse))) == NULL ? ft_error(0) : 0;
 	draw->mouse->button_press = 0;
 	draw->zoom = 1;
