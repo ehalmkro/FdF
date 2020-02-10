@@ -654,11 +654,11 @@
       <screen x="0" y="23" width="2560" height="1371" />
     </state>
     <state x="1027" y="575" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2560.1371@0.23.2560.1371" timestamp="1581168522114" />
-    <state x="535" y="23" width="1490" height="1308" key="CommitChangelistDialog2" timestamp="1581342477018">
+    <state x="535" y="23" width="1490" height="1308" key="CommitChangelistDialog2" timestamp="1581342559065">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="301" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579439018118" />
-    <state x="535" y="23" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1581342477018" />
+    <state x="535" y="23" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1581342559065" />
     <state x="535" y="45" width="1490" height="1308" key="CommitChangelistDialog2/0.23.2560.1371@0.23.2560.1371" timestamp="1581168791638" />
     <state width="210" height="983" key="GridCell.Tab.0.bottom" timestamp="1581342452400">
       <screen x="0" y="0" width="2560" height="1440" />
@@ -709,10 +709,10 @@
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1579437206715" />
     <state x="938" y="108" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1581098186458" />
-    <state x="880" y="456" key="Vcs.Push.Dialog.v2" timestamp="1581336008695">
+    <state x="880" y="456" key="Vcs.Push.Dialog.v2" timestamp="1581342561593">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="880" y="456" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1581336008695" />
+    <state x="880" y="456" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1581342561593" />
     <state x="880" y="457" key="Vcs.Push.Dialog.v2/0.23.2560.1371@0.23.2560.1371" timestamp="1581168794946" />
     <state x="959" y="543" key="com.intellij.ide.util.TipDialog" timestamp="1580317142890">
       <screen x="0" y="0" width="2560" height="1440" />
