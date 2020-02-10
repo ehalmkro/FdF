@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 12:31:33 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/10 11:54:33 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:37:17 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,9 @@ void		render(t_scene *draw)
 		draw->carousel == 9 ? draw->carousel = 0 : draw->carousel++;
 	if (timer(draw, 30000, 1) == 0)
 		switch_color(draw);
-	draw_window(draw);
+	ft_bzero(draw->image_buffer, WINDOW_WIDTH * WINDOW_HEIGHT * 4);
+	draw_image_background(draw);
 	draw->debug == 1 ? debug_lines(draw) : draw_matrix(draw->map, draw);
+	mlx_put_image_to_window(draw->mlx, draw->win, draw->image, 0, 0);
+	draw_window(draw);
 }

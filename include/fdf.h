@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/10 11:46:56 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:39:29 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ typedef struct			s_scene
 	void				*mlx;
 	void				*win;
 	void				*image;
-	char 				*image_buffer;
+	char				*image_buffer;
 	int					c_dir[3][3];
 	int					color[4];
 	int					carousel;
@@ -126,6 +126,7 @@ void					draw_line_bresenham(t_point start, t_point end, \
 void					draw_line_wu(t_point start, t_point end, t_scene *draw);
 void					draw_matrix(t_map *start, t_scene *draw);
 void					put_pixel(float x, float y, int color, t_scene *draw);
+void					draw_image_background(t_scene *draw);
 void					event_handler(t_scene *draw);
 void					render(t_scene *draw);
 

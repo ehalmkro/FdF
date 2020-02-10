@@ -3,6 +3,9 @@
 
 CMakeFiles/ft.dir/Libft/ft_atoi.c.o: ../Libft/ft_atoi.c
 
+CMakeFiles/ft.dir/Libft/ft_bzero.c.o: ../Libft/ft_bzero.c
+CMakeFiles/ft.dir/Libft/ft_bzero.c.o: ../Libft/libft.h
+
 CMakeFiles/ft.dir/Libft/ft_fswap.c.o: ../Libft/ft_fswap.c
 
 CMakeFiles/ft.dir/Libft/ft_memset.c.o: ../Libft/ft_memset.c

@@ -3,6 +3,9 @@
 
 CMakeFiles/ft.dir/Libft/ft_atoi.c.o
  /Users/ehalmkro/hive/FdF/Libft/ft_atoi.c
+CMakeFiles/ft.dir/Libft/ft_bzero.c.o
+ /Users/ehalmkro/hive/FdF/Libft/ft_bzero.c
+ /Users/ehalmkro/hive/FdF/Libft/libft.h
 CMakeFiles/ft.dir/Libft/ft_fswap.c.o
  /Users/ehalmkro/hive/FdF/Libft/ft_fswap.c
 CMakeFiles/ft.dir/Libft/ft_memset.c.o

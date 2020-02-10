@@ -6,13 +6,13 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 10:55:59 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/10 13:57:08 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:39:29 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fdf.h"
 
-static void		draw_image_background(t_scene *draw)
+void			draw_image_background(t_scene *draw)
 {
 	int x;
 	int y;
@@ -24,7 +24,7 @@ static void		draw_image_background(t_scene *draw)
 		x = 0;
 		while (x < WINDOW_WIDTH)
 		{
-			pixel = y * 4 * WINDOW_WIDTH + 4 * x;
+			pixel = y * 4 * WINDOW_WIDTH + x * 4;
 			draw->image_buffer[pixel + 0] = (char)0x32;
 			draw->image_buffer[pixel + 1] = (char)0x2D;
 			draw->image_buffer[pixel + 2] = (char)0x32;
@@ -66,9 +66,6 @@ void			draw_window(t_scene *draw)
 {
 	char *linedraw;
 
-	mlx_clear_window(draw->mlx, draw->win);
-	draw_image_background(draw);
-	mlx_put_image_to_window(draw->mlx, draw->win, draw->image, 0, 0);
 	mlx_string_put(draw->mlx, draw->win, 780, 60, draw->color[3], \
 	"Line draw algorithm:");
 	linedraw = draw->draw_algorithm == &draw_line_bresenham ? \

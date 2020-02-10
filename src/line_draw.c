@@ -6,21 +6,27 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/10 11:00:32 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:26:43 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fdf.h"
 #include <math.h>
 
-/*
-** TODO: remove padding from put_pixel, add to draw_matrix/draw_isometric
-*/
-
 void			put_pixel(float x, float y, int color, t_scene *draw)
 {
-	mlx_pixel_put(draw->mlx, draw->win, x + draw->padding_x,\
-	y + draw->padding_y, color);
+	int pixel;
+
+	x += draw->padding_x;
+	y += draw->padding_y;
+	if (x >= 0 && x < WINDOW_WIDTH && y >= 0 && y < WINDOW_HEIGHT)
+	{
+		pixel = (int)y * 4 * WINDOW_WIDTH + (int)x * 4;
+		draw->image_buffer[pixel + 0] = (color) & 0xFF;
+		draw->image_buffer[pixel + 1] = (color >> 8) & 0xFF;
+		draw->image_buffer[pixel + 2] = (color >> 16) & 0xFF;
+		draw->image_buffer[pixel + 3] = (color >> 24);
+	}
 }
 
 void			draw_line_bresenham(t_point start, t_point end, t_scene *draw)
@@ -110,6 +116,5 @@ void			draw_matrix(t_map *start, t_scene *draw)
 			draw->draw_algorithm((*start->dt), (*start->dn->dt), draw);
 		if (start->nxt)
 			draw_matrix(start->nxt, draw);
-		draw->draw_algorithm((*start->dt), (*start->dt), draw);
 	}
 }
