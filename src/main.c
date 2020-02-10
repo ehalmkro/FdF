@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/10 10:36:51 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 12:55:06 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,15 +63,25 @@ static void		init_window(t_scene *draw)
 static t_scene	*init_scene(void)
 {
 	t_map	*start;
-	t_scene *draw;
+	t_scene	*draw;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
 
+	bits_per_pixel = 32;
+	line_length = WINDOW_WIDTH;
+	endian = 0;
 	(start = (t_map*)malloc(sizeof(t_map))) == NULL ? ft_error(0) : 0;
 	start->nxt = NULL;
 	(draw = (t_scene*)malloc(sizeof(t_scene))) == NULL ? ft_error(0) : 0;
 	draw->map = start;
 	(draw->mlx = mlx_init()) == NULL ? ft_error(3) : 0;
-	(draw->win = mlx_new_window(draw->mlx, WINDOW_WIDTH, WINDOW_HEIGHT,\
-	"FdF 1.0 // ehalmkro // 2020")) == NULL ? ft_error(1) : 0;
+	(draw->win = mlx_new_window(draw->mlx, WINDOW_WIDTH, WINDOW_HEIGHT,
+		"FdF 1.0 // ehalmkro // 2020")) == NULL ? ft_error(1) : 0;
+	(draw->image = mlx_new_image(draw->mlx, WINDOW_WIDTH, WINDOW_HEIGHT))
+		== NULL ? ft_error(1) : 0;
+	(draw->image_buffer = mlx_get_data_addr(draw->image, &bits_per_pixel,
+		&line_length, &endian)) == NULL ? ft_error(1) : 0;
 	return (draw);
 }
 

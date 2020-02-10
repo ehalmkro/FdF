@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = get_next_line.c ft_strsub.c ft_strnew.c ft_strjoin.c ft_strdup.c \
+SRC = ft_bzero.c get_next_line.c ft_strsub.c ft_strnew.c ft_strjoin.c ft_strdup.c \
 		ft_strdel.c ft_strchr.c ft_putendl.c ft_fswap.c ft_atoi.c \
 		ft_memset.c ft_strlen.c ft_strcpy.c ft_strcat.c
 OBJECTS = $(subst .c,.o, $(SRC))
