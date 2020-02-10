@@ -6,12 +6,16 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 11:22:50 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/08 14:48:52 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 11:00:32 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fdf.h"
 #include <math.h>
+
+/*
+** TODO: remove padding from put_pixel, add to draw_matrix/draw_isometric
+*/
 
 void			put_pixel(float x, float y, int color, t_scene *draw)
 {

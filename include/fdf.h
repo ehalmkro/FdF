@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:49:03 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/08 14:50:13 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 11:46:56 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define ZOOM_COEFF_POS 1.15
 # define ZOOM_COEFF_NEG 0.9
 
-# define PINK 0xF222FF
+# define PINK 0xBF71AE
 # define TEAL 0x00F1FF
 # define MAGENTA 0xFF019A
 # define YELLOW 0xFF901F
@@ -88,6 +88,8 @@ typedef struct			s_scene
 	t_proj				projection;
 	void				*mlx;
 	void				*win;
+	void				*image;
+	char 				*image_buffer;
 	int					c_dir[3][3];
 	int					color[4];
 	int					carousel;

@@ -20,6 +20,7 @@
 # define BUFF_SIZE 32
 # define MAX_FD 8192
 
+void				*ft_bzero(void *s, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strnew(size_t size);
 char				*ft_strjoin(char const *s1, char const *s2);

@@ -163,6 +163,33 @@ Libft/ft_atoi.c.s:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/Libft/ft_atoi.c.s
 .PHONY : Libft/ft_atoi.c.s
 
+Libft/ft_bzero.o: Libft/ft_bzero.c.o
+
+.PHONY : Libft/ft_bzero.o
+
+# target to build an object file
+Libft/ft_bzero.c.o:
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/Libft/ft_bzero.c.o
+.PHONY : Libft/ft_bzero.c.o
+
+Libft/ft_bzero.i: Libft/ft_bzero.c.i
+
+.PHONY : Libft/ft_bzero.i
+
+# target to preprocess a source file
+Libft/ft_bzero.c.i:
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/Libft/ft_bzero.c.i
+.PHONY : Libft/ft_bzero.c.i
+
+Libft/ft_bzero.s: Libft/ft_bzero.c.s
+
+.PHONY : Libft/ft_bzero.s
+
+# target to generate assembly for a file
+Libft/ft_bzero.c.s:
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/Libft/ft_bzero.c.s
+.PHONY : Libft/ft_bzero.c.s
+
 Libft/ft_fswap.o: Libft/ft_fswap.c.o
 
 .PHONY : Libft/ft_fswap.o
@@ -878,6 +905,9 @@ help:
 	@echo "... Libft/ft_atoi.o"
 	@echo "... Libft/ft_atoi.i"
 	@echo "... Libft/ft_atoi.s"
+	@echo "... Libft/ft_bzero.o"
+	@echo "... Libft/ft_bzero.i"
+	@echo "... Libft/ft_bzero.s"
 	@echo "... Libft/ft_fswap.o"
 	@echo "... Libft/ft_fswap.i"
 	@echo "... Libft/ft_fswap.s"
