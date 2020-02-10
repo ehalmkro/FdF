@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 18:47:20 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/08 14:48:52 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 10:49:22 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,25 +33,28 @@ void	zoom_matrix(t_point *data, t_point vertex, t_scene *draw, float deg)
 	}
 }
 
-void	rot_z(t_point *data, t_point vertex, t_scene *draw, float deg)
-{
-	(void)draw;
-	data->x = vertex.x * cosf(deg) - vertex.y * sinf(deg);
-	data->y = vertex.x * sinf(deg) + vertex.y * cosf(deg);
-}
-
 void	rot_x(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
 	(void)draw;
+	data->x = vertex.x;
 	data->y = vertex.y * cosf(deg) + vertex.z * sinf(deg);
-	data->z = (-vertex.y) * sinf(deg) + vertex.z * cosf(deg);
+	data->z = -vertex.y * sinf(deg) + vertex.z * cosf(deg);
 }
 
 void	rot_y(t_point *data, t_point vertex, t_scene *draw, float deg)
 {
 	(void)draw;
+	data->y = vertex.y;
 	data->x = vertex.x * cosf(deg) + vertex.z * sinf(deg);
-	data->z = (-vertex.x) * sinf(deg) + vertex.z * cosf(deg);
+	data->z = -vertex.x * sinf(deg) + vertex.z * cosf(deg);
+}
+
+void	rot_z(t_point *data, t_point vertex, t_scene *draw, float deg)
+{
+	(void)draw;
+	data->z = vertex.z;
+	data->x = vertex.x * cosf(deg) - vertex.y * sinf(deg);
+	data->y = vertex.x * sinf(deg) + vertex.y * cosf(deg);
 }
 
 void	matrix_transformation(t_scene *draw, void (*transformation)\

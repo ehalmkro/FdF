@@ -12,6 +12,12 @@ CMakeFiles/FdF.dir/src/events.c.o
  /Users/ehalmkro/hive/FdF/include/keycodes.h
  /Users/ehalmkro/hive/FdF/src/events.c
  /usr/local/include/mlx.h
+CMakeFiles/FdF.dir/src/events_mouse.c.o
+ /Users/ehalmkro/hive/FdF/Libft/libft.h
+ /Users/ehalmkro/hive/FdF/include/fdf.h
+ /Users/ehalmkro/hive/FdF/include/keycodes.h
+ /Users/ehalmkro/hive/FdF/src/events_mouse.c
+ /usr/local/include/mlx.h
 CMakeFiles/FdF.dir/src/extras.c.o
  /Users/ehalmkro/hive/FdF/Libft/libft.h
  /Users/ehalmkro/hive/FdF/include/fdf.h
@@ -31,12 +37,6 @@ CMakeFiles/FdF.dir/src/matrix.c.o
  /Users/ehalmkro/hive/FdF/Libft/libft.h
  /Users/ehalmkro/hive/FdF/include/fdf.h
  /Users/ehalmkro/hive/FdF/src/matrix.c
- /usr/local/include/mlx.h
-CMakeFiles/FdF.dir/src/mouse_events.c.o
- /Users/ehalmkro/hive/FdF/Libft/libft.h
- /Users/ehalmkro/hive/FdF/include/fdf.h
- /Users/ehalmkro/hive/FdF/include/keycodes.h
- /Users/ehalmkro/hive/FdF/src/mouse_events.c
  /usr/local/include/mlx.h
 CMakeFiles/FdF.dir/src/pointlist.c.o
  /Users/ehalmkro/hive/FdF/Libft/libft.h

@@ -173,6 +173,9 @@
 		<Unit filename="/Users/ehalmkro/hive/FdF/src/events.c">
 			<Option target="FdF"/>
 		</Unit>
+		<Unit filename="/Users/ehalmkro/hive/FdF/src/events_mouse.c">
+			<Option target="FdF"/>
+		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/src/extras.c">
 			<Option target="FdF"/>
 		</Unit>
@@ -183,9 +186,6 @@
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/src/matrix.c">
-			<Option target="FdF"/>
-		</Unit>
-		<Unit filename="/Users/ehalmkro/hive/FdF/src/mouse_events.c">
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/Users/ehalmkro/hive/FdF/src/pointlist.c">
