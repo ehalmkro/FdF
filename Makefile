@@ -30,9 +30,7 @@ $(NAME):
 clean:
 				@rm -f $(OBJECTS)
 				@make -C $(LIB) clean
-				@make -C $(MLIB) clean
 fclean: clean
 				@rm -f $(NAME)
 				@make -C $(LIB) fclean
-				@make -C $(MLIB) fclean
 re: fclean all
