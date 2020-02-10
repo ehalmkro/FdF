@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="FdF" targetName="FdF" />
       <config projectName="FdF" targetName="ft" />
+      <config projectName="FdF" targetName="FdF" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -12,27 +12,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="norminette fix">
+    <list default="true" id="b9d43d2c-ed78-4c5c-9a96-34579cebaae8" name="Default Changelist" comment="final fix, all working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libft/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Libft/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/Libft/libft.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FdF.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FdF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FdF.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FdF.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libft.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/fdf.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/fdf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/events.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/events.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/line_draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/line_draw.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/read_write.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/read_write.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/window.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/window.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/pylone.fdf" beforeDir="false" afterPath="$PROJECT_DIR$/test_maps/pylone.fdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_maps/pyra.fdf" beforeDir="false" afterPath="$PROJECT_DIR$/test_maps/pyra.fdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,14 +225,9 @@
       <workItem from="1581091286410" duration="11500000" />
       <workItem from="1581168869573" duration="2441000" />
       <workItem from="1581172082477" duration="178000" />
-      <workItem from="1581323084332" duration="7700000" />
-    </task>
-    <task id="LOCAL-00015" summary="refactor draw functions, add exit event">
-      <created>1579517841058</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1579517841058</updated>
+      <workItem from="1581323084332" duration="8957000" />
+      <workItem from="1581337635509" duration="1031000" />
+      <workItem from="1581339279466" duration="3222000" />
     </task>
     <task id="LOCAL-00016" summary="clear stuff up for event function compability">
       <created>1579519463532</created>
@@ -575,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581327235498</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="add background with put_image">
+      <created>1581335972514</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1581335972514</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,8 +602,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add timer for text carousel" />
-    <MESSAGE value="add rgb switch to timer" />
     <MESSAGE value="Refactor main" />
     <MESSAGE value="norminette main" />
     <MESSAGE value="input check started" />
@@ -630,7 +625,9 @@
     <MESSAGE value="clean code" />
     <MESSAGE value="fix input check, norminette ok, need to fix z centering" />
     <MESSAGE value="norminette fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="norminette fix" />
+    <MESSAGE value="add background with put_image" />
+    <MESSAGE value="final fix, all working" />
+    <option name="LAST_COMMIT_MESSAGE" value="final fix, all working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="373" key="#Notifications" timestamp="1579857381237">
@@ -657,51 +654,51 @@
       <screen x="0" y="23" width="2560" height="1371" />
     </state>
     <state x="1027" y="575" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2560.1371@0.23.2560.1371" timestamp="1581168522114" />
-    <state x="535" y="23" width="1490" height="1308" key="CommitChangelistDialog2" timestamp="1581331204018">
+    <state x="535" y="23" width="1490" height="1308" key="CommitChangelistDialog2" timestamp="1581342477018">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="301" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579439018118" />
-    <state x="535" y="23" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1581331204018" />
+    <state x="535" y="23" key="CommitChangelistDialog2/0.0.2560.1440@0.0.2560.1440" timestamp="1581342477018" />
     <state x="535" y="45" width="1490" height="1308" key="CommitChangelistDialog2/0.23.2560.1371@0.23.2560.1371" timestamp="1581168791638" />
-    <state width="210" height="983" key="GridCell.Tab.0.bottom" timestamp="1581335868211">
+    <state width="210" height="983" key="GridCell.Tab.0.bottom" timestamp="1581342452400">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="210" height="983" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581335868211" />
+    <state width="210" height="983" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581342452400" />
     <state width="410" height="1222" key="GridCell.Tab.0.bottom/0.23.2560.1371@0.23.2560.1371" timestamp="1581326587945" />
-    <state width="210" height="983" key="GridCell.Tab.0.center" timestamp="1581335868210">
+    <state width="210" height="983" key="GridCell.Tab.0.center" timestamp="1581342452399">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="210" height="983" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581335868210" />
+    <state width="210" height="983" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581342452399" />
     <state width="410" height="1222" key="GridCell.Tab.0.center/0.23.2560.1371@0.23.2560.1371" timestamp="1581326587945" />
-    <state width="210" height="983" key="GridCell.Tab.0.left" timestamp="1581335868210">
+    <state width="210" height="983" key="GridCell.Tab.0.left" timestamp="1581342452398">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="210" height="983" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581335868210" />
+    <state width="210" height="983" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581342452398" />
     <state width="410" height="1222" key="GridCell.Tab.0.left/0.23.2560.1371@0.23.2560.1371" timestamp="1581326587945" />
-    <state width="210" height="983" key="GridCell.Tab.0.right" timestamp="1581335868211">
+    <state width="210" height="983" key="GridCell.Tab.0.right" timestamp="1581342452399">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="210" height="983" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581335868211" />
+    <state width="210" height="983" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581342452399" />
     <state width="410" height="1222" key="GridCell.Tab.0.right/0.23.2560.1371@0.23.2560.1371" timestamp="1581326587945" />
-    <state width="2518" height="272" key="GridCell.Tab.1.bottom" timestamp="1581331917431">
+    <state width="2518" height="272" key="GridCell.Tab.1.bottom" timestamp="1581336993419">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="272" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581331917431" />
+    <state width="2518" height="272" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1581336993419" />
     <state width="2518" height="272" key="GridCell.Tab.1.bottom/0.23.2560.1371@0.23.2560.1371" timestamp="1581091429502" />
-    <state width="2518" height="272" key="GridCell.Tab.1.center" timestamp="1581331917430">
+    <state width="2518" height="272" key="GridCell.Tab.1.center" timestamp="1581336993419">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="272" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581331917430" />
+    <state width="2518" height="272" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1581336993419" />
     <state width="2518" height="272" key="GridCell.Tab.1.center/0.23.2560.1371@0.23.2560.1371" timestamp="1581091429501" />
-    <state width="2518" height="272" key="GridCell.Tab.1.left" timestamp="1581331917429">
+    <state width="2518" height="272" key="GridCell.Tab.1.left" timestamp="1581336993418">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="272" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581331917429" />
+    <state width="2518" height="272" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1581336993418" />
     <state width="2518" height="272" key="GridCell.Tab.1.left/0.23.2560.1371@0.23.2560.1371" timestamp="1581091429500" />
-    <state width="2518" height="272" key="GridCell.Tab.1.right" timestamp="1581331917430">
+    <state width="2518" height="272" key="GridCell.Tab.1.right" timestamp="1581336993419">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="272" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581331917430" />
+    <state width="2518" height="272" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1581336993419" />
     <state width="2518" height="272" key="GridCell.Tab.1.right/0.23.2560.1371@0.23.2560.1371" timestamp="1581091429501" />
     <state x="1114" y="364" key="RollbackChangesDialog" timestamp="1581088347484">
       <screen x="0" y="0" width="2560" height="1440" />
@@ -712,10 +709,10 @@
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1579437206715" />
     <state x="938" y="108" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1581098186458" />
-    <state x="880" y="456" key="Vcs.Push.Dialog.v2" timestamp="1581327241402">
+    <state x="880" y="456" key="Vcs.Push.Dialog.v2" timestamp="1581336008695">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="880" y="456" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1581327241402" />
+    <state x="880" y="456" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1581336008695" />
     <state x="880" y="457" key="Vcs.Push.Dialog.v2/0.23.2560.1371@0.23.2560.1371" timestamp="1581168794946" />
     <state x="959" y="543" key="com.intellij.ide.util.TipDialog" timestamp="1580317142890">
       <screen x="0" y="0" width="2560" height="1440" />
@@ -731,10 +728,10 @@
     </state>
     <state x="502" y="369" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1579437128653" />
     <state x="892" y="590" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1440@0.0.2560.1440" timestamp="1580224592011" />
-    <state x="936" y="461" width="1047" height="695" key="find.popup" timestamp="1581335826153">
+    <state x="936" y="461" width="1047" height="695" key="find.popup" timestamp="1581342530783">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="936" y="461" width="1047" height="695" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1581335826153" />
+    <state x="936" y="461" width="1047" height="695" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1581342530783" />
     <state x="936" y="462" width="1047" height="662" key="find.popup/0.23.2560.1371@0.23.2560.1371" timestamp="1581168770275" />
     <state x="1115" y="622" key="git4idea.ui.GitStashDialog" timestamp="1581088339814">
       <screen x="0" y="0" width="2560" height="1440" />
@@ -748,11 +745,11 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1042" y="358" key="refactoring.ChangeSignatureDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1580488375047" />
-    <state x="945" y="345" width="670" height="675" key="run.anything.popup" timestamp="1581323714622">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="945" y="345" width="670" height="675" key="run.anything.popup" timestamp="1581341864820">
+      <screen x="0" y="23" width="2560" height="1371" />
     </state>
     <state x="945" y="345" width="670" height="675" key="run.anything.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1581323714622" />
-    <state x="945" y="345" width="670" height="675" key="run.anything.popup/0.23.2560.1371@0.23.2560.1371" timestamp="1581093142601" />
+    <state x="945" y="345" width="670" height="675" key="run.anything.popup/0.23.2560.1371@0.23.2560.1371" timestamp="1581341864820" />
     <state x="945" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1581331014998">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

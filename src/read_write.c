@@ -48,7 +48,7 @@ int				read_input(char *str, t_scene *draw)
 	char	*line;
 
 	y = 0;
-	if ((fd = open(str, O_RDONLY)) == -1)
+	if ((fd = open(str, O_RDWR)) == -1)
 		return (-1);
 	while ((get_next_line(fd, &line)) == 1)
 	{

@@ -6,7 +6,7 @@
 /*   By: ehalmkro <ehalmkro@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 11:45:49 by ehalmkro          #+#    #+#             */
-/*   Updated: 2020/02/10 12:55:06 by ehalmkro         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:14:36 by ehalmkro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ static void		init_window(t_scene *draw)
 	while (draw->max_x * draw->zoom < WINDOW_WIDTH / 2)
 		draw->zoom++;
 	draw->projection = PARALLEL;
-	draw->padding_x = WINDOW_WIDTH / 2 - draw->max_x / 2;
-	draw->padding_y = WINDOW_HEIGHT / 2 - draw->max_y / 2;
 	draw->draw_algorithm = &draw_line_bresenham;
 	draw->carousel = 0;
 	draw->display_ctrls = 0;
+	draw->padding_x = WINDOW_WIDTH / 2 - draw->max_x / 2;
+	draw->padding_y = WINDOW_HEIGHT / 2 - draw->max_y / 2;
 	append_map(draw);
 	center_origo(draw);
 	matrix_transformation(draw, &zoom_matrix, 0);
