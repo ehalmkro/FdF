@@ -6,7 +6,7 @@
 #    By: ehalmkro <ehalmkro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/18 17:34:36 by ehalmkro          #+#    #+#              #
-#    Updated: 2020/02/10 16:17:48 by ehalmkro         ###   ########.fr        #
+#    Updated: 2020/02/10 16:28:05 by ehalmkro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,9 @@ $(NAME):
 clean:
 				@rm -f $(OBJECTS)
 				@make -C $(LIB) clean
+				@make -C $(MLIB) clean
 fclean: clean
 				@rm -f $(NAME)
 				@make -C $(LIB) fclean
+				@make -C $(MLIB) fclean
 re: fclean all
