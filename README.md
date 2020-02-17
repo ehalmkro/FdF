@@ -9,3 +9,7 @@ Has mouse rotations, zoom, colour gradients with RGB pulse and two line algorith
 Written in accordance with École 42's strict norm, no more than 25 lines in a function block, no more than 5 functions in a .c file, no more than 4 parameters in a function call.
 
 <a href="https://github.com/ehalmkro/FdF/blob/master/elem.fdf.png"><img src="https://github.com/ehalmkro/FdF/blob/master/elem.fdf.png" width="800" height="635"/></a>
+
+![demo gif](https://github.com/ehalmkro/FdF/blob/master/demo.gif)
+
+
