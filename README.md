@@ -10,7 +10,7 @@ Written in accordance with École 42's strict norm, no more than 25 lines in a f
 
 <a href="https://github.com/ehalmkro/FdF/blob/master/elem.fdf.png"><img src="https://github.com/ehalmkro/FdF/blob/master/elem.fdf.png" width="800" height="635"/></a>
 <p align="center">
-![demo gif](https://github.com/ehalmkro/FdF/blob/master/demo.gif)
+<img src="https://github.com/ehalmkro/FdF/blob/master/demo.gif" />
  </p>
 
 
